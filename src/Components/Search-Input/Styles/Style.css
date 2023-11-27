@@ -1,0 +1,11 @@
+.input-search{
+   background-image:url('../Assets/images/istockphoto-924437708-612x612.jpg');
+   background-size: 14%;  
+   background-repeat: no-repeat;
+  background-position: -4px center;
+  padding:8px 
+}
+.input-search::placeholder{
+    position: absolute;
+    margin-left: 25px;
+}
