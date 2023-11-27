@@ -10,12 +10,11 @@ interface StatisticsProps {
 }
 const Statistics: React.FC<StatisticsProps> = ({ title }) => {
   return (
-    <Card className="w-[550px] h-[250px] course-container">
+    <Card className="course-container">
       <CardHeader>
         <CardTitle>
           <div className="flex justify-between items-center">
             <div className="order-last">
-              {/*Todo : Make This Div is to collapse div */}
               <img
                 className="collapse-icon"
                 src={collapseIcon}

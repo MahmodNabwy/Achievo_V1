@@ -12,7 +12,7 @@ interface AssessmentsProps {
 const AssessmentsCard: React.FC<AssessmentsProps> = ({ title }) => {
   return (
     <div>
-      <Card className="w-[600px] h-[230px] assessments-container">
+      <Card className="assessments-container">
         <CardHeader>
           <CardTitle>
             <div className="flex justify-between items-center">

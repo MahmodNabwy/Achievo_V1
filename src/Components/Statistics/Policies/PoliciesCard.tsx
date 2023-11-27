@@ -3,7 +3,6 @@ import { Card, CardHeader, CardTitle } from "../../../@/components/ui/card";
 import PoliciesContent from "./PoliciesContent";
 import collapseIcon from "./Assets/images/Bookmark.svg";
 import policiesIcon from "./Assets/images/Bag2.svg";
-
 import "./Styles/Style.css";
 
 interface PoliciesCardProps {
@@ -13,7 +12,7 @@ interface PoliciesCardProps {
 const PoliciesCard: React.FC<PoliciesCardProps> = ({ title }) => {
   return (
     <div>
-      <Card className="w-[550px] h-[250px] policies-container">
+      <Card className="policies-container">
         <CardHeader>
           <CardTitle>
             <div className="flex justify-between items-center">

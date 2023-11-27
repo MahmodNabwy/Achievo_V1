@@ -17,7 +17,7 @@ const CardWithProgress: React.FC<CardWithProgressProps> = ({
   TextTwo,
 }) => {
   return (
-    <Card className="w-[350px] card-container">
+    <Card className="card-container">
       <CardHeader>
         <CardTitle>
           <ProgressCircle

@@ -17,7 +17,7 @@ const AssessmentsContent: React.FC<AssessmentsContentProps> = ({
           <p>Completed assessments</p>
           <div className="border-completed"></div>
         </p>
-        <ul className="list-item list-inside absolute left-5 ml-4 mb-0">
+        <ul className="list-item list-inside relative left-5 ml-4 mb-0">
           {completed.map((item) => {
             return (
               <li className="flex items-center li-items">
@@ -62,7 +62,7 @@ const AssessmentsContent: React.FC<AssessmentsContentProps> = ({
           <p>Uncompleted assessments</p>
           <div className="border-uncompleted"></div>
         </p>
-        <ul className="list-item list-inside absolute left-3 ml-4 mb-0">
+        <ul className="list-item list-inside relative left-5 ml-4 mb-0">
           {unCompleted.map((item) => {
             return (
               <>

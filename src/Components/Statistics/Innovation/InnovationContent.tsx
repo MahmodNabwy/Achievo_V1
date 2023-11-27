@@ -17,7 +17,7 @@ const InnovationContent: React.FC<InnovationContentProps> = ({
             <p>Reviewing innovation management</p>
             <div className="border-reviewing"></div>
           </p>
-          <ul className="list-item list-inside absolute left-3  ml-4 mb-0">
+          <ul className="list-item list-inside relative left-5  ml-4 mb-0">
             {reviewing.map((item) => {
               return (
                 <li className="flex items-center li-items">
@@ -62,7 +62,7 @@ const InnovationContent: React.FC<InnovationContentProps> = ({
             <p>Approved innovation management</p>
             <div className="border-approved"></div>
           </p>
-          <ul className="list-item list-inside absolute left-3 ml-4 mb-0">
+          <ul className="list-item list-inside relative left-5 ml-4 mb-0">
             {approved.map((item) => {
               return (
                 <>

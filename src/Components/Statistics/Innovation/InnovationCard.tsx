@@ -12,7 +12,7 @@ interface InnovationCardProps {
 const InnovationCard: React.FC<InnovationCardProps> = ({ title }) => {
   return (
     <div>
-      <Card className="w-[600px] h-[230px] innovation-container">
+      <Card className="innovation-container">
         <CardHeader>
           <CardTitle>
             <div className="flex justify-between items-center">

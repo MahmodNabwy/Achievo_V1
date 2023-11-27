@@ -87,13 +87,14 @@ const ProgressCircle: React.FC<ProgressCircleProps> = ({
           {progress}%
         </div>
       </div>
+
       {/* Text */}
       <div className="ml-7 card-content">
         <span>{score}</span>
         <br />
-        <span>{TextOne}</span>
-        <br />
-        <span>{TextTwo}</span>
+        <span>
+          {TextOne} <br /> {TextTwo}
+        </span>
       </div>
     </div>
   );
