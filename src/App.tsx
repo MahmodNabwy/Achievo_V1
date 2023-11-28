@@ -9,12 +9,12 @@ import { Sidebar } from "./Components/Sidebar/Sidebar";
 
 const App = () => {
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 ">
+    <div className="grid grid-cols-6">
       {/* Left Sidebar */}
-      <div>
+      <div className="col-span-1">
         <Sidebar />
       </div>
-      <div>
+      <div className="col-span-5">
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4 mb-16">
           <WelcomeBanner userName="Mohamed Mansour" />
         </div>
@@ -55,7 +55,13 @@ const App = () => {
           <InnovationCard title="Innovation Management" />
         </div>
       </div>
+      {/* <div className="col-span-1 text-center">test</div>
+      <div className="col-span-5 text-center">test</div> */}
     </div>
+    // <div className="grid grid-cols-6 gap-4">
+    //   <div className="col-span-1 ...">01</div>
+    //   <div className="col-start-5 col-end-3 ...">02</div>
+    // </div>
   );
 };
 
