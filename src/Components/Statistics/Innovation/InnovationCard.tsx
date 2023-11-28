@@ -41,6 +41,8 @@ const InnovationCard: React.FC<InnovationCardProps> = ({ title }) => {
             "Challenging games",
             "Motivation",
             "Rewards for collaboration",
+            "Rewards for collaboration",
+            "Rewards for collaboration",
           ]}
         />
       </Card>

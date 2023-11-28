@@ -5,129 +5,127 @@ font-weight: normal;
 font-style: normal;
 }
 @font-face {
-  font-family: 'Cairo-SemiBold';  
-  src: url('../Assets/fonts/Cairo-SemiBold.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+font-family: 'Cairo-SemiBold';  
+src: url('../Assets/fonts/Cairo-SemiBold.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
   }
 .course-container{
-    background-color: #F3F3F3;
+background-color: #F3F3F3;
 }
 .statistics-percentage{
-    margin-right: 20px;
-    color: #000;
-   font-family: Cairo;
-   font-size: 16px;
-   font-style: normal;
-   font-weight: 300;
-   line-height: normal;
-   color: #000;
-   text-align: right;
-   font-family: Cairo;
-   font-size: 14px;
-   font-style: normal;
-   font-weight: 700;
-   line-height: normal;
+margin-right: 20px;
+color: #000;
+font-family: Cairo;
+font-size: 1rem;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+color: #000;
+text-align: right;
+font-family: Cairo;
+font-size: 1rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
  }
- .statistics-title{
-   margin-left: 24px;
-   display: flex;
-   width: 188.822px;
-   height: 39px;
-   flex-direction: column;
-   justify-content: center;
-   flex-shrink: 0;
-   color: #000;
-   font-family: Cairo;
-   font-size: 16px;
-   font-style: normal;
-   font-weight: 300;
-   line-height: normal;
+.statistics-title{
+margin-left: 24px;
+display: flex;
+width: 188.822px;
+height: 39px;
+flex-direction: column;
+justify-content: center;
+flex-shrink: 0;
+color: #000;
+font-family: Cairo;
+font-size: 1rem;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+}
+.statistics-progress{
+margin-top: 10px;
+margin-left: 23px;
+}
 
- }
- .statistics-progress{
-     margin-top: 10px;
-     margin-left: 23px;
- }
- .course-name{
-    margin-left: 24px;
-     font-size: 14px;    
- }
- .course-name span:first-child {
-   width: 260px;
-   height: 39px;
-   flex-direction: column;
-   justify-content: center;
-   flex-shrink: 0;
-   color: #000;
-   font-family: Cairo;
-   font-size: 16px;
-   font-style: normal;
-   font-weight: 300;
-   line-height: normal;
- }
- .course-name span:nth-child(2){
-   width: 260px;
-   height: 39px;
-   flex-direction: column;
-   justify-content: center;
-   flex-shrink: 0;
-   color: #000;
-   font-family: Cairo-SemiBold;
-   font-size: 16px;
-   font-style: normal;
-   font-weight: 500;
-   line-height: normal;
- }
- 
- .course-header{
-    margin-bottom: -11px;
- }
- .course-info{
-    margin-top: 10px;
- }
- .course-info a{
-   margin-right: 17px;
-   color: cornflowerblue;
- }
- .course-icon{
-   width: 27.91px;
-   height: 27.908px;
-   flex-shrink: 0;
- }
- .course-title{
-   display: flex;
-   width: 206.523px;
-   height: 32.693px;
-   flex-direction: column;
-   justify-content: center;
-   flex-shrink: 0;
-   color: #000;
-   font-family: Cairo;
-   font-size: 19.935px;
-   font-style: normal;
-   font-weight: 300;
-   line-height: normal;
-   margin-left: 10px;
- }
- .collapse-icon{
-   width: 35px;
-   height: 35px;
-   flex-shrink: 0;
- }
- 
- .resuming{
-   width: 188.822px;
-   height: 39px;
-   flex-direction: column;
-   justify-content: center;
-   flex-shrink: 0;
-   color: #3186EA;
-   text-align: right;
-   font-family: Cairo;
-   font-size: 14px;
-   font-style: normal;
-   font-weight: 700;
-   line-height: normal;
-   text-decoration-line: underline;
+.course-name{
+margin-left: 24px;
+font-size: 1rem;    
+}
+.course-name span:first-child {
+width: 260px;
+height: 39px;
+flex-direction: column;
+justify-content: center;
+flex-shrink: 0;
+color: #000;
+font-family: Cairo;
+font-size: 1rem;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+}
+.course-name span:nth-child(2){
+width: 260px;
+height: 39px;
+flex-direction: column;
+justify-content: center;
+flex-shrink: 0;
+color: #000;
+font-family: Cairo-SemiBold;
+font-size: 1rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.course-header{
+margin-bottom: -11px;
+}
+.course-info{
+margin-top: 10px;
+}
+.course-info a{
+margin-right: 17px;
+color: cornflowerblue;
+}
+.course-icon{
+width: 27.91px;
+height: 27.908px;
+flex-shrink: 0;
+}
+.course-title{
+display: flex;
+width: 206.523px;
+height: 32.693px;
+flex-direction: column;
+justify-content: center;
+flex-shrink: 0;
+color: #000;
+font-family: Cairo;
+font-size: 1rem;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+margin-left: 10px;
+}
+.collapse-icon{
+width: 35px;
+height: 35px;
+flex-shrink: 0;
+}
+.resuming{
+ width: 188.822px;
+ height: 39px;
+ flex-direction: column;
+ justify-content: center;
+ flex-shrink: 0;
+ color: #3186EA;
+ text-align: right;
+ font-family: Cairo;
+ font-size: 1rem;
+ font-style: normal;
+ font-weight: 700;
+ line-height: normal;
+ text-decoration-line: underline;
  }

@@ -16,7 +16,7 @@ const PoliciesContent: React.FC<PoliciesContentProps> = ({
           <p>Policies & Procedures Acknowledged</p>
           <div className="border-acknowledged"></div>
         </p>
-        <ul className="list-item list-inside relative left-5 ml-4 mb-0">
+        <ul className="list-item list-inside relative left-5  ml-4 mb-0">
           {acknowledged.map((item) => {
             return (
               <li className="flex items-center li-items">

@@ -1,0 +1,51 @@
+@font-face {
+font-family: 'Cairo';  
+src: url('../Assets/Fonts/Cairo-Regular-3.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Cairo-SemiBold';  
+src: url('../Assets/Fonts/Cairo-SemiBold.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+@font-face {
+font-family: 'Cairo-Bold';  
+src: url('../Assets/Fonts/Cairo-Bold.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+.banner{
+border-right: 1px solid #EAEAEB;
+background: #F8FAFD;
+}
+.li-active-container{
+flex-direction: row;
+flex-shrink: 0;
+border-radius: 10px;
+background-color: #F3F3F3;
+  
+}
+.li-active-container a{
+color: #000;
+font-family: Cairo;
+font-size: 1rem;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.li-container{
+flex-direction: row;
+flex-shrink: 0;
+border-radius: 10px;
+}
+.li-container a{
+color: #000;
+font-family: Cairo;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+ 

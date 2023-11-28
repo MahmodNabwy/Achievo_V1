@@ -18,9 +18,9 @@ const PoliciesCard: React.FC<PoliciesCardProps> = ({ title }) => {
             <div className="flex justify-between items-center">
               <div className="order-last">
                 <img
-                  className="collapse-icon"
                   src={collapseIcon}
                   alt="collapse"
+                  className="collapse-icon"
                 />
               </div>
               <div className="flex items-center">

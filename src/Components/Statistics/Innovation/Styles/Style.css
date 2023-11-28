@@ -81,13 +81,7 @@ margin-bottom: 3px;
 font-size: 14px;
 margin-bottom: 3px; 
 }
-.border-reviewing{
-border-top: 1px solid #000103;
-width: 107%;
-margin-top: 3px;
-margin-bottom: 3px; 
-margin-left: 11px;
-}
+ 
 .border-approved{
 border-top: 1px solid #000103;
 margin-top: 3px;
@@ -115,7 +109,7 @@ justify-content: center;
 flex-shrink: 0; 
 color: #000;
 font-family: Cairo-SemiBold;
-font-size: 15.139px;
+font-size: 1rem;
 font-style: normal;
 font-weight: bold;
 line-height: normal;
