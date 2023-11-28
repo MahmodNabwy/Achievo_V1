@@ -3,7 +3,7 @@ import "./Styles/Styles.css";
 type SidebarProps = {};
 export const Sidebar = (props: SidebarProps) => {
   return (
-    <div className="h-screen fixed top-0 left-0 banner">
+    <div className="h-full banner">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="232"
@@ -95,7 +95,8 @@ export const Sidebar = (props: SidebarProps) => {
               </svg>
               <a href="#" className="text-center relative pr-2">
                 Dashboard
-                <span className="absolute top-0.5 bottom-0 right-0 left-36 border-r-4 border-black h-full rounded-lg"></span>
+                {/* //Todo : Refactor This Right Border */}
+                {/* <span className="absolute top-0.5 bottom-0 right-0 left-36 border-r-4 border-black h-full rounded-lg"></span> */}
               </a>
             </div>
           </li>

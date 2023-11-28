@@ -9,12 +9,12 @@ import { Sidebar } from "./Components/Sidebar/Sidebar";
 
 const App = () => {
   return (
-    <div className="container mt-4 flex">
+    <div className="flex ...">
       {/* Left Sidebar */}
-      <div className="w-1/4 pr-4">
+      <div className="w-1/5 mr-4">
         <Sidebar />
       </div>
-      <div className="w-4/4">
+      <div className="w-4/5">
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4 mb-16">
           <WelcomeBanner userName="Mohamed Mansour" />
         </div>
