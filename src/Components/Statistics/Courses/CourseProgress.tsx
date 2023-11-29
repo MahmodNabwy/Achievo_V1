@@ -4,11 +4,13 @@ interface StatisticsProgressProps {
   title: string;
   percentage: string;
   courseName: string;
+  lineValue: number;
 }
 const StatisticsProgress: React.FC<StatisticsProgressProps> = ({
   title,
   percentage,
   courseName,
+  lineValue,
 }) => {
   const [progress, setProgress] = useState(13);
   useEffect(() => {
@@ -24,7 +26,7 @@ const StatisticsProgress: React.FC<StatisticsProgressProps> = ({
         <div className="statistics-title">{title}</div>
       </div>
       <div className="statistics-progress">
-        <ProgressLine value={11} />
+        <ProgressLine value={lineValue} />
       </div>
       <div className="flex justify-between course-info">
         <div className="order-last resuming-section">

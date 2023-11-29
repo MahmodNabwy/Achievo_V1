@@ -3,7 +3,7 @@ import "./Styles/Styles.css";
 type SidebarProps = {};
 export const Sidebar = (props: SidebarProps) => {
   return (
-    <div className="banner">
+    <div className="h-full banner">
       <div>
         <div className="logo">
           <svg
