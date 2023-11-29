@@ -90,5 +90,5 @@ module.exports = {
       'Cairo': url('/src/Components/Cards/Assets/Fonts/Cairo-Regular-3.ttf')      
     }
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"),require("rippleui")],
 }
