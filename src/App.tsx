@@ -58,10 +58,6 @@ const App = () => {
       {/* <div className="col-span-1 text-center">test</div>
       <div className="col-span-5 text-center">test</div> */}
     </div>
-    // <div className="grid grid-cols-6 gap-4">
-    //   <div className="col-span-1 ...">01</div>
-    //   <div className="col-start-5 col-end-3 ...">02</div>
-    // </div>
   );
 };
 
