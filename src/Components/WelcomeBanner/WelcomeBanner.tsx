@@ -1,5 +1,5 @@
 import * as React from "react";
-import "./Styles/Style.css";
+import "./WelcomeBanner.css";
 interface WelcomeBannerProps {
   userName: string;
 }

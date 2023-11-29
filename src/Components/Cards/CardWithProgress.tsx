@@ -1,7 +1,7 @@
 import React from "react";
 import ProgressCircle from "./ProgressCircle";
 import { Card, CardHeader, CardTitle } from "../../@/components/ui/card";
-import "./Styles/Style.css";
+import "./Cards.css";
 interface CardWithProgressProps {
   progress: number;
   score: string;

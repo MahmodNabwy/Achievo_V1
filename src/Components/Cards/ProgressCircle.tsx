@@ -1,4 +1,5 @@
 import React from "react";
+import "./Cards.css";
 
 // Define the interface for the props
 interface ProgressCircleProps {

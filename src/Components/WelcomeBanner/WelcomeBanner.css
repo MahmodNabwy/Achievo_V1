@@ -1,0 +1,15 @@
+ 
+.headTitle{
+color: #000;
+font-family: Cairo;
+font-size: 1rem;
+font-style: normal;
+font-weight: 700;
+}
+.headTitle span{
+color: #000;
+font-family: Cairo;
+font-size: 1rem;
+font-style: normal;
+font-weight: 300;
+}

@@ -4,7 +4,7 @@ import CardWithProgress from "../../Components/Cards/CardWithProgress";
 type circlesProps = {};
 export const Circles = () => {
   return (
-    <div className="grid grid-cols-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-4">
+    <div className="grid grid-cols-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-16 gap-4">
       <CardWithProgress
         progress={50}
         score="4 of 11"
