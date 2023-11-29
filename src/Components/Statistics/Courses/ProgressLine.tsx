@@ -1,13 +1,11 @@
 import * as React from "react";
 import { Progress } from "../../../@/components/ui/progress";
 
-// Define the interface for the props
-interface ProgressLineProps {
+type ProgressLineProps = {
   value: number;
-}
-
-const ProgressLine: React.FC<ProgressLineProps> = ({ value }) => {
-  const [progress, setProgress] = React.useState(value);
+};
+const ProgressLine = (props: ProgressLineProps) => {
+  const [progress, setProgress] = React.useState(props.value);
 
   React.useEffect(() => {
     const timer = setTimeout(() => setProgress(66), 500);

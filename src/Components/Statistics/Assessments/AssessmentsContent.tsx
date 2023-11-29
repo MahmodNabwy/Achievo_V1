@@ -1,14 +1,11 @@
 import * as React from "react";
 import "../../MainCard/MainCard.css";
 
-interface AssessmentsContentProps {
+type AssessmentsContentProps = {
   completed: string[];
   unCompleted: string[];
-}
-const AssessmentsContent: React.FC<AssessmentsContentProps> = ({
-  completed,
-  unCompleted,
-}) => {
+};
+const AssessmentsContent = (props: AssessmentsContentProps) => {
   return (
     <div className="flex flex-col md:flex-row p-4 rounded-md relative status-section">
       {/* First Column */}
@@ -18,7 +15,7 @@ const AssessmentsContent: React.FC<AssessmentsContentProps> = ({
           <div className="border-completed"></div>
         </p>
         <ul className="list-item list-inside relative left-5 ml-4 mb-0">
-          {completed.map((item) => {
+          {props.completed.map((item) => {
             return (
               <li className="flex items-center li-items">
                 <svg
@@ -63,7 +60,7 @@ const AssessmentsContent: React.FC<AssessmentsContentProps> = ({
           <div className="border-uncompleted"></div>
         </p>
         <ul className="list-item list-inside relative left-5 ml-4 mb-0">
-          {unCompleted.map((item) => {
+          {props.unCompleted.map((item) => {
             return (
               <>
                 <li className="flex items-center li-items">

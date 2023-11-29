@@ -2,29 +2,22 @@ import React from "react";
 import ProgressCircle from "./ProgressCircle";
 import { Card, CardHeader, CardTitle } from "../../@/components/ui/card";
 import "./Cards.css";
-interface CardWithProgressProps {
+type CardWithProgressProps = {
   progress: number;
   score: string;
   TextOne: string;
   TextTwo: string;
-}
-
-const CardWithProgress: React.FC<CardWithProgressProps> = ({
-  progress,
-
-  score,
-  TextOne,
-  TextTwo,
-}) => {
+};
+const CardWithProgress = (props: CardWithProgressProps) => {
   return (
     <Card className="card-container">
       <CardHeader>
         <CardTitle>
           <ProgressCircle
-            progress={progress}
-            score={score}
-            TextOne={TextOne}
-            TextTwo={TextTwo}
+            progress={props.progress}
+            score={props.score}
+            TextOne={props.TextOne}
+            TextTwo={props.TextTwo}
           />
         </CardTitle>
       </CardHeader>

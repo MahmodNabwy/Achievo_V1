@@ -1,14 +1,11 @@
 import * as React from "react";
 import "../../MainCard/MainCard.css";
 
-interface InnovationContentProps {
+type InnovationContentProps = {
   approved: string[];
   reviewing: string[];
-}
-const InnovationContent: React.FC<InnovationContentProps> = ({
-  approved,
-  reviewing,
-}) => {
+};
+const InnovationContent = (props: InnovationContentProps) => {
   return (
     <div>
       <div className="flex flex-col md:flex-row p-4 rounded-md relative content-section">
@@ -19,7 +16,7 @@ const InnovationContent: React.FC<InnovationContentProps> = ({
             <div className="border-reviewing"></div>
           </p>
           <ul className="list-item list-inside relative left-5  ml-4 mb-0">
-            {reviewing.map((item) => {
+            {props.reviewing.map((item) => {
               return (
                 <li className="flex items-center li-items">
                   <svg
@@ -64,7 +61,7 @@ const InnovationContent: React.FC<InnovationContentProps> = ({
             <div className="border-approved"></div>
           </p>
           <ul className="list-item list-inside relative left-5 ml-4 mb-0">
-            {approved.map((item) => {
+            {props.approved.map((item) => {
               return (
                 <>
                   <li className="flex items-center li-items">

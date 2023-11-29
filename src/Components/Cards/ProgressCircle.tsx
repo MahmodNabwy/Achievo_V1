@@ -1,24 +1,17 @@
 import React from "react";
 import "./Cards.css";
 
-// Define the interface for the props
-interface ProgressCircleProps {
+type ProgressCircleProps = {
   progress: number;
   score: string;
   TextOne: string;
   TextTwo: string;
-}
+};
 
-const ProgressCircle: React.FC<ProgressCircleProps> = ({
-  progress,
-
-  score,
-  TextOne,
-  TextTwo,
-}) => {
+const ProgressCircle = (props: ProgressCircleProps) => {
   const radius = 40;
   const circumference = 2 * Math.PI * radius;
-  const dashOffset = ((100 - progress) * circumference) / 100;
+  const dashOffset = ((100 - props.progress) * circumference) / 100;
 
   return (
     <div className="flex items-center">
@@ -85,16 +78,16 @@ const ProgressCircle: React.FC<ProgressCircleProps> = ({
 
         {/* Number */}
         <div className="flex items-center w-full h-full circle-number">
-          {progress}%
+          {props.progress}%
         </div>
       </div>
 
       {/* Text */}
       <div className="ml-7 card-content">
-        <span>{score}</span>
+        <span>{props.score}</span>
         <br />
         <span>
-          {TextOne} <br /> {TextTwo}
+          {props.TextOne} <br /> {props.TextTwo}
         </span>
       </div>
     </div>

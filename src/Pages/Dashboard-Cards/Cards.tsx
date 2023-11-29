@@ -1,7 +1,6 @@
 import React from "react";
 import { MainCard } from "../../Components/MainCard/MainCard";
 import courseIcon from "./Icons/TwoUsers.svg";
-
 import StatisticsProgress from "../../Components/Statistics/Courses/CourseProgress";
 import AssessmentsContent from "../../Components/Statistics/Assessments/AssessmentsContent";
 import NextAssessmentBtn from "../../Components/Statistics/Assessments/NextAssessmentBtn";
@@ -9,6 +8,7 @@ import PoliciesContent from "../../Components/Statistics/Policies/PoliciesConten
 import policiesIcon from "./Icons/Policies.svg";
 import InnovationContent from "../../Components/Statistics/Innovation/InnovationContent";
 import innovationIcon from "../Dashboard-Cards/Icons/Innovation.svg";
+
 export const Cards = () => {
   const CoursesChildren = [
     <StatisticsProgress

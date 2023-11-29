@@ -1,13 +1,14 @@
 import * as React from "react";
 import "./WelcomeBanner.css";
-interface WelcomeBannerProps {
+type WelcomeBannerProps = {
   userName: string;
-}
-const WelcomeBanner: React.FC<WelcomeBannerProps> = ({ userName }) => {
+};
+
+const WelcomeBanner = (props: WelcomeBannerProps) => {
   return (
     <div>
       <h1 className="headTitle">
-        Welcome back, {userName} <br />
+        Welcome back, {props.userName} <br />
         <span> Your current status is here</span>
       </h1>
     </div>

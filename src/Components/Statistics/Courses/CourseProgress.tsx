@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from "react";
 import ProgressLine from "./ProgressLine";
-interface StatisticsProgressProps {
+type CourseProgressProps = {
   title: string;
   percentage: string;
   courseName: string;
   lineValue: number;
-}
-const StatisticsProgress: React.FC<StatisticsProgressProps> = ({
-  title,
-  percentage,
-  courseName,
-  lineValue,
-}) => {
+};
+
+const CourseProgress = (props: CourseProgressProps) => {
   const [progress, setProgress] = useState(13);
   useEffect(() => {
     const timer = setTimeout(() => setProgress(66), 500);
@@ -21,12 +17,12 @@ const StatisticsProgress: React.FC<StatisticsProgressProps> = ({
     <div className="statistics-progress-container">
       <div className="flex justify-between  course-header">
         <div className="order-last statistics-percentage">
-          {percentage} completed
+          {props.percentage} completed
         </div>
-        <div className="statistics-title">{title}</div>
+        <div className="statistics-title">{props.title}</div>
       </div>
       <div className="statistics-progress">
-        <ProgressLine value={lineValue} />
+        <ProgressLine value={props.lineValue} />
       </div>
       <div className="flex justify-between course-info">
         <div className="order-last resuming-section">
@@ -36,10 +32,10 @@ const StatisticsProgress: React.FC<StatisticsProgressProps> = ({
         </div>
         <div className="course-name">
           <span>Course Name:</span>
-          <span> {courseName}</span>
+          <span> {props.courseName}</span>
         </div>
       </div>
     </div>
   );
 };
-export default StatisticsProgress;
+export default CourseProgress;

@@ -1,13 +1,10 @@
 import * as React from "react";
 import "../../MainCard/MainCard.css";
-interface PoliciesContentProps {
+type PoliciesContentProps = {
   acknowledged: string[];
   unread: string[];
-}
-const PoliciesContent: React.FC<PoliciesContentProps> = ({
-  acknowledged,
-  unread,
-}) => {
+};
+const PoliciesContent = (props: PoliciesContentProps) => {
   return (
     <div className="flex flex-col md:flex-row p-4 rounded-md relative content-section">
       {/* First Column */}
@@ -17,7 +14,7 @@ const PoliciesContent: React.FC<PoliciesContentProps> = ({
           <div className="border-acknowledged"></div>
         </p>
         <ul className="list-item list-inside relative left-5  ml-4 mb-0">
-          {acknowledged.map((item) => {
+          {props.acknowledged.map((item) => {
             return (
               <li className="flex items-center li-items">
                 <svg
@@ -62,7 +59,7 @@ const PoliciesContent: React.FC<PoliciesContentProps> = ({
           <div className="border-unread"></div>
         </p>
         <ul className="list-item list-inside relative left-5 ml-4 mb-0">
-          {unread.map((item) => {
+          {props.unread.map((item) => {
             return (
               <>
                 <li className="flex items-center li-items">
