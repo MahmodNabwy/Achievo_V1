@@ -1,3 +1,5 @@
+const { url } = require('inspector');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
@@ -84,6 +86,9 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
+    fontFamily: {
+      'Cairo': url('/src/Components/Cards/Assets/Fonts/Cairo-Regular-3.ttf')      
+    }
   },
   plugins: [require("tailwindcss-animate")],
 }

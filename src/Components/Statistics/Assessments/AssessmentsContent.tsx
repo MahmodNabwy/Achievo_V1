@@ -1,5 +1,5 @@
 import * as React from "react";
-import "./Styles/Style.css";
+import "../../MainCard/MainCard.css";
 
 interface AssessmentsContentProps {
   completed: string[];

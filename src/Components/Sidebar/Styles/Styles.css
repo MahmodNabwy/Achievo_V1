@@ -19,6 +19,7 @@ font-style: normal;
 .banner{
 border-right: 1px solid #EAEAEB;
 background: #F8FAFD;
+height: 100vh;
 }
 .logo{
 flex-shrink: 0;

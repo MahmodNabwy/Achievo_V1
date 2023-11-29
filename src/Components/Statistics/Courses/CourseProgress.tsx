@@ -17,7 +17,7 @@ const StatisticsProgress: React.FC<StatisticsProgressProps> = ({
   }, []);
   return (
     <div className="statistics-progress-container">
-      <div className="flex justify-between ... course-header">
+      <div className="flex justify-between  course-header">
         <div className="order-last statistics-percentage">
           {percentage} completed
         </div>
@@ -26,9 +26,11 @@ const StatisticsProgress: React.FC<StatisticsProgressProps> = ({
       <div className="statistics-progress">
         <ProgressLine value={11} />
       </div>
-      <div className="flex justify-between ... course-info">
+      <div className="flex justify-between course-info">
         <div className="order-last resuming-section">
-          <a href="#" className="resuming">Resume Course</a>
+          <a href="#" className="resuming">
+            Resume Course
+          </a>
         </div>
         <div className="course-name">
           <span>Course Name:</span>
