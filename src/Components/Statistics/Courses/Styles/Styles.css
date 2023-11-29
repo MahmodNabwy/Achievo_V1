@@ -11,7 +11,9 @@ font-weight: normal;
 font-style: normal;
   }
 .course-container{
-background-color: #F3F3F3;
+  border: 1px solid #EAEAEB;
+  background: rgba(234, 234, 235, 0.20);
+
 }
 .statistics-percentage{
 margin-right: 20px;

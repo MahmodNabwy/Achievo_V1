@@ -14,8 +14,8 @@ const App = () => {
       <div className="col-span-1">
         <Sidebar />
       </div>
-      <div className="col-span-5">
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4 mb-16">
+      <div className="col-span-5 ml-10 mr-10">
+        <div className="grid grid-cols-1">
           <WelcomeBanner userName="Mohamed Mansour" />
         </div>
         <div className="grid grid-cols-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-4">
