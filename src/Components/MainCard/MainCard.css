@@ -2,7 +2,7 @@
     .main-container{
       border: 1px solid #EAEAEB;
       background: rgba(234, 234, 235, 0.20);
-      height: 255px;
+      height: auto;
 
     }
     .statistics-percentage{
@@ -76,6 +76,8 @@
     }
     .course-info{
     margin-top: 10px;
+    margin-bottom: 150px;
+
     }
     .course-info a{
     margin-right: 17px;

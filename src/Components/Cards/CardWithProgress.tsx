@@ -10,18 +10,16 @@ type CardWithProgressProps = {
 };
 const CardWithProgress = (props: CardWithProgressProps) => {
   return (
-    <Card className="card-container">
-      <CardHeader>
-        <CardTitle>
-          <ProgressCircle
-            progress={props.progress}
-            score={props.score}
-            TextOne={props.TextOne}
-            TextTwo={props.TextTwo}
-          />
-        </CardTitle>
-      </CardHeader>
-    </Card>
+    <div className="card">
+      <div className="card-body">
+        <ProgressCircle
+          progress={props.progress}
+          score={props.score}
+          TextOne={props.TextOne}
+          TextTwo={props.TextTwo}
+        />
+      </div>
+    </div>
   );
 };
 export default CardWithProgress;

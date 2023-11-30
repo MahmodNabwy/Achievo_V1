@@ -28,10 +28,12 @@ line-height: normal;
 opacity: 0.6;
 }
 .card-content{
-display: flex;
-height: 46px;
-flex-direction: column;
-justify-content: center;
+  color: #000;
+  font-family: Cairo;
+  font-size: 18.639px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px; /* 134.13% */
 }
 .card-content span:first-child {
 color: #000;
@@ -63,6 +65,24 @@ height: 80.637px;
 flex-shrink: 0;   
 fill: linear-gradient(180deg, #FF0059 0%, rgba(255, 0, 89, 0.00) 100%), conic-gradient(from 181deg at 50.6% 40.96%, #544E50 0deg, #000000 360deg);
 }
- 
+
+
+
+/* react - cricular - circle */
+/* .CircularProgressbar .CircularProgressbar-path
+  {
+   
+    fill: linear-gradient(180deg, #FF0059 0%, rgba(255, 0, 89, 0.00) 100%), conic-gradient(from 181deg at 50.6% 40.96%, #544E50 0deg, #DA1515 360deg);
+  }
+  .CircularProgressbar-trail {
+    stroke: gray;
+  }
+  .CircularProgressbar-text {
+    fill: yellow;
+  }
+  .CircularProgressbar-background {
+    fill: green;
+  }
+  */
  
  
