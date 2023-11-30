@@ -12,6 +12,12 @@ export const Circles = () => {
         TextTwo="Done"
       />
       <CardWithProgress
+        progress={40}
+        score="3 of 5"
+        TextOne="Assessments"
+        TextTwo="Done"
+      />
+      <CardWithProgress
         progress={14}
         score="1 of 7"
         TextOne="Policies & Procedures"
@@ -22,12 +28,6 @@ export const Circles = () => {
         score="3 of 4"
         TextOne="Innovation Management"
         TextTwo="Approved"
-      />
-      <CardWithProgress
-        progress={40}
-        score="4 of 11"
-        TextOne="Courses"
-        TextTwo="Done"
       />
     </div>
   );

@@ -2,7 +2,8 @@
     .main-container{
       border: 1px solid #EAEAEB;
       background: rgba(234, 234, 235, 0.20);
-    
+      height: 255px;
+
     }
     .statistics-percentage{
     margin-right: 20px;

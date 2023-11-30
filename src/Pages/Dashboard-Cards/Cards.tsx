@@ -49,22 +49,26 @@ export const Cards = () => {
     />,
   ];
   return (
-    <div>
-      <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 mt-20 ">
+    <div className="my-4 grid grid-cols-2 gap-4">
+      <div className="h-full w-full items-center">
         <MainCard content={CoursesChildren} icon={courseIcon} title="Courses" />
+      </div>
+
+      <div className="h-full w-full items-center">
         <MainCard
           content={AssessmentChildren}
           icon={courseIcon}
           title="Assessments"
         />
       </div>
-
-      <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 mt-20 ">
+      <div className="h-full w-full items-center">
         <MainCard
           content={PoliciesChildren}
           icon={policiesIcon}
           title="Policies & Procedures"
         />
+      </div>
+      <div className="h-full w-full items-center">
         <MainCard
           content={InnovationChildren}
           icon={innovationIcon}

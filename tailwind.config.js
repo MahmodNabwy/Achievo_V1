@@ -87,8 +87,8 @@ module.exports = {
       },
     },
     fontFamily: {
-      'Cairo': url('/src/Components/Cards/Assets/Fonts/Cairo-Regular-3.ttf')      
+      'Cairo': url('/src/app-layout/Assets/Fonts/Cairo-Bold.ttf')      
     }
   },
-  plugins: [require("tailwindcss-animate"),require("rippleui")],
+  plugins: [require("rippleui"),require("tailwindcss-animate")],
 }
