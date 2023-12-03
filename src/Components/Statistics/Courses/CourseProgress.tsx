@@ -14,25 +14,30 @@ const CourseProgress = (props: CourseProgressProps) => {
     return () => clearTimeout(timer);
   }, []);
   return (
-    <div className="statistics-progress-container">
-      <div className="flex justify-between  course-header">
-        <div className="order-last statistics-percentage">
-          {props.percentage} completed
+    <div className="grid grid-cols-6 p-4">
+      <div className="col-start-1 col-end-3">
+        <div className="flex">
+          <span className="statistics-title">{props.title}</span>
         </div>
-        <div className="statistics-title">{props.title}</div>
       </div>
-      <div className="statistics-progress">
+      <div className="col-end-7 col-span-2">
+        <div className="flex justify-end">
+          <span className="statistics-percentage">
+            {props.percentage} Completed
+          </span>
+        </div>
+      </div>
+      <div className="col-span-6">
         <ProgressLine value={props.lineValue} />
       </div>
-      <div className="flex justify-between course-info">
-        <div className="order-last resuming-section">
-          <a href="#" className="resuming">
-            Resume Course
-          </a>
+      <div className="col-start-1 col-end-3">
+        <div className="flex">
+          <span className="course-name">Course Name :{props.courseName}</span>
         </div>
-        <div className="course-name">
-          <span>Course Name:</span>
-          <span> {props.courseName}</span>
+      </div>
+      <div className="col-end-7 col-span-2">
+        <div className="flex justify-end">
+          <a href="#">Resume Course</a>
         </div>
       </div>
     </div>

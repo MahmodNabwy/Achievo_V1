@@ -1,8 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Styles/Styles.css";
 import profilePhoto from "./Assets/Images/Diversity Avatar Girl 05@4x 2.png";
 type SidebarProps = {};
 export const Sidebar = (props: SidebarProps) => {
+  const [selectedElement, setSelectedElement] = useState(0);
+  const handleSelectedElement = (e: number) => {
+    switch (e) {
+      case 0: {
+        setSelectedElement(e);
+        break;
+      }
+      case 1: {
+        setSelectedElement(e);
+        break;
+      }
+      case 2: {
+        setSelectedElement(e);
+        break;
+      }
+      case 3: {
+        setSelectedElement(e);
+        break;
+      }
+      case 4: {
+        setSelectedElement(e);
+        break;
+      }
+      case 5: {
+        setSelectedElement(e);
+        break;
+      }
+      default: {
+        setSelectedElement(0);
+        break;
+      }
+    }
+  };
   return (
     <div className="sm:w-full sm:max-w-[18rem]">
       <input
@@ -82,7 +115,14 @@ export const Sidebar = (props: SidebarProps) => {
             <section className="menu-section px-4">
               <ul className="menu-items">
                 {/* Dashboard */}
-                <li className="menu-item">
+                <li
+                  className={
+                    selectedElement === 0
+                      ? "menu-item menu-active"
+                      : "menu-item"
+                  }
+                  onClick={() => handleSelectedElement(0)}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="28"
@@ -110,7 +150,14 @@ export const Sidebar = (props: SidebarProps) => {
                   <span>Dashboard</span>
                 </li>
                 {/* Courses */}
-                <li className="menu-item menu-active">
+                <li
+                  className={
+                    selectedElement === 1
+                      ? "menu-item menu-active"
+                      : "menu-item"
+                  }
+                  onClick={() => handleSelectedElement(1)}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="28"
@@ -154,7 +201,14 @@ export const Sidebar = (props: SidebarProps) => {
                   <span>Courses</span>
                 </li>
                 {/* Assessments */}
-                <li className="menu-item">
+                <li
+                  className={
+                    selectedElement === 2
+                      ? "menu-item menu-active"
+                      : "menu-item"
+                  }
+                  onClick={() => handleSelectedElement(2)}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="28"
@@ -190,7 +244,14 @@ export const Sidebar = (props: SidebarProps) => {
                   <span>Assessments</span>
                 </li>
                 {/* Policies & Procedures */}
-                <li className="menu-item">
+                <li
+                  className={
+                    selectedElement === 3
+                      ? "menu-item menu-active"
+                      : "menu-item"
+                  }
+                  onClick={() => handleSelectedElement(3)}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="28"
@@ -235,7 +296,14 @@ export const Sidebar = (props: SidebarProps) => {
                 </li>
 
                 {/* Innovation Management */}
-                <li className="menu-item">
+                <li
+                  className={
+                    selectedElement === 4
+                      ? "menu-item menu-active"
+                      : "menu-item"
+                  }
+                  onClick={() => handleSelectedElement(4)}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="28"
@@ -280,7 +348,14 @@ export const Sidebar = (props: SidebarProps) => {
                 </li>
 
                 {/* Certificates */}
-                <li className="menu-item">
+                <li
+                  className={
+                    selectedElement === 5
+                      ? "menu-item menu-active"
+                      : "menu-item"
+                  }
+                  onClick={() => handleSelectedElement(5)}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="28"

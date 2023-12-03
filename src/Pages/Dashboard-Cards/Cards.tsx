@@ -50,11 +50,13 @@ export const Cards = () => {
   ];
   return (
     <div className="my-4 grid grid-cols-2 gap-4">
-      <div className="h-full w-full items-center">
+      <div className="col-span-1">
         <MainCard content={CoursesChildren} icon={courseIcon} title="Courses" />
       </div>
-
-      <div className="h-full w-full items-center">
+      <div className="col-span-1">
+        <MainCard content={CoursesChildren} icon={courseIcon} title="Courses" />
+      </div>
+      {/* <div className="h-full w-full items-center">
         <MainCard
           content={AssessmentChildren}
           icon={courseIcon}
@@ -74,7 +76,7 @@ export const Cards = () => {
           icon={innovationIcon}
           title="Innovation Management"
         />
-      </div>
+      </div> */}
     </div>
   );
 };

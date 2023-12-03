@@ -6,7 +6,6 @@
 
     }
     .statistics-percentage{
-    margin-right: 20px;
     color: #000;
     font-family: Cairo;
     font-size: 1rem;
@@ -22,9 +21,7 @@
     line-height: normal;
      }
     .statistics-title{
-    margin-left: 24px;
     display: flex;
-    width: 188.822px;
     height: 39px;
     flex-direction: column;
     justify-content: center;
@@ -35,13 +32,14 @@
     font-style: normal;
     font-weight: 300;
     line-height: normal;
+    text-wrap: nowrap;
     }
     .statistics-progress{
     margin-top: 10px;
     margin-left: 23px;
     }
     
-    .course-name{
+    /* .course-name{
     margin-left: 24px;
     font-size: 1rem;    
     }
@@ -70,7 +68,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    }
+    } */
     .course-header{
     margin-bottom: -11px;
     }
@@ -84,17 +82,17 @@
     color: cornflowerblue;
     }
     .card-icon{
-    width: 27.91px;
-    height: 27.908px;
+    /* width: 27.91px; */
+    /* height: 27.908px; */
     flex-shrink: 0;
     }
     .card-title{
-    display: flex;
-    width: 206.523px;
+    /* display: flex; */
+    /* width: 206.523px; */
     height: 32.693px;
     flex-direction: column;
     justify-content: center;
-    flex-shrink: 0;
+    /* flex-shrink: 0; */
     color: #000;
     font-family: Cairo;
     font-size: 1rem;
@@ -104,11 +102,9 @@
     margin-left: 10px;
     }
     .expand-icon{
-    width: 35px;
-    height: 35px;
-    flex-shrink: 0;
+position: relative;
     }
-    .resuming{
+    /* .resuming{
      width: 188.822px;
      height: 39px;
      flex-direction: column;
@@ -128,7 +124,7 @@
       border-radius: 12.197px;
       border: 1px solid #EAEAEB;
       background: rgba(234, 234, 235, 0.20);
-    }
+    } */
     .assessment-status{
         margin-bottom: 3px;
     }
@@ -473,8 +469,7 @@
  padding-left: 1px;
  }
  .resuming{
- width: 188.822px;
- height: 39px;
+  height: 39px;
  flex-direction: column;
  justify-content: center;
  flex-shrink: 0;
@@ -485,4 +480,21 @@
  font-weight: 700;
  line-height: normal;
  text-decoration-line: underline;
+ text-wrap: nowrap;
  }
+ /* New Version */
+ .percentege{
+  text-wrap: nowrap;
+ }
+ .card-section{
+  border-radius: 12.197px;
+border: 1px solid #EAEAEB;
+background: rgba(234, 234, 235, 0.20);
+
+ }
+ .testt{
+  text-wrap: nowrap;
+ }
+
+
+ 

@@ -12,6 +12,6 @@ const ProgressLine = (props: ProgressLineProps) => {
     return () => clearTimeout(timer);
   }, []);
 
-  return <Progress value={progress} className="w-[90%]" />;
+  return <Progress value={progress} />;
 };
 export default ProgressLine;
