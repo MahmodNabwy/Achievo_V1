@@ -18,14 +18,15 @@ const ProgressCircle = (props: ProgressCircleProps) => {
   const percentage = 66;
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
-      <div className="rounded-md p-4">
+    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2">
+      <div className="col-span-1 rounded-md p-4">
         {/* Define linearGradient and conicGradient */}
         <Gradient />
         <CircularProgressbar
-          // strokeWidth={8}
+          strokeWidth={8}
           value={props.progress}
           text={`${props.progress}%`}
+          minValue={10}
           styles={{
             path: { stroke: `url(#${idCSS})`, height: "100%" },
             trail: {
@@ -45,11 +46,9 @@ const ProgressCircle = (props: ProgressCircleProps) => {
       </div>
 
       <div className="col-span-1 card-content">
-        <p>
-          <strong>{props.score}</strong>
-        </p>
-        <p>{props.TextOne}</p>
-        <p>{props.TextTwo}</p>
+        <span className="score">{props.score}</span>
+        <p className="content-txt">{props.TextOne}</p>
+        <p className="content-txt">{props.TextTwo}</p>
       </div>
     </div>
   );

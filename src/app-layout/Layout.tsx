@@ -2,13 +2,14 @@ import React from "react";
 import { Circles } from "../Pages/Dashboard-Circles/Circles";
 import { Cards } from "../Pages/Dashboard-Cards/Cards";
 import { Sidebar } from "../Components/Sidebar/Sidebar";
+import WelcomeBanner from "../Components/WelcomeBanner/WelcomeBanner";
 
 export const Layout = () => {
   return (
     <div className="flex flex-row sm:gap-10">
       <Sidebar />
 
-      <div className="flex w-full flex-col p-4">
+      <div className="flex w-full h-full flex-col p-4">
         {/* Expand Button */}
         <div
           className="w-fit"
@@ -33,7 +34,7 @@ export const Layout = () => {
             </svg>
           </label>
         </div>
-
+        <WelcomeBanner userName="Mohamed Mansour" />
         <Circles />
         <Cards />
       </div>
