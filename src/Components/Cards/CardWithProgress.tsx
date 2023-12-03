@@ -15,17 +15,6 @@ const CardWithProgress = (props: CardWithProgressProps) => {
   const idCSS = "hello";
 
   return (
-    // <div className="card" style={{ height: "110px" }}>
-    //   <div className="card-body">
-    //     {/* <ProgressCircle
-    //       progress={props.progress}
-    //       score={props.score}
-    //       TextOne={props.TextOne}
-    //       TextTwo={props.TextTwo}
-    //     /> */}
-
-    //   </div>
-    // </div>
     <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 p-4 cricular-card">
       <div className="col-start-1">
         <div style={{ width: "77px", height: "50px" }}>
