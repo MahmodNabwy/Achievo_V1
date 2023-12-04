@@ -80,17 +80,14 @@ margin-right: 17px;
 color: cornflowerblue;
 }
 .card-icon{
-/* width: 27.91px; */
-/* height: 27.908px; */
 flex-shrink: 0;
 }
 .card-title{
-/* display: flex; */
-/* width: 206.523px; */
+ 
 height: 32.693px;
 flex-direction: column;
 justify-content: center;
-/* flex-shrink: 0; */
+ 
 color: #000;
 font-family: Cairo;
 font-size: 1rem;
@@ -411,7 +408,6 @@ margin-left: 13px;
   margin-left: 1px;
  }
  .border-unread{
- 
  border-top: 1px solid #000103;
  margin-top: 3px;
  margin-bottom: 3px;
@@ -467,7 +463,7 @@ margin-left: 13px;
  padding-left: 1px;
  }
  .resuming{
-  height: 39px;
+height: 39px;
  flex-direction: column;
  justify-content: center;
  flex-shrink: 0;
@@ -479,20 +475,251 @@ margin-left: 13px;
  line-height: normal;
  text-decoration-line: underline;
  text-wrap: nowrap;
- }
- /* New Version */
- .percentege{
-  text-wrap: nowrap;
- }
- .card-section{
-  border-radius: 12.197px;
+}
+/* New Version */
+.percentege{
+ text-wrap: nowrap;
+}
+.card-section{
+border-radius: 12.197px;
 border: 1px solid #EAEAEB;
 background: rgba(234, 234, 235, 0.20);
+}
+.testt{
+ text-wrap: nowrap;
+}
+.border-completed{
+position: relative;
+border: 1px solid #000;
+margin-left: 55px;
+width: 220px;
+height: 0.759px;
+}
+.border-uncompleted{
+position: relative;
+border: 1px solid #000;
+margin-left: 45px;
+width: 220px;
+height: 0.759px;
+}
+.assessment-text{
+color: #000;
+font-family: Cairo;
+font-size: 1rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal; 
+/* text-wrap: nowrap; */
+}
+.menu-item:hover {
+--tw-bg-opacity: 0;
+background-color: unset;
+}
+.menu-item {
+--tw-text-opacity: 1;
+align-items: center;
+border-radius: .5rem/* 8px */;
+color: rgb(var(--content1)/var(--tw-text-opacity));
+cursor: pointer;
+display: flex;
+flex-direction: row;
+font-size: .875rem/* 14px */;
+gap: .5rem/* 8px */;
+line-height: 1.25rem/* 20px */;
+padding: .5rem/* 8px */ 3rem/* 16px */;
+transition-duration: .15s;
+transition-property: transform,opacity,visibility;
+transition-timing-function: cubic-bezier(.4,0,.2,1);
+-webkit-user-select: none;
+-moz-user-select: none;
+user-select: none;
+will-change: transform;
+}
+.assess-btn-section{
+ justify-content: flex-end;
+}
+ 
+.assessments-element{
+color: #000;
+font-family: Cairo;
+font-size: 1rem;
+font-style: normal;
+font-weight: 300;
+text-align: center;
+ text-wrap: nowrap; 
+}
+.continue-assesments{
+width: 100%;
+background-color: #3186EA;
+color: #FFF;
+text-align: center;
+font-family: Cairo;
+font-size: 1rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+@media (max-width: 500px) {
+  /* Medium screens and above */
+  .menu-item-xs {
+    display: grid;
+    --tw-text-opacity: 1;
+    align-items: center;
+    border-radius: .5rem;
+    color: rgb(var(--content1)/var(--tw-text-opacity));
+    cursor: pointer;
+    flex-direction: row;
+    font-size: .875rem ;
+    gap: .5rem ;
+    line-height: 1.25rem ;     
+    transition-duration: .15s;
+    transition-property: transform,opacity,visibility;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    will-change: transform;
+  }
+  .assessment-text{
+    text-wrap: nowrap;
+  }
+  .assessments-element{
+    color: #000;
+    font-family: Cairo;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 300;
+    text-align: justify;
+    text-wrap: unset;
+  }
+  .continue-assesments-xs{                   
+    background-color: #3186EA;
+    color: #FFF;
+    text-align: center;
+    font-family: Cairo;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-wrap: nowrap;
+    width:unset;
+  }
+  .assess-btn-section-xs{
+  justify-content:unset;
+  }
+  .border-completed-xs{
+    position: relative;
+    border: 1px solid #000;
+    margin-left: 2px;
+    width: 178px;
+    height: 0.759px;
+  }
+  .border-uncompleted-xs{
+    position: relative;
+    border: 1px solid #000;
+    margin-left: 0px;
+    width: 190px;
+    height: 0.759px;
+  }
+  .completed-box-xs{
+    margin-left: 20px;
+  }
+  .card-title-xs{       
+    height: 32.693px;
+    flex-direction: column;
+    justify-content: center;    
+    color: #000;
+    font-family: Cairo;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;   
+    margin-left: 0px;
 
- }
- .testt{
-  text-wrap: nowrap;
- }
+  }
+ 
+}
+@media (max-width: 420px) {
+  /* Medium screens and above */
+  .menu-item-xs {
+    display: grid;
+    --tw-text-opacity: 1;
+    align-items: center;
+    border-radius: .5rem;
+    color: rgb(var(--content1)/var(--tw-text-opacity));
+    cursor: pointer;
+    flex-direction: row;
+    font-size: .875rem ;
+    gap: .5rem ;
+    line-height: 1.25rem ;     
+    transition-duration: .15s;
+    transition-property: transform,opacity,visibility;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    will-change: transform;
+  }
+  .assessment-text{
+    text-wrap: balance;
+  }
+  .assessments-element{
+    color: #000;
+    font-family: Cairo;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 300;
+    text-align: justify;
+    text-wrap: unset;
+  }
+  .continue-assesments-xs{                   
+    background-color: #3186EA;
+    color: #FFF;
+    text-align: center;
+    font-family: Cairo;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-wrap: nowrap;
+    width:unset;
+  }
+  .assess-btn-section-xs{
+  justify-content:unset;
+  }
+  .border-completed-xs{
+    position: relative;
+    border: 1px solid #000;
+    margin-left: 2px;
+    width: 160px;
+    height: 0.759px;
+  }
+  .border-uncompleted-xs{
+    position: relative;
+    border: 1px solid #000;
+    margin-left: 0px;
+    width: 165px;
+    height: 0.759px;
+  }
+  .completed-box-xs{
+    margin-left: 20px;
+  }
+  .card-title-xs{       
+    height: 32.693px;
+    flex-direction: column;
+    justify-content: center;    
+    color: #000;
+    font-family: Cairo;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;  
+    margin-left: 0px;
+ 
+  }
+ 
+}
 
 
+ 
  

@@ -54,7 +54,11 @@ export const Cards = () => {
         <MainCard content={CoursesChildren} icon={courseIcon} title="Courses" />
       </div>
       <div className="col-span-1">
-        <MainCard content={CoursesChildren} icon={courseIcon} title="Courses" />
+        <MainCard
+          content={CoursesChildren}
+          icon={courseIcon}
+          title="Assessments"
+        />
       </div>
       {/* <div className="h-full w-full items-center">
         <MainCard
