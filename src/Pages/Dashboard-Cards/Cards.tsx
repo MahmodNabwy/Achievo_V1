@@ -5,17 +5,6 @@ import InnovationContent from "../../Components/Statistics/Innovation/Innovation
 import CourseProgress from "../../Components/Statistics/Courses/CourseProgress";
 
 export const Cards = () => {
-  const PoliciesChildren = [
-    <PoliciesContent
-      acknowledged={["Company policy v1.0"]}
-      unread={[
-        "Company policy v1.0",
-        "Attendence Policy",
-        "Zenhr Guide",
-        "Zenhr Guide",
-      ]}
-    />,
-  ];
   const InnovationChildren = [
     <InnovationContent
       reviewing={["Awareness Campaigns"]}
