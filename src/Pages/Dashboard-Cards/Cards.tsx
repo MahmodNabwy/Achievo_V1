@@ -8,23 +8,9 @@ import PoliciesContent from "../../Components/Statistics/Policies/PoliciesConten
 import policiesIcon from "./Icons/Policies.svg";
 import InnovationContent from "../../Components/Statistics/Innovation/InnovationContent";
 import innovationIcon from "../Dashboard-Cards/Icons/Innovation.svg";
+import CourseProgress from "../../Components/Statistics/Courses/CourseProgress";
 
 export const Cards = () => {
-  const CoursesChildren = [
-    <StatisticsProgress
-      percentage="20%"
-      title="Latest Course"
-      courseName="Password Cracking"
-      lineValue={20}
-    />,
-  ];
-  const AssessmentChildren = [
-    <AssessmentsContent
-      completed={["Security Awareness Test", "Malicious emails", "Spam"]}
-      unCompleted={["Personality Test", "Working From Home"]}
-    />,
-    <NextAssessmentBtn title={"Continue Next Assessment"} />,
-  ];
   const PoliciesChildren = [
     <PoliciesContent
       acknowledged={["Company policy v1.0"]}
@@ -51,36 +37,14 @@ export const Cards = () => {
   return (
     <div className="my-4 grid grid-cols-2 gap-4">
       <div className="col-span-1">
-        <MainCard content={CoursesChildren} icon={courseIcon} title="Courses" />
+        <CourseProgress courseName="Password Cracking" lineValue={12} />
       </div>
       <div className="col-span-1">
-        <MainCard
-          content={CoursesChildren}
-          icon={courseIcon}
-          title="Assessments"
+        <AssessmentsContent
+          completed={["Security Awareness Test", "Malicious emails", "Spam"]}
+          unCompleted={["Personality Test", "Working From Home"]}
         />
       </div>
-      {/* <div className="h-full w-full items-center">
-        <MainCard
-          content={AssessmentChildren}
-          icon={courseIcon}
-          title="Assessments"
-        />
-      </div>
-      <div className="h-full w-full items-center">
-        <MainCard
-          content={PoliciesChildren}
-          icon={policiesIcon}
-          title="Policies & Procedures"
-        />
-      </div>
-      <div className="h-full w-full items-center">
-        <MainCard
-          content={InnovationChildren}
-          icon={innovationIcon}
-          title="Innovation Management"
-        />
-      </div> */}
     </div>
   );
 };
