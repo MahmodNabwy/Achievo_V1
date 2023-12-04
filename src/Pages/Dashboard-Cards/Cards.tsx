@@ -1,13 +1,7 @@
 import React from "react";
-import { MainCard } from "../../Components/MainCard/MainCard";
-import courseIcon from "./Icons/TwoUsers.svg";
-import StatisticsProgress from "../../Components/Statistics/Courses/CourseProgress";
 import AssessmentsContent from "../../Components/Statistics/Assessments/AssessmentsContent";
-import NextAssessmentBtn from "../../Components/Statistics/Assessments/NextAssessmentBtn";
 import PoliciesContent from "../../Components/Statistics/Policies/PoliciesContent";
-import policiesIcon from "./Icons/Policies.svg";
 import InnovationContent from "../../Components/Statistics/Innovation/InnovationContent";
-import innovationIcon from "../Dashboard-Cards/Icons/Innovation.svg";
 import CourseProgress from "../../Components/Statistics/Courses/CourseProgress";
 
 export const Cards = () => {
@@ -43,6 +37,17 @@ export const Cards = () => {
         <AssessmentsContent
           completed={["Security Awareness Test", "Malicious emails", "Spam"]}
           unCompleted={["Personality Test", "Working From Home"]}
+        />
+      </div>
+      <div className="col-span-1">
+        <PoliciesContent
+          acknowledged={["Company policy v1.0"]}
+          unread={[
+            "Company policy v1.0",
+            "Attendence Policy",
+            "Zenhr Guide",
+            "Zenhr Guide",
+          ]}
         />
       </div>
     </div>

@@ -9,7 +9,7 @@ type AssessmentsContentProps = {
 };
 const AssessmentsContent = (props: AssessmentsContentProps) => {
   return (
-    <div className="grid grid-cols-1 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 p-4 card-section">
+    <div className="grid grid-cols-1 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 pb-4 card-section">
       <MainCard icon={assesmentIcon} title="Assessments" />
 
       {/* Completed Assessments */}
@@ -72,7 +72,6 @@ const AssessmentsContent = (props: AssessmentsContentProps) => {
               className="checkbox-warning checkbox checkbox-xs completed-box-xs"
               checked
             />
-
             <span className="assessments-element">Working from Home</span>
           </li>
         </ul>
