@@ -635,7 +635,7 @@ user-select: none;
 will-change: transform;
 }
 @media (max-width: 500px) {
-  /* Medium screens and above */
+   
   .menu-item-xs {
     display: grid;
     --tw-text-opacity: 1;
@@ -654,6 +654,22 @@ will-change: transform;
     -moz-user-select: none;
     user-select: none;
     will-change: transform;
+  } 
+  .assessment-text{
+    text-wrap: nowrap;
+  }
+  .assessments-element{
+    color: #000;
+    font-family: Cairo;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 300;
+    text-align: center;   
+    text-wrap: unset;
+  }
+  /* Policies-Start */
+  .policies-header-x{
+    margin-top: 10px;
   }
   .policies-item-xs {
     display: grid;
@@ -693,18 +709,6 @@ will-change: transform;
     user-select: none;
     will-change: transform;
   }
-  .assessment-text{
-    text-wrap: nowrap;
-  }
-  .assessments-element{
-    color: #000;
-    font-family: Cairo;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 300;
-    text-align: center;   
-    text-wrap: unset;
-  }
   .acknowledge-element-xs{
     color: #000;
     font-family: Cairo;
@@ -714,6 +718,41 @@ will-change: transform;
     text-align: center;   
     text-wrap: unset;
   }
+  .border-acknowledged-xs{
+    position: relative;
+    border: 1px solid #000;
+    margin-left: 30px;
+    width: 150px;
+    height: 0.759px;
+  }
+  .border-unread-xs{
+    position: relative;
+    border: 1px solid #000;
+    margin-left: 17px;
+    width: 180px;
+    height: 0.759px;
+    margin-bottom: 1px;
+  }
+  .acknowledge-box-xs{
+    margin-left: 80px;
+  }
+  .unread-box-xs{
+    margin-left: 55px;
+    margin-top: 10px;
+  }
+  .read-more-xs{
+    color: #3186EA;
+    text-align: center;
+    font-family: Cairo;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-decoration-line: underline;
+    text-wrap: nowrap;
+  } 
+  /* Policies-End */
   .continue-assesments-xs{                   
     background-color: #3186EA;
     color: #FFF;
@@ -743,33 +782,10 @@ will-change: transform;
     width: 190px;
     height: 0.759px;
   }
-  .border-acknowledged-xs{
-    position: relative;
-    border: 1px solid #000;
-    margin-left: 21px;
-    width: 140px;
-    height: 0.759px;
-  }
-  .border-unread-xs{
-    position: relative;
-    border: 1px solid #000;
-    margin-left: 17px;
-    width: 155px;
-    height: 0.759px;
-    margin-bottom: 1px;
-  }
+ 
   .completed-box-xs{
     margin-left: 50px;
-  }
-  .acknowledge-box-xs{
-    margin-left: 62px;
-
-  }
-  .unread-box-xs{
-    margin-left: 30px;
-    margin-top: 10px;
-
-  }
+  } 
   .card-title-xs{       
     height: 32.693px;
     flex-direction: column;
@@ -784,8 +800,8 @@ will-change: transform;
   }
 }
 @media (max-width: 420px) {
-  /* Medium screens and above */
-  .menu-item-xs {
+  /* Assessments-Start */
+   .menu-item-xs {
     display: grid;
     --tw-text-opacity: 1;
     align-items: center;
@@ -803,7 +819,51 @@ will-change: transform;
     -moz-user-select: none;
     user-select: none;
     will-change: transform;
-  }
+   }  
+   .assessments-element{
+    color: #000;
+    font-family: Cairo;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 300;
+    text-align: center;
+    text-wrap: unset;
+   }  
+   .continue-assesments-xs{                   
+     background-color: #3186EA;
+     color: #FFF;
+     text-align: center;
+     font-family: Cairo;
+     font-size: 1rem;
+     font-style: normal;
+     font-weight: 700;
+     line-height: normal;
+     text-wrap: nowrap;
+     width:unset;
+   }
+   .assess-btn-section-xs{
+     justify-content:unset;
+   }
+   .border-completed-xs{
+     position: relative;
+     border: 1px solid #000;
+     margin-left: 10px;
+     width: 160px;
+     height: 0.759px;
+   }
+   .border-uncompleted-xs{
+     position: relative;
+     border: 1px solid #000;
+     margin-left: 10px;
+     width: 165px;
+     height: 0.759px;
+   }
+   .completed-box-xs{
+     margin-left: 20px;
+   }
+  /* Assessments-End */
+
+  /* Policies-Start */
   .policies-item-xs {
     display: grid;
     --tw-text-opacity: 1;
@@ -851,17 +911,15 @@ will-change: transform;
     line-height: 1;
   }  
   .policies-header-xs{
+    margin-top: 25px;
+  }
+  .unread-box-xs{
+    margin-left: 40px;
     margin-top: 10px;
   }
-  
-  .assessments-element{
-   color: #000;
-   font-family: Cairo;
-   font-size: 1rem;
-   font-style: normal;
-   font-weight: 300;
-   text-align: center;
-   text-wrap: unset;
+  .acknowledge-box-xs{
+    margin-left: 65px;
+
   }
   .acknowledge-element-xs{
     color: #000;
@@ -869,41 +927,25 @@ will-change: transform;
    font-size: 1rem;
    font-style: normal;
    font-weight: 300;
-   text-align: justify;
+   text-align: center;
    text-wrap: unset;
   }
-  .continue-assesments-xs{                   
-    background-color: #3186EA;
-    color: #FFF;
-    text-align: center;
-    font-family: Cairo;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-wrap: nowrap;
-    width:unset;
-  }
-  .assess-btn-section-xs{
-  justify-content:unset;
-  }
-  .border-completed-xs{
+  .border-acknowledged-xs{
     position: relative;
     border: 1px solid #000;
-    margin-left: 10px;
-    width: 160px;
-    height: 0.759px;
-  }
-  .border-uncompleted-xs{
-    position: relative;
-    border: 1px solid #000;
-    margin-left: 10px;
-    width: 165px;
-    height: 0.759px;
-  }
-  .completed-box-xs{
     margin-left: 20px;
+    width: 150px;
+    height: 0.759px;
   }
+  .border-unread-xs{
+    position: relative;
+    border: 1px solid #000;
+    margin-left: 20px;
+    width: 150px;
+    height: 0.759px;
+    margin-bottom: 1px;
+  }
+  /* Policies-End */
   .card-title-xs{       
     height: 32.693px;
     flex-direction: column;

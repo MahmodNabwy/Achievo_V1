@@ -62,8 +62,8 @@ const PoliciesContent = (props: PoliciesContentProps) => {
               </>
             );
           })}
-          <li className="policies-item-unread policies-item-unread-xs read-more-xs ">
-            <a href="#" className="read-more">
+          <li className="policies-item-unread policies-item-unread-xs ">
+            <a href="#" className="read-more read-more-xs">
               Read More.
             </a>
           </li>

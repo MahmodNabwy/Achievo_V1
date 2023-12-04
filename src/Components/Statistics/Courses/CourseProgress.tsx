@@ -17,13 +17,13 @@ const CourseProgress = (props: CourseProgressProps) => {
     return () => clearTimeout(timer);
   }, []);
   return (
-    <div className="grid grid-cols-1 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2  card-section">
+    <div className="grid grid-cols-1 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 h-full card-section">
       <MainCard icon={coursesIcon} title="Courses" />
-      <div className="col-start-1 col-end-1 xs:col-start-1 sm:col-start-1 lg:p-4">
+      <div className="col-start-1 col-end-1 xs:col-start-1 sm:col-start-1 pr-4 pl-4">
         <div className="flex course-status">Latest Course</div>
       </div>
-      <div className="col-start-1  xs:col-start-1 sm:col-start-1  md:col-start-1 lg:flex lg:col-start-2 lg:p-4  justify-end ">
-        <div className="percentege">{props.lineValue} % Compeleted</div>
+      <div className="col-start-1  xs:col-start-1 sm:col-start-1  md:col-start-1 lg:flex lg:col-start-2  pr-4 pl-4  justify-end ">
+        <div className="flex percentege">{props.lineValue} % Compeleted</div>
       </div>
       <div className="col-span-full pr-4 pl-4">
         <ProgressLine value={props.lineValue} />
