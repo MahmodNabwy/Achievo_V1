@@ -1,105 +1,56 @@
 import * as React from "react";
 import "../../MainCard/MainCard.css";
-
+import innovationIcon from "../../MainCard/Assets/Icons/Innovation.svg";
+import { MainCard } from "../../MainCard/MainCard";
 type InnovationContentProps = {
   approved: string[];
   reviewing: string[];
 };
 const InnovationContent = (props: InnovationContentProps) => {
   return (
-    <div>
-      <div className="flex flex-col md:flex-row p-4 rounded-md relative content-section">
-        {/* First Column */}
-        <div className="md:w-1/2 p-4 relative">
-          <p className="text-center relative reviewing-status">
-            <p>Reviewing innovation management</p>
-            <div className="border-reviewing"></div>
-          </p>
-          <ul className="list-item list-inside relative left-5  ml-4 mb-0">
-            {props.reviewing.map((item) => {
-              return (
-                <li className="flex items-center li-items">
-                  <svg
-                    className="mr-2 reviewing-check"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="11"
-                    height="11"
-                    viewBox="0 0 11 11"
-                    fill="none"
-                  >
-                    <g clip-path="url(#clip0_1_342)">
-                      <path
-                        d="M2.84448 5.12119L4.98032 7.25703L9.25199 2.98535"
-                        stroke="white"
-                        stroke-width="2.73387"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_1_342">
-                        <rect
-                          width="10.252"
-                          height="10.252"
-                          fill="white"
-                          transform="translate(0.708618 -0.00488281)"
-                        />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  {item}
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+    <div className="grid grid-cols-1 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 h-full pb-4 card-section">
+      <MainCard icon={innovationIcon} title="Innovation Management" />
 
-        {/* Second Column */}
-        <div className="md:w-1/2 p-4 relative">
-          <p className="text-center relative approved-status">
-            <p>Approved innovation management</p>
-            <div className="border-approved"></div>
-          </p>
-          <ul className="list-item list-inside relative left-5 ml-4 mb-0">
-            {props.approved.map((item) => {
-              return (
-                <>
-                  <li className="flex items-center li-items">
-                    <svg
-                      className="mr-2 approved-check"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="11"
-                      height="11"
-                      viewBox="0 0 11 11"
-                      fill="none"
-                    >
-                      <g clip-path="url(#clip0_1_367)">
-                        <path
-                          d="M2.49536 5.12119L4.6312 7.25703L8.90287 2.98535"
-                          stroke="white"
-                          stroke-width="2.73387"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_1_367">
-                          <rect
-                            width="10.252"
-                            height="10.252"
-                            fill="white"
-                            transform="translate(0.359192 -0.00488281)"
-                          />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                    {item}
-                  </li>
-                </>
-              );
-            })}
-          </ul>
-        </div>
+      {/* Reviewing innovation management */}
+
+      <div className="col-start-1 text-center xs:col-start-1 sm:col-start-1 lg:col-start-1">
+        <span className="innovation-text">Reviewing innovation management</span>
+        <div className="col-start-1 text-center border-reviewing border-reviewing-xs xs:col-start-1 sm:col-start-1 lg:col-start-1"></div>
+        <ul>
+          {props.reviewing.map((title) => {
+            return (
+              <li className="reviewed-items reviewed-items-xs">
+                <input
+                  type="checkbox"
+                  className="checkbox-warning checkbox checkbox-xs completed-box-xs"
+                  checked
+                />
+
+                <span className="innovation-element">{title}</span>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+      {/* Approved innovation management */}
+      <div className="col-start-1 text-center xs:col-start-1 sm:col-start-1 lg:col-start-2">
+        <span className="innovation-text">Approved innovation management</span>
+        <div className="col-start-1 text-center xs:col-start-1 sm:col-start-1 lg:col-start-2 border-approved border-approved-xs"></div>
+        <ul>
+          {props.approved.map((title) => {
+            return (
+              <li className="Approved-items Approved-items-xs">
+                <input
+                  type="checkbox"
+                  className="checkbox-success checkbox checkbox-xs approved-box-xs"
+                  checked
+                />
+
+                <span className="innovation-element">{title}</span>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </div>
   );

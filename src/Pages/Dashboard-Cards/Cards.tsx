@@ -39,6 +39,18 @@ export const Cards = () => {
           ]}
         />
       </div>
+      <div className="col-span-1">
+        <InnovationContent
+          approved={[
+            "Challenging games",
+            "Motivation",
+            "Rewards for collaboration",
+            "Rewards for collaboration",
+            "Rewards for collaboration",
+          ]}
+          reviewing={["Awareness Campaigns"]}
+        />
+      </div>
     </div>
   );
 };
