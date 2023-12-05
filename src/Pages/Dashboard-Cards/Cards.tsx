@@ -5,20 +5,8 @@ import InnovationContent from "../../Components/Statistics/Innovation/Innovation
 import CourseProgress from "../../Components/Statistics/Courses/CourseProgress";
 
 export const Cards = () => {
-  const InnovationChildren = [
-    <InnovationContent
-      reviewing={["Awareness Campaigns"]}
-      approved={[
-        "Challenging games",
-        "Motivation",
-        "Rewards for collaboration",
-        "Rewards for collaboration",
-        "Rewards for collaboration",
-      ]}
-    />,
-  ];
   return (
-    <div className="my-4 grid grid-cols-2 gap-4">
+    <div className="my-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4">
       <div className="col-span-1">
         <CourseProgress courseName="Password Cracking" lineValue={12} />
       </div>

@@ -30,6 +30,10 @@ export const Sidebar = (props: SidebarProps) => {
         setSelectedElement(e);
         break;
       }
+      case 6: {
+        setSelectedElement(e);
+        break;
+      }
       default: {
         setSelectedElement(0);
         break;
@@ -118,8 +122,8 @@ export const Sidebar = (props: SidebarProps) => {
                 <li
                   className={
                     selectedElement === 0
-                      ? "menu-item menu-active"
-                      : "menu-item"
+                      ? "dashboard-item dashboard-active"
+                      : "dashboard-item"
                   }
                   onClick={() => handleSelectedElement(0)}
                 >
@@ -147,14 +151,17 @@ export const Sidebar = (props: SidebarProps) => {
                       stroke-linejoin="round"
                     />
                   </svg>
-                  <span>Dashboard</span>
+                  <span className="module-name">Dashboard</span>
+                  {selectedElement === 0 ? (
+                    <div className="dashboard-item-border"></div>
+                  ) : null}
                 </li>
                 {/* Courses */}
                 <li
                   className={
                     selectedElement === 1
-                      ? "menu-item menu-active"
-                      : "menu-item"
+                      ? "dashboard-item dashboard-active"
+                      : "dashboard-item"
                   }
                   onClick={() => handleSelectedElement(1)}
                 >
@@ -198,14 +205,17 @@ export const Sidebar = (props: SidebarProps) => {
                       stroke-linejoin="round"
                     />
                   </svg>
-                  <span>Courses</span>
+                  <span className="module-name">Courses</span>
+                  {selectedElement === 1 ? (
+                    <div className="dashboard-item-border"></div>
+                  ) : null}
                 </li>
                 {/* Assessments */}
                 <li
                   className={
                     selectedElement === 2
-                      ? "menu-item menu-active"
-                      : "menu-item"
+                      ? "dashboard-item dashboard-active"
+                      : "dashboard-item"
                   }
                   onClick={() => handleSelectedElement(2)}
                 >
@@ -241,14 +251,17 @@ export const Sidebar = (props: SidebarProps) => {
                       stroke-linejoin="round"
                     />
                   </svg>
-                  <span>Assessments</span>
+                  <span className="module-name">Assessments</span>
+                  {selectedElement === 2 ? (
+                    <div className="dashboard-item-border"></div>
+                  ) : null}
                 </li>
                 {/* Policies & Procedures */}
                 <li
                   className={
                     selectedElement === 3
-                      ? "menu-item menu-active"
-                      : "menu-item"
+                      ? "dashboard-item dashboard-active"
+                      : "dashboard-item"
                   }
                   onClick={() => handleSelectedElement(3)}
                 >
@@ -292,15 +305,18 @@ export const Sidebar = (props: SidebarProps) => {
                       stroke-linejoin="round"
                     />
                   </svg>
-                  <span>Policies & Procedures</span>
+                  <span className="module-name">Policies & Procedures</span>
+                  {selectedElement === 3 ? (
+                    <div className="dashboard-item-border"></div>
+                  ) : null}
                 </li>
 
                 {/* Innovation Management */}
                 <li
                   className={
                     selectedElement === 4
-                      ? "menu-item menu-active"
-                      : "menu-item"
+                      ? "dashboard-item dashboard-active"
+                      : "dashboard-item"
                   }
                   onClick={() => handleSelectedElement(4)}
                 >
@@ -344,15 +360,18 @@ export const Sidebar = (props: SidebarProps) => {
                       stroke-linejoin="round"
                     />
                   </svg>
-                  <span>Innovation Management</span>
+                  <span className="module-name">Innovation Management</span>
+                  {selectedElement === 4 ? (
+                    <div className="dashboard-item-border"></div>
+                  ) : null}
                 </li>
 
                 {/* Certificates */}
                 <li
                   className={
                     selectedElement === 5
-                      ? "menu-item menu-active"
-                      : "menu-item"
+                      ? "dashboard-item dashboard-active"
+                      : "dashboard-item"
                   }
                   onClick={() => handleSelectedElement(5)}
                 >
@@ -380,7 +399,51 @@ export const Sidebar = (props: SidebarProps) => {
                       stroke-linejoin="round"
                     />
                   </svg>
-                  <span>Certificates</span>
+                  <span className="module-name">Certificates</span>
+                  {selectedElement === 5 ? (
+                    <div className="dashboard-item-border"></div>
+                  ) : null}
+                </li>
+
+                {/* Certificates */}
+                <li
+                  className={
+                    selectedElement === 6
+                      ? "dashboard-item dashboard-active"
+                      : "dashboard-item"
+                  }
+                  onClick={() => handleSelectedElement(6)}
+                >
+                  <span className="notification-number">2</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="28"
+                    height="29"
+                    viewBox="0 0 28 29"
+                    fill="none"
+                    className="bell-icon"
+                  >
+                    <path
+                      d="M13.9507 3.31543C8.79347 3.31543 6.55382 7.98429 6.55382 11.0717C6.55382 13.3788 6.88872 12.6997 5.6119 15.5138C4.05252 19.5245 10.3226 21.1629 13.9507 21.1629C17.5788 21.1629 23.8478 19.5233 22.2896 15.5138C21.0104 12.6997 21.3476 13.3788 21.3476 11.0717C21.3476 7.98429 19.1057 3.31543 13.9507 3.31543Z"
+                      stroke="black"
+                      stroke-width="1.19608"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M16.6358 24.2444C16.3094 24.6409 15.8993 24.9602 15.4348 25.1795C14.9704 25.3987 14.4632 25.5124 13.9496 25.5124C13.436 25.5124 12.9288 25.3987 12.4644 25.1795C12 24.9602 11.5898 24.6409 11.2634 24.2444"
+                      stroke="black"
+                      stroke-width="1.19608"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span className="module-name">Announcements</span>
+                  {selectedElement === 6 ? (
+                    <div className="dashboard-item-border"></div>
+                  ) : null}
                 </li>
               </ul>
             </section>
