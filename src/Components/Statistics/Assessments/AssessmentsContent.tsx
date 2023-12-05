@@ -13,8 +13,8 @@ const AssessmentsContent = (props: AssessmentsContentProps) => {
       <MainCard
         icon={assesmentIcon}
         title="Assessments"
-        onDataReceived={() => 2}
         cardId={2}
+        expanded={false}
       />
 
       {/* Completed Assessments */}

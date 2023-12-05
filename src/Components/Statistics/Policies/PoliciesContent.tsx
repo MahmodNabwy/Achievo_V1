@@ -12,8 +12,8 @@ const PoliciesContent = (props: PoliciesContentProps) => {
       <MainCard
         icon={policiesIcon}
         title="Policies & Procedures"
-        onDataReceived={() => 3}
         cardId={3}
+        expanded={false}
       />
 
       {/* Policies & Procedures Acknowledged */}

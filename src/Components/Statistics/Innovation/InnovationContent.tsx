@@ -12,8 +12,8 @@ const InnovationContent = (props: InnovationContentProps) => {
       <MainCard
         icon={innovationIcon}
         title="Innovation Management"
-        onDataReceived={() => 4}
         cardId={4}
+        expanded={false}
       />
 
       {/* Reviewing innovation management */}

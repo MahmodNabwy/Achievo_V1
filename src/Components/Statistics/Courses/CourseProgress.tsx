@@ -7,8 +7,6 @@ import "../../MainCard/MainCard.css";
 type CourseProgressProps = {
   courseName: string;
   lineValue: number;
-  isExpanded: boolean;
-  dataToCardContainer: (data: boolean) => void;
 };
 
 const CourseProgress = (props: CourseProgressProps) => {
@@ -20,26 +18,13 @@ const CourseProgress = (props: CourseProgressProps) => {
     return () => clearTimeout(timer);
   }, []);
 
-  // Callback function to receive data from the child component
-  const dataReceivedFromMainCard = (data: number) => {
-    setParentData(data);
-    if (data === 1) {
-      sendDataToCardsContainer(true);
-    }
-  };
-
-  const sendDataToCardsContainer = (e: boolean) => {
-    props.dataToCardContainer(e);
-  };
-
-  //Todo : If is Expanded = true then return Courses In Expand Mode on UI
   return (
     <div className="grid grid-cols-1 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 h-full card-section">
       <MainCard
         icon={coursesIcon}
         title="Courses"
-        onDataReceived={dataReceivedFromMainCard}
         cardId={1}
+        expanded={false}
       />
       <div className="col-start-1 col-end-1 xs:col-start-1 sm:col-start-1 pr-4 pl-4">
         <div className="flex course-status">Latest Course</div>

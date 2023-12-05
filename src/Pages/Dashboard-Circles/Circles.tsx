@@ -1,6 +1,6 @@
 import React from "react";
 import "./Circles.css";
-import CardWithProgress from "../../Components/Cards/CardWithProgress";
+import CardWithProgress from "../../Components/CricularCard/CardWithProgress";
 type circlesProps = {};
 export const Circles = () => {
   return (

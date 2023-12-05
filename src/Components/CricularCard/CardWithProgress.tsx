@@ -1,7 +1,5 @@
 import React from "react";
-import ProgressCircle from "./ProgressCircle";
-
-import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import { CircularProgressbar } from "react-circular-progressbar";
 import Gradient from "./Assets/GradientSVG";
 import "react-circular-progressbar/dist/styles.css";
 import "./Cards.css";
