@@ -10,7 +10,12 @@ type AssessmentsContentProps = {
 const AssessmentsContent = (props: AssessmentsContentProps) => {
   return (
     <div className="grid grid-cols-1 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 pb-4 card-section">
-      <MainCard icon={assesmentIcon} title="Assessments" />
+      <MainCard
+        icon={assesmentIcon}
+        title="Assessments"
+        onDataReceived={() => 2}
+        cardId={2}
+      />
 
       {/* Completed Assessments */}
 

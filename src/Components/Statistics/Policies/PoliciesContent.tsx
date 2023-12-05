@@ -9,7 +9,12 @@ type PoliciesContentProps = {
 const PoliciesContent = (props: PoliciesContentProps) => {
   return (
     <div className="grid grid-cols-1 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2  card-section">
-      <MainCard icon={policiesIcon} title="Policies & Procedures" />
+      <MainCard
+        icon={policiesIcon}
+        title="Policies & Procedures"
+        onDataReceived={() => 3}
+        cardId={3}
+      />
 
       {/* Policies & Procedures Acknowledged */}
       <div className="col-start-1 text-center xs:col-start-1 sm:col-start-1 lg:col-start-1 policies-header-xs">

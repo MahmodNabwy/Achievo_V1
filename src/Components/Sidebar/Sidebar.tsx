@@ -156,6 +156,7 @@ export const Sidebar = (props: SidebarProps) => {
                     <div className="dashboard-item-border"></div>
                   ) : null}
                 </li>
+
                 {/* Courses */}
                 <li
                   className={
@@ -210,6 +211,7 @@ export const Sidebar = (props: SidebarProps) => {
                     <div className="dashboard-item-border"></div>
                   ) : null}
                 </li>
+
                 {/* Assessments */}
                 <li
                   className={
@@ -256,6 +258,7 @@ export const Sidebar = (props: SidebarProps) => {
                     <div className="dashboard-item-border"></div>
                   ) : null}
                 </li>
+
                 {/* Policies & Procedures */}
                 <li
                   className={
@@ -405,7 +408,7 @@ export const Sidebar = (props: SidebarProps) => {
                   ) : null}
                 </li>
 
-                {/* Certificates */}
+                {/* Announcements */}
                 <li
                   className={
                     selectedElement === 6

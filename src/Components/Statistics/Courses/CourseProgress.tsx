@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import coursesIcon from "../../../Components/MainCard/Assets/Icons/Coruses-icon.svg";
-import expandIcon from "../../../Components/MainCard/Assets/Icons/Bookmark.svg";
 import ProgressLine from "./ProgressLine";
 import { MainCard } from "../../MainCard/MainCard";
 import "../../MainCard/MainCard.css";
@@ -8,17 +7,40 @@ import "../../MainCard/MainCard.css";
 type CourseProgressProps = {
   courseName: string;
   lineValue: number;
+  isExpanded: boolean;
+  dataToCardContainer: (data: boolean) => void;
 };
 
 const CourseProgress = (props: CourseProgressProps) => {
+  const [parentData, setParentData] = useState<number>(0);
   const [progress, setProgress] = useState(13);
+
   useEffect(() => {
     const timer = setTimeout(() => setProgress(66), 500);
     return () => clearTimeout(timer);
   }, []);
+
+  // Callback function to receive data from the child component
+  const dataReceivedFromMainCard = (data: number) => {
+    setParentData(data);
+    if (data === 1) {
+      sendDataToCardsContainer(true);
+    }
+  };
+
+  const sendDataToCardsContainer = (e: boolean) => {
+    props.dataToCardContainer(e);
+  };
+
+  //Todo : If is Expanded = true then return Courses In Expand Mode on UI
   return (
     <div className="grid grid-cols-1 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 h-full card-section">
-      <MainCard icon={coursesIcon} title="Courses" />
+      <MainCard
+        icon={coursesIcon}
+        title="Courses"
+        onDataReceived={dataReceivedFromMainCard}
+        cardId={1}
+      />
       <div className="col-start-1 col-end-1 xs:col-start-1 sm:col-start-1 pr-4 pl-4">
         <div className="flex course-status">Latest Course</div>
       </div>

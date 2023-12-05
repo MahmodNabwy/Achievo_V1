@@ -1,13 +1,17 @@
 import React from "react";
-import { Card, CardHeader, CardTitle } from "../../@/components/ui/card";
 import expandIcon from "./Assets/Icons/Bookmark.svg";
 import "../MainCard/MainCard.css";
-import ProgressLine from "../Statistics/Courses/ProgressLine";
 type MainCardProps = {
   title: string;
   icon: string;
+  cardId: number;
+  onDataReceived: (data: number) => void;
 };
 export const MainCard = (props: MainCardProps) => {
+  const sendDataToParent = (e: number) => {
+    props.onDataReceived(e);
+  };
+
   return (
     <div className="col-span-full">
       <div className="grid grid-cols-2 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 p-4">
@@ -20,7 +24,7 @@ export const MainCard = (props: MainCardProps) => {
           </div>
         </div>
         <div className="col-start-2 flex justify-end">
-          <span>
+          <span onClick={() => sendDataToParent(props.cardId)}>
             <img className="expand-icon" src={expandIcon} alt="expand" />
           </span>
         </div>

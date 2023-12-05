@@ -9,7 +9,12 @@ type InnovationContentProps = {
 const InnovationContent = (props: InnovationContentProps) => {
   return (
     <div className="grid grid-cols-1 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 h-full pb-4 card-section">
-      <MainCard icon={innovationIcon} title="Innovation Management" />
+      <MainCard
+        icon={innovationIcon}
+        title="Innovation Management"
+        onDataReceived={() => 4}
+        cardId={4}
+      />
 
       {/* Reviewing innovation management */}
 
