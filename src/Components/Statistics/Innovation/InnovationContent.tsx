@@ -13,7 +13,7 @@ const InnovationContent = (props: InnovationContentProps) => {
 
       {/* Reviewing innovation management */}
 
-      <div className="col-start-1 text-center xs:col-start-1 sm:col-start-1 lg:col-start-1">
+      <div className="col-start-1 text-center xs:col-start-1 sm:col-start-1 lg:col-start-1 innovation-header-xs">
         <span className="innovation-text">Reviewing innovation management</span>
         <div className="col-start-1 text-center border-reviewing border-reviewing-xs xs:col-start-1 sm:col-start-1 lg:col-start-1"></div>
         <ul>

@@ -884,6 +884,176 @@ text-align: center;
   }
  
 }
+/* For Mobile Phones Portrait or Landscape View */
+@media screen
+	and (max-device-width: 640px) {
+     /* Policies-Start */
+
+    .policies-item-xs {
+      display: grid;
+      --tw-text-opacity: 1;
+      align-items: center;
+      border-radius: .5rem;
+      color: rgb(var(--content1)/var(--tw-text-opacity));
+      cursor: pointer;
+      flex-direction: row;
+      font-size: .875rem ;
+      gap: .5rem ;
+      line-height: 1.25rem ;     
+      transition-duration: .15s;
+      transition-property: transform,opacity,visibility;
+      transition-timing-function: cubic-bezier(.4,0,.2,1);
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+      will-change: transform;
+    }
+    .policies-item-unread-xs{
+      display: grid;
+      --tw-text-opacity: 1;
+      align-items: center;
+      border-radius: .5rem;
+      color: rgb(var(--content1)/var(--tw-text-opacity));
+      cursor: pointer;
+      flex-direction: row;
+      font-size: .875rem ;
+      gap: .5rem ;
+      line-height: 1.25rem ;     
+      transition-duration: .15s;
+      transition-property: transform,opacity,visibility;
+      transition-timing-function: cubic-bezier(.4,0,.2,1);
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+      will-change: transform;
+    }
+    .policies-text-xs{
+      color: #000;
+      font-family: Cairo;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 1;
+    }  
+    .policies-header-xs{
+      margin-top: 25px;
+    }
+    .unread-box-xs{
+      margin-left: 40px;
+      margin-top: 10px;
+    }
+    .acknowledge-box-xs{
+      margin-left: 65px;
+  
+    }
+    .acknowledge-element-xs{
+      color: #000;
+     font-family: Cairo;
+     font-size: 1rem;
+     font-style: normal;
+     font-weight: 300;
+     text-align: center;
+     text-wrap: unset;
+    }
+    .border-acknowledged-xs{
+      position: relative;
+      border: 1px solid #000;
+      margin-left: 20px;
+      width: 150px;
+      height: 0.759px;
+    }
+    .border-unread-xs{
+      position: relative;
+      border: 1px solid #000;
+      margin-left: 20px;
+      width: 150px;
+      height: 0.759px;
+      margin-bottom: 1px;
+    }
+     /* Policies-End */
+     /* Innovation-Start */
+     .innovation-text{
+      color: #000;
+      font-family: Cairo;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal; 
+      text-wrap: balance;
+     }
+     .innovation-header-xs{
+      margin-top: 25px;
+     }
+     /* Innovation-End */
+     /* Assessments-Start */
+     .border-completed-xs{
+      position: relative;
+      border: 1px solid #000;
+      margin-left: 10px;
+      width: 153px;
+      height: 0.759px;
+    }
+    .border-uncompleted-xs{
+      position: relative;
+      border: 1px solid #000;
+      margin-left: 10px;
+      width: 153px;
+      height: 0.759px;
+    }
+    .continue-assesments-xs {
+      margin-top: 10px;
+      margin-left: 10px;
+      background-color: #3186EA;
+      color: #FFF;
+      text-align: center;
+      font-family: Cairo;
+      font-size: 0.8rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-wrap: nowrap;
+      width: unset;
+    }
+    .assessment-text {
+      text-wrap: balance;
+    }
+     /* Assessments-End */
+}
+
+/* For iPhone 4 Portrait or Landscape View */
+@media screen and (min-device-width: 320px) 
+	and (-webkit-min-device-pixel-ratio: 2) {
+	.gfg-div {
+		width: 400px;
+		height: 400px;
+		background-color: brown;
+		color: black;
+	}
+}
+
+/* For iPhone 5 Portrait or Landscape View */
+@media (device-height: 568px) 
+	and (device-width: 320px) 
+	and (-webkit-min-device-pixel-ratio: 2) {
+	.gfg-div {
+		width: 400px;
+		height: 400px;
+		background-color: cornflowerblue;
+		color: black;
+	}
+}
+
+/* For iPhone 6 and 6 plus Portrait or Landscape View */
+@media (min-device-height: 667px) 
+	and (min-device-width: 375px) 
+	and (-webkit-min-device-pixel-ratio: 3) {
+	.gfg-div {
+		width: 400px;
+		height: 400px;
+		background-color: darkgoldenrod;
+		color: black;
+	}
+};
 
 
  
