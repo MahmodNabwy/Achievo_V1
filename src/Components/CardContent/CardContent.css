@@ -20,13 +20,64 @@
 .border-completed-b-4{
     border-bottom-width: 1px;
     padding-top: -1px;
-    
+
 }
 .completed-text{
-   
+
     text-wrap: nowrap;
-    justify-content: space-between; 
+    justify-content: space-between;
     border-bottom: 0.5px solid #000;
-   
+
 }
 /* Test Table  End*/
+.rightSection{
+    display: flex;
+    justify-content: space-around;
+    /* width:32rem; */
+}
+.left-section{
+    display: flex;
+    justify-content: center;
+}
+.continue-btn{
+display: flex;
+width: 120px;
+height: 31px;
+flex-direction: column;
+justify-content: center;
+flex-shrink: 0;
+color: #FFF;
+text-align: center;
+font-family: Cairo;
+font-size: 0.9rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+border-radius: 15px;
+background-color: #3186EA;
+align-items: center;
+}
+.table-head {
+  position: relative;
+}
+
+.table-head::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 75px;
+  bottom: 0;
+  border-bottom: 1px solid #000;
+}
+.table-head-completed{
+  position: relative;
+
+}
+.table-head-completed::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: -70px;
+    bottom: 0;
+    border-bottom: 1px solid #000;
+  }

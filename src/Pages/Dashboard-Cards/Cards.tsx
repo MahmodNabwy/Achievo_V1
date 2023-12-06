@@ -43,10 +43,10 @@ export const Cards = () => {
         {/* <CourseProgress courseName="Password Cracking" lineValue={12} /> */}
       </div>
       <div className="col-span-1">
-        {/* <AssessmentsContent
+        <AssessmentsContent
           completed={["Security Awareness Test", "Malicious emails", "Spam"]}
           unCompleted={["Personality Test", "Working From Home"]}
-        /> */}
+        />
       </div>
       {/* 
       <div className="col-span-1">

@@ -22,139 +22,116 @@ type CardContentProps = {
 };
 export const CardContent = (props: CardContentProps) => {
   return (
-    <div
-      className={
-        props.hasThirdColumn === true
-          ? "grid grid-cols-1 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 pb-4 card-section"
-          : "grid grid-cols-1 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  card-section"
-      }
-    >
-      <MainCard
-        icon={props.cardIcon}
-        title={props.cardTitle}
-        cardId={props.cardId}
-        expanded={true}
-      />
+    <div className="col-span-12">
+      <div
+        className={
+          props.hasThirdColumn === true
+            ? "grid grid-cols-1 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 pb-4 card-section"
+            : "grid grid-cols-1 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  card-section"
+        }
+      >
+        <MainCard
+          icon={props.cardIcon}
+          title={props.cardTitle}
+          cardId={props.cardId}
+          expanded={true}
+        />
 
-      {/* First Section */}
-      <div className="col-start-1 text-center xs:col-start-1 sm:col-start-1 lg:col-start-1">
-        <span className="assessment-text">{props.firstSection.title}</span>
-        {/* <div className="col-start-1 text-center border-completed border-completed-xs xs:col-start-1 sm:col-start-1 lg:col-start-1"></div> */}
-        <ul>
-          {props.firstSection.data.slice(0, 4).map((item) => {
-            return (
-              <li className="menu-item menu-item-xs">
-                <input
-                  type="checkbox"
-                  className="checkbox-success checkbox checkbox-xs completed-box-xs"
-                  checked
-                />
+        {/* Completed Assessments Table */}
+        <div className="col-start-1 left-section">
+          <table className="table-auto">
+            <thead className="table-head-completed">
+              <tr>
+                <th style={{ display: "flex" }}>Completed Assessments</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    className="checkbox-success checkbox checkbox-xs completed-box-xs"
+                    checked
+                    style={{ marginTop: "7px", marginRight: "10px" }}
+                  />
 
-                <span
-                  className="assessments-element"
-                  style={{ marginRight: "-6px" }}
-                >
-                  {item}
-                </span>
-              </li>
-            );
-          })}
-          {props.firstSection.data.length > 4 ? (
-            <>
-              <li className="policies-item-unread policies-item-unread-xs ">
-                <a href="#" className="read-more read-more-xs">
-                  Read More.
-                </a>
-              </li>
-            </>
-          ) : null}
+                  <span>Security Awareness Test</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    className="checkbox-success checkbox checkbox-xs completed-box-xs"
+                    checked
+                    style={{ marginTop: "7px", marginRight: "10px" }}
+                  />
+                  <span> Malicious emails</span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="checkbox"
+                    className="checkbox-success checkbox checkbox-xs completed-box-xs"
+                    checked
+                    style={{ marginTop: "7px", marginRight: "10px" }}
+                  />
+                  <span>Spam</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-          {/* <li className="menu-item menu-item-xs">
-            <input
-              type="checkbox"
-              className="checkbox-success checkbox checkbox-xs completed-box-xs"
-              checked
-            />
-
-            <span className="assessments-element">Malicious emails</span>
-          </li>
-          <li className="menu-item menu-item-xs">
-            <input
-              type="checkbox"
-              className="checkbox-success checkbox checkbox-xs completed-box-xs"
-              checked
-            />
-
-            <span className="assessments-element">Spam</span>
-          </li> */}
-        </ul>
-      </div>
-
-      {/* Middle Section */}
-      <div className="col-start-1 text-center xs:col-start-1 sm:col-start-1 lg:col-start-2">
-        <span className="assessment-text">{props.middleSection.title}</span>
-        {/* <div className="col-start-1 text-center xs:col-start-1 sm:col-start-1 lg:col-start-2 border-uncompleted border-uncompleted-xs"></div> */}
-        <ul>
-          {props.middleSection.data.slice(0, 4).map((item) => {
-            return (
-              <li className="menu-item menu-item-xs">
-                <input
-                  type="checkbox"
-                  className="checkbox-warning checkbox checkbox-xs completed-box-xs"
-                  checked
-                />
-
-                <span className="assessments-element">{item}</span>
-              </li>
-            );
-          })}
-          {props.middleSection.data.length > 4 ? (
-            <>
-              <li className="policies-item-unread policies-item-unread-xs ">
-                <a href="#" className="read-more read-more-xs">
-                  Read More.
-                </a>
-              </li>
-            </>
-          ) : null}
-        </ul>
-      </div>
-
-      {/* Last Section If Exist */}
-      {props.hasThirdColumn === true && props.lastSection != null ? (
-        <>
-          {/* Last Section */}
-          <div className="col-start-1 text-center xs:col-start-1 sm:col-start-1 lg:col-start-3">
-            <span className="assessment-text">{props.lastSection.title}</span>
-            {/* <div className="col-start-1 text-center xs:col-start-1 sm:col-start-1 lg:col-start-2 border-uncompleted border-uncompleted-xs"></div> */}
-            <ul>
-              {props.lastSection.data.slice(0, 4).map((item) => {
-                return (
-                  //Todo : Work On This Section To Have Button At The End Of Li
-                  <li className="menu-item menu-item-xs">
+        {/* UnCompleted Assessments  Table */}
+        <div className="col-start-2">
+          <div className="rightSection">
+            <table className="table-auto w-full">
+              <thead className="table-head">
+                <tr className="right-tr">
+                  <th style={{ display: "flex" }}>Uncompleted assessments</th>
+                  <th style={{ textAlign: "left" }}>Deadline</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
                     <input
                       type="checkbox"
                       className="checkbox-warning checkbox checkbox-xs completed-box-xs"
                       checked
+                      style={{ marginTop: "7px", marginRight: "10px" }}
                     />
 
-                    <span className="assessments-element">{item}</span>
-                  </li>
-                );
-              })}
+                    <span>Personality Test</span>
+                  </td>
+                  <td style={{ display: "inline-flex", marginTop: "10px" }}>
+                    <span style={{ marginRight: "25px" }}>30/07/2023</span>
+                    <button className="continue-btn">Continue</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      type="checkbox"
+                      className="checkbox-warning checkbox checkbox-xs completed-box-xs"
+                      checked
+                      style={{ marginTop: "7px", marginRight: "10px" }}
+                    />
 
-              <li className="menu-item menu-item-xs">
-                <input
-                  type="checkbox"
-                  className="checkbox-warning checkbox checkbox-xs completed-box-xs"
-                  checked
-                />
-                <span className="assessments-element">Working from Home</span>
-              </li>
-            </ul>
+                    <span>Personality Test</span>
+                  </td>
+                  <td style={{ display: "inline-flex", marginTop: "10px" }}>
+                    <span style={{ marginRight: "25px" }}>30/07/2023</span>
+                    <button className="continue-btn">Continue</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-        </>
-      ) : null}
+        </div>
+      </div>
     </div>
   );
 };
