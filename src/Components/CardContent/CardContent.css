@@ -81,3 +81,23 @@ align-items: center;
     bottom: 0;
     border-bottom: 1px solid #000;
   }
+
+
+@media (max-width: 500px) {
+    .table-head::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 75px;
+        bottom: 0;
+        border-bottom: 1px solid #000;
+    }
+    .table-head-completed::after{
+        content: "";
+        position: absolute;
+        left: -50px;
+        right: 0px;
+        bottom: 0;
+        border-bottom: 1px solid #000;
+    }
+}

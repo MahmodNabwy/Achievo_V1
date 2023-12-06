@@ -85,7 +85,7 @@ export const CardContent = (props: CardContentProps) => {
         </div>
 
         {/* UnCompleted Assessments  Table */}
-        <div className="col-start-2">
+        <div className="col-start-1 lg:col-start-2 sm:col-start-1">
           <div className="rightSection">
             <table className="table-auto w-full">
               <thead className="table-head">

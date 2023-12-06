@@ -40,7 +40,7 @@ export const Cards = () => {
           <CourseProgress courseName="Password Cracking" lineValue={12} />
         </div>
       </div>
-      <div className="col-span-3 flex-1">
+      <div className="col-span-1 sm:col-span-1 lg:col-span-3 flex-1">
         <CardContent
           cardTitle="Assessments"
           cardId={2}
