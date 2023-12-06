@@ -22,11 +22,11 @@ type CardContentProps = {
 };
 export const CardContent = (props: CardContentProps) => {
   return (
-    <div className="col-span-12">
+    <div className="col-span-12 h-full">
       <div
         className={
           props.hasThirdColumn === true
-            ? "grid grid-cols-1 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 pb-4 card-section"
+            ? "grid grid-cols-1 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 pb-4 h-full card-section"
             : "grid grid-cols-1 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  card-section"
         }
       >
@@ -46,7 +46,7 @@ export const CardContent = (props: CardContentProps) => {
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr style={{ display: "flex" }}>
                 <td>
                   <input
                     type="checkbox"
@@ -58,7 +58,7 @@ export const CardContent = (props: CardContentProps) => {
                   <span>Security Awareness Test</span>
                 </td>
               </tr>
-              <tr>
+              <tr style={{ display: "flex" }}>
                 <td>
                   <input
                     type="checkbox"
@@ -69,7 +69,7 @@ export const CardContent = (props: CardContentProps) => {
                   <span> Malicious emails</span>
                 </td>
               </tr>
-              <tr>
+              <tr style={{ display: "flex" }}>
                 <td>
                   <input
                     type="checkbox"

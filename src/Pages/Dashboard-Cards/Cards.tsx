@@ -29,7 +29,18 @@ export const Cards = () => {
   };
   return (
     <div className="my-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-4">
-      <div className="col-span-3">
+      <div>
+        <div className="col-span-1">
+          <CourseProgress courseName="Password Cracking" lineValue={12} />
+        </div>
+        <div className="col-span-1 mt-10">
+          <CourseProgress courseName="Password Cracking" lineValue={12} />
+        </div>
+        <div className="col-span-1 mt-16">
+          <CourseProgress courseName="Password Cracking" lineValue={12} />
+        </div>
+      </div>
+      <div className="col-span-3 flex-1">
         <CardContent
           cardTitle="Assessments"
           cardId={2}
@@ -40,38 +51,9 @@ export const Cards = () => {
           middleSection={AssessmentsMiddleSection}
           lastSection={AssessmentsLastSection}
         />
+
         {/* <CourseProgress courseName="Password Cracking" lineValue={12} /> */}
       </div>
-      <div className="col-span-1">
-        <AssessmentsContent
-          completed={["Security Awareness Test", "Malicious emails", "Spam"]}
-          unCompleted={["Personality Test", "Working From Home"]}
-        />
-      </div>
-      {/* 
-      <div className="col-span-1">
-        <PoliciesContent
-          acknowledged={["Company policy v1.0"]}
-          unread={[
-            "Company policy v1.0",
-            "Attendence Policy",
-            "Zenhr Guide",
-            "Zenhr Guide",
-          ]}
-        />
-      </div>
-      <div className="col-span-1">
-        <InnovationContent
-          approved={[
-            "Challenging games",
-            "Motivation",
-            "Rewards for collaboration",
-            "Rewards for collaboration",
-            "Rewards for collaboration",
-          ]}
-          reviewing={["Awareness Campaigns"]}
-        />
-      </div> */}
     </div>
   );
 };

@@ -19,7 +19,7 @@ const CourseProgress = (props: CourseProgressProps) => {
   }, []);
 
   return (
-    <div className="grid grid-cols-1 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 h-full card-section">
+    <div className="grid grid-cols-1 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-1 h-full card-section">
       <MainCard
         icon={coursesIcon}
         title="Courses"
