@@ -33,7 +33,7 @@ font-family: Cairo;
 font-size: 1rem;
 font-style: normal;
 font-weight: 700;
-line-height: 25px; /* 134.13% */
+line-height: 25px; 
 }
  
 .score{
@@ -42,7 +42,7 @@ font-family: Cairo;
 font-size: 1rem;
 font-style: normal;
 font-weight: 700;
-line-height: 25px; /* 134.13% */
+line-height: 25px;  
 }
 .content-txt{
 color: #000;
@@ -51,11 +51,24 @@ font-size: 1rem;
 font-style: normal;
 font-weight: 400;
 line-height: 25px;
-}
+text-wrap: nowrap;
+}   
 .cricular-card{
 border-radius: 15px;
 border: 1px solid #EAEAEB;
 background: rgba(234, 234, 235, 0.20);
 text-align: center;
 }
+/* @media (max-width: 1200px) {
+     
+     
+    .content-txt{
+        color: #000;
+        font-family: Cairo;
+        font-size: 0.8rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 25px;
+    }
+  } */
  

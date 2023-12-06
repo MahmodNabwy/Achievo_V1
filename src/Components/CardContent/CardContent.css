@@ -6,3 +6,27 @@
 /* Expand Mode Start */
 
 /* Expand Mode End */
+/* Test Table Start  */
+.text-th{
+    display: flex;
+    text-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: -0.5px;
+
+}
+.border-b-4{
+    border-bottom-width: 1px;
+}
+.border-completed-b-4{
+    border-bottom-width: 1px;
+    padding-top: -1px;
+    
+}
+.completed-text{
+   
+    text-wrap: nowrap;
+    justify-content: space-between; 
+    border-bottom: 0.5px solid #000;
+   
+}
+/* Test Table  End*/

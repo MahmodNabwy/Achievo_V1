@@ -13,7 +13,10 @@ const CardWithProgress = (props: CardWithProgressProps) => {
   const idCSS = "hello";
 
   return (
-    <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 p-4 cricular-card">
+    <div
+      className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2  md:grid-cols-1 lg:grid-cols-2 p-4 cricular-card"
+      style={{ display: "flex" }}
+    >
       <div className="col-start-1">
         <div style={{ width: "77px", height: "50px" }}>
           <Gradient />
@@ -40,7 +43,10 @@ const CardWithProgress = (props: CardWithProgressProps) => {
           />
         </div>
       </div>
-      <div className="col-start-2">
+      <div
+        className="col-start-2"
+        style={{ marginLeft: "15px", textAlign: "justify" }}
+      >
         <div>
           <span className="score">{props.score}</span>
           <p className="content-txt">{props.TextOne}</p>
