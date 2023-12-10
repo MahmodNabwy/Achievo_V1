@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import AssessmentsContent from "../../Components/Statistics/Assessments/AssessmentsContent";
 import PoliciesContent from "../../Components/Statistics/Policies/PoliciesContent";
 import InnovationContent from "../../Components/Statistics/Innovation/InnovationContent";
 import CourseProgress from "../../Components/Statistics/Courses/CourseProgress";
 import { CardContent } from "../../Components/CardContent/CardContent";
-import coursesIcon from "./Icons/TwoUsers.svg";
 import assessmentIcon from "./Icons/Assessments.svg";
 
 export const Cards = () => {
@@ -27,6 +25,9 @@ export const Cards = () => {
     title: "Deadline",
     data: ["30/07/2023", "No Deadline"],
   };
+  {
+    /* Make Condition Here if The Maximized Card is Assessment So Return The below code */
+  }
   return (
     <div className="my-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-4">
       <div>
@@ -47,10 +48,10 @@ export const Cards = () => {
           />
         </div>
         <div className="col-span-1 mt-16" style={{ height: "142px" }}>
-          <CourseProgress
-            courseName="Password Cracking"
+          <InnovationContent
+            approved={[""]}
+            reviewing={[""]}
             isMinmized={true}
-            lineValue={12}
           />
         </div>
       </div>
