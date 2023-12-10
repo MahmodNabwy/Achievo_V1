@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import AssessmentsContent from "../../Components/Statistics/Assessments/AssessmentsContent";
 import PoliciesContent from "../../Components/Statistics/Policies/PoliciesContent";
 import InnovationContent from "../../Components/Statistics/Innovation/InnovationContent";
 import CourseProgress from "../../Components/Statistics/Courses/CourseProgress";
 import { CardContent } from "../../Components/CardContent/CardContent";
-import coursesIcon from "./Icons/TwoUsers.svg";
-import assessmentIcon from "./Icons/Assessments.svg";
 import policiesIcon from "./Icons/Policies.svg";
 import { ThreeColumns } from "../../Components/ThreeColumnsContent/ThreeColumns";
 
@@ -42,8 +40,6 @@ export const Cards = () => {
           middleSection={AssessmentsMiddleSection}
           lastSection={AssessmentsLastSection}
         />
-
-        {/* <CourseProgress courseName="Password Cracking" lineValue={12} /> */}
       </div>
       <div>
         {/* Is Minimized === true then add height 142px else remove this height */}
@@ -55,11 +51,10 @@ export const Cards = () => {
           />
         </div>
         <div className="col-span-1 mt-10" style={{ height: "142px" }}>
-          <PoliciesContent
-            acknowledged={[""]}
-            unread={[""]}
+          <AssessmentsContent
+            completed={[""]}
+            unCompleted={[""]}
             isMinmized={true}
-            // lineValue={12}
           />
         </div>
         <div className="col-span-1 mt-16" style={{ height: "142px" }}>
