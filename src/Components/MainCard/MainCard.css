@@ -1097,6 +1097,41 @@ text-align: center;
 
 
 /* Expanded Cards Start*/
+/* Expand Policies Card */
+.left-section{
+  display: flex;
+  justify-content: center;
+}
+.table-head-acknowledge{
+  position: relative;
+
+}
+.table-head-acknowledge::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: -15px;
+    bottom: 0;
+    border-bottom: 1px solid #1b1b1b;
+  }
+.checkbox.checkbox-xs:after {
+  height: 5px;
+  left: 2.5px;
+  top: 1.5px;
+  width: 2px;
+}
+.checkbox-xs{
+  height: 0.55rem;
+  width: 0.55rem;
+}
+.table-head-completed::after{
+content: "";
+position: absolute;
+left: 0;
+right: -12px;
+bottom: 0;
+border-bottom: 1px solid #b0b0b0;
+}
 /* Expanded Cards End*/
 
 

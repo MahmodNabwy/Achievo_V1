@@ -39,10 +39,11 @@ export const Cards = () => {
           />
         </div>
         <div className="col-span-1 mt-10" style={{ height: "142px" }}>
-          <CourseProgress
-            courseName="Password Cracking"
+          <PoliciesContent
+            acknowledged={[""]}
+            unread={[""]}
             isMinmized={true}
-            lineValue={12}
+            // lineValue={12}
           />
         </div>
         <div className="col-span-1 mt-16" style={{ height: "142px" }}>
