@@ -32,7 +32,12 @@ const InnovationContent = (props: InnovationContentProps) => {
             cardId={4}
             expanded={true}
           />
-          <MaxTwoColumns />
+          <MaxTwoColumns
+            firstColumnTitle="Reviewing innovation management"
+            secondColumnTitle="Approved innovation management"
+            firstColData={[""]}
+            secondColData={[""]}
+          />
         </div>
       </div>
     </>

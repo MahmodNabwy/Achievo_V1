@@ -1,5 +1,10 @@
 import "./MaxTwoColumns.scss";
-type MaxTwoColumnsProps = {};
+type MaxTwoColumnsProps = {
+  firstColumnTitle: string;
+  secondColumnTitle: string;
+  firstColData: string[];
+  secondColData: string[];
+};
 export const MaxTwoColumns = (props: MaxTwoColumnsProps) => {
   return (
     <div className="MaxTwoColumns">
@@ -8,7 +13,7 @@ export const MaxTwoColumns = (props: MaxTwoColumnsProps) => {
         <table className="table-auto">
           <thead className="table-head-max">
             <tr>
-              <th className="title">Policies & Procedures Acknowledged</th>
+              <th className="title">{props.firstColumnTitle}</th>
             </tr>
           </thead>
           <tbody>
@@ -48,9 +53,7 @@ export const MaxTwoColumns = (props: MaxTwoColumnsProps) => {
         <table className="table-auto">
           <thead className="table-head-second">
             <tr>
-              <th style={{ display: "flex" }}>
-                Policies & Procedures Acknowledged
-              </th>
+              <th style={{ display: "flex" }}>{props.secondColumnTitle}</th>
             </tr>
           </thead>
           <tbody>
