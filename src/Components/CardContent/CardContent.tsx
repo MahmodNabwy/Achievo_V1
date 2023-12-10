@@ -1,5 +1,6 @@
 import "./CardContent.css";
 import { MainCard } from "../MainCard/MainCard";
+import { BlueButton } from "../BlueButton/BlueButton";
 
 type CardContentProps = {
   cardIcon: string;
@@ -124,7 +125,7 @@ export const CardContent = (props: CardContentProps) => {
                   </td>
                   <td style={{ display: "inline-flex", marginTop: "10px" }}>
                     <span style={{ marginRight: "25px" }}>30/07/2023</span>
-                    <button className="continue-btn">Continue</button>
+                    <BlueButton title="continue" />
                   </td>
                 </tr>
               </tbody>
