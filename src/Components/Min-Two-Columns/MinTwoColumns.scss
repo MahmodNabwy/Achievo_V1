@@ -1,0 +1,65 @@
+.MinTwoColumns{
+    display: contents;
+   
+    .left-section{
+        display: flex;
+        justify-content: center;
+    }
+    .table-head-first{
+        position: relative;
+      
+      }
+      .table-head-first::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: -15px;
+          bottom: 0;
+          border-bottom: 1px solid #1b1b1b;
+        }
+        .title{
+            display: flex;
+            font-size: 0.408rem;
+        }
+        .tr-content{
+            display: flex;
+        }
+        .td-content{
+            display: flex;
+            margin-top: 5px;
+        }
+        .checkbox-xs{
+            height: 0.55rem;
+            width: 0.55rem;
+        }
+        .f-checkBox{
+            margin-right: 10px;
+        }
+        .checkbox.f-checkBox::after{
+            height: 5px;
+            left: 3.5px;
+            top: 0.5px;
+            width: 2px;
+        }
+        .checkbox.checkbox-xs:after {
+            height: 5px;
+            left: 2.5px;
+            top: 0.5px;
+            width: 2px;
+        }
+        .td-content-title{
+            font-size: 0.437rem;
+        }
+        .table-head-second{
+            position: relative;
+          
+        }
+        .table-head-second::after {
+         content: "";
+         position: absolute;
+         left: 0;
+         right: -15px;
+         bottom: 0;
+         border-bottom: 1px solid #1b1b1b;
+        }
+}
