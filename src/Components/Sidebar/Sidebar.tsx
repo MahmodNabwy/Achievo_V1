@@ -48,7 +48,10 @@ export const Sidebar = (props: SidebarProps) => {
         className="sidebar-state"
       />
       <label htmlFor="sidebar-mobile-fixed" className="sidebar-overlay"></label>
-      <aside className="sidebar sidebar-fixed-left sidebar-mobile h-full justify-start max-sm:fixed max-sm:-translate-x-full">
+      <aside
+        className="sidebar sidebar-fixed-left sidebar-mobile h-full justify-start max-sm:fixed max-sm:-translate-x-full"
+        style={{ maxWidth: "17rem" }}
+      >
         <section className="sidebar-title items-center p-4">
           {/* Achievo Logo */}
           <div className="flex flex-col">
