@@ -2,6 +2,7 @@ import * as React from "react";
 import "../../MainCard/MainCard.css";
 import innovationIcon from "../../MainCard/Assets/Icons/Innovation.svg";
 import { MainCard } from "../../MainCard/MainCard";
+import { MinTwoColumns } from "../../Min-Two-Columns/MinTwoColumns";
 type InnovationContentProps = {
   approved: string[];
   reviewing: string[];
@@ -17,108 +18,7 @@ const InnovationContent = (props: InnovationContentProps) => {
           cardId={3}
           expanded={false}
         />
-        {/* //Todo :When Elements is more than three so show read more button */}
-        {/* Left Section Table */}
-        <div className="col-start-1 left-section">
-          <table className="table-auto">
-            <thead className="table-head-acknowledge">
-              <tr>
-                <th style={{ display: "flex", fontSize: "6.532px" }}>
-                  Reviewing innovation management
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr style={{ display: "flex" }}>
-                <td style={{ display: "flex", marginTop: "5px" }}>
-                  <input
-                    type="checkbox"
-                    className="checkbox-success checkbox checkbox-xs completed-box-xs"
-                    checked
-                    style={{ marginRight: "10px" }}
-                  />
-
-                  <span style={{ fontSize: "6.986px" }}>
-                    Security Awareness Test
-                  </span>
-                </td>
-              </tr>
-              <tr style={{ display: "flex" }}>
-                <td style={{ display: "flex", marginTop: "5px" }}>
-                  <input
-                    type="checkbox"
-                    className="checkbox-success checkbox checkbox-xs completed-box-xs"
-                    checked
-                    style={{ marginRight: "10px" }}
-                  />
-                  <span style={{ fontSize: "6.986px" }}> Malicious emails</span>
-                </td>
-              </tr>
-              <tr style={{ display: "flex" }}>
-                <td style={{ display: "flex", marginTop: "5px" }}>
-                  <input
-                    type="checkbox"
-                    className="checkbox-success checkbox checkbox-xs completed-box-xs"
-                    checked
-                    style={{ marginRight: "10px" }}
-                  />
-                  <span style={{ fontSize: "6.986px" }}>Spam</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        {/* Right Section Table */}
-        <div className="col-start-1 lg:col-start-2 sm:col-start-1">
-          <table className="table-auto">
-            <thead className="table-head-acknowledge">
-              <tr>
-                <th style={{ display: "flex", fontSize: "6.532px" }}>
-                  Approved innovation management
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr style={{ display: "flex" }}>
-                <td style={{ display: "flex", marginTop: "5px" }}>
-                  <input
-                    type="checkbox"
-                    className="checkbox-warning checkbox checkbox-xs completed-box-xs"
-                    checked
-                    style={{ marginRight: "10px" }}
-                  />
-
-                  <span style={{ fontSize: "6.986px" }}>
-                    Security Awareness Test
-                  </span>
-                </td>
-              </tr>
-              <tr style={{ display: "flex" }}>
-                <td style={{ display: "flex", marginTop: "5px" }}>
-                  <input
-                    type="checkbox"
-                    className="checkbox-warning checkbox checkbox-xs completed-box-xs"
-                    checked
-                    style={{ marginRight: "10px" }}
-                  />
-                  <span style={{ fontSize: "6.986px" }}> Malicious emails</span>
-                </td>
-              </tr>
-              <tr style={{ display: "flex" }}>
-                <td style={{ display: "flex", marginTop: "5px" }}>
-                  <input
-                    type="checkbox"
-                    className="checkbox-warning checkbox checkbox-xs completed-box-xs"
-                    checked
-                    style={{ marginRight: "10px" }}
-                  />
-                  <span style={{ fontSize: "6.986px" }}>Spam</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <MinTwoColumns />
       </div>
     </>
   ) : (
