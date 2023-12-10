@@ -30,15 +30,10 @@ export const Cards = () => {
   return (
     <div className="my-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-4">
       <div className="col-span-1 sm:col-span-1 lg:col-span-3 flex-1">
-        <ThreeColumns
-          cardTitle="Policies & Procedures"
-          cardId={3}
-          cardIcon={policiesIcon}
-          hasThirdColumn={true}
-          middleColumnWithOption={false}
-          firstSection={AssessmentsFirstSection}
-          middleSection={AssessmentsMiddleSection}
-          lastSection={AssessmentsLastSection}
+        <InnovationContent
+          approved={[""]}
+          reviewing={[""]}
+          isMinmized={false}
         />
       </div>
       <div>

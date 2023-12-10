@@ -1,0 +1,54 @@
+.MaxTwoColumns{
+    display: contents;
+    .left-section{
+        display: flex;
+        justify-content: center;
+    }
+    .table-head-max{
+        position: relative;
+      
+      }
+      .table-head-max::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: -70px;
+          bottom: 0;
+          border-bottom: 1px solid #000;
+        }
+        .title{
+            display: flex;
+           
+        }
+        .tr-content{
+            display: flex;
+
+        }
+        .f-checkBox{
+            margin-right: 10px;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+        .checkbox-xs{
+            width: 0.75rem;
+            height: 0.75rem;
+        }
+        .checkbox.checkbox-xs:after{
+            height: 8px;
+            left: 2.5px;
+            top: 0.5px;
+            width: 5px;
+        }
+        .table-head-second {
+            position: relative;
+          }
+          
+          .table-head-second::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: -40px;
+            bottom: 0;
+            border-bottom: 1px solid #000;
+          }
+}
