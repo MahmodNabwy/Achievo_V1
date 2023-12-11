@@ -29,13 +29,6 @@ export const Cards = () => {
   };
   return (
     <div className="my-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-4">
-      <div className="col-span-1 sm:col-span-1 lg:col-span-3 flex-1">
-        <InnovationContent
-          approved={[""]}
-          reviewing={[""]}
-          isMinmized={false}
-        />
-      </div>
       <div>
         {/* Is Minimized === true then add height 142px else remove this height */}
         <div className="col-span-1" style={{ height: "142px" }}>
@@ -59,6 +52,13 @@ export const Cards = () => {
             isMinmized={true}
           />
         </div>
+      </div>
+      <div className="col-span-1 sm:col-span-1 lg:col-span-3 flex-1">
+        <InnovationContent
+          approved={[""]}
+          reviewing={[""]}
+          isMinmized={false}
+        />
       </div>
     </div>
   );
