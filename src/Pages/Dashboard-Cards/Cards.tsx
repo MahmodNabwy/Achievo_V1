@@ -27,6 +27,48 @@ export const Cards = () => {
     title: "Deadline",
     data: ["30/07/2023", "No Deadline"],
   };
+  const CoursesMaximizeData = {
+    firstColumn: {
+      title: "Completed courses",
+      data: [
+        "Security Awareness Training",
+        "Mailcious emails",
+        "Spam",
+        "Phishing attacks",
+        "API Security",
+      ],
+    },
+    secondColumn: {
+      title: "In progress courses",
+      data: [
+        {
+          title: "Password Cracking",
+          percentage: 20,
+        },
+        {
+          title: "IOT",
+          percentage: 60,
+        },
+        {
+          title: "Physical security",
+          percentage: 1,
+        },
+        {
+          title: "Mobile device security",
+          percentage: 15,
+        },
+        {
+          title: "Communication skills",
+          percentage: 72,
+        },
+      ],
+    },
+    thirdColumn: {
+      title: "Your Rank",
+      score: 4,
+      total: 15,
+    },
+  };
   return (
     <div className="my-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-4">
       <div className="col-span-1 sm:col-span-1 lg:col-span-3 flex-1">
@@ -34,28 +76,31 @@ export const Cards = () => {
           courseName="Password Cracking"
           lineValue={20}
           isMinmized={false}
+          firstColumn={CoursesMaximizeData.firstColumn}
+          secondColumn={CoursesMaximizeData.secondColumn}
+          thirdColumn={CoursesMaximizeData.thirdColumn}
         />
       </div>
       <div>
         {/* Is Minimized === true then add height 142px else remove this height */}
         <div className="col-span-1" style={{ height: "142px" }}>
-          <CourseProgress
-            courseName="Password Cracking"
-            isMinmized={true}
-            lineValue={12}
-          />
-        </div>
-        <div className="col-span-1 mt-10" style={{ height: "142px" }}>
           <AssessmentsContent
             completed={[""]}
             unCompleted={[""]}
             isMinmized={true}
           />
         </div>
-        <div className="col-span-1 mt-16" style={{ height: "142px" }}>
+        <div className="col-span-1 mt-10" style={{ height: "142px" }}>
           <InnovationContent
             approved={[""]}
             reviewing={[""]}
+            isMinmized={true}
+          />
+        </div>
+        <div className="col-span-1 mt-16" style={{ height: "142px" }}>
+          <PoliciesContent
+            acknowledged={[""]}
+            unread={[""]}
             isMinmized={true}
           />
         </div>
