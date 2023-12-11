@@ -2,7 +2,7 @@ import React from "react";
 import { CircularProgressbar } from "react-circular-progressbar";
 import Gradient from "./Assets/GradientSVG";
 import "react-circular-progressbar/dist/styles.css";
-import "./Cards.css";
+import "./Cards.scss";
 type CardWithProgressProps = {
   progress: number;
   score: string;
@@ -48,7 +48,9 @@ const CardWithProgress = (props: CardWithProgressProps) => {
         style={{ marginLeft: "15px", textAlign: "justify" }}
       >
         <div>
-          <span className="score">{props.score}</span>
+          <span className="score">
+            <strong>{props.score}</strong>
+          </span>
           <p className="content-txt">{props.TextOne}</p>
           <p className="content-txt">{props.TextTwo}</p>
         </div>
