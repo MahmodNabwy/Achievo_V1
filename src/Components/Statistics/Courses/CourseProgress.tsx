@@ -297,29 +297,28 @@ const CourseProgress = (props: CourseProgressProps) => {
             </div>
             {/* Third Table */}
             <div className="col-span-1">
-              <table className="table-auto w-full">
-                <thead className="table-end-max">
-                  <tr>
-                    <th className="table-title-mx">Your Rank</th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  <tr></tr>
-                  <tr>
-                    <td colSpan={2} style={{ textAlign: "center" }}>
-                      <div className="circle-container">
-                        <div>Circle</div>
-                        <div>
-                          <span>of 8</span>
+              <div className="row-span-1">
+                <h3 className="rank">Your Rank</h3>
+              </div>
+              <div
+                className="row-span-1 mt-10 flex justify-center"
+                style={{ alignItems: "center" }}
+              >
+                <div className="flex">
+                  <div style={{ textAlign: "center" }}>
+                    <div className="outer-circle">
+                      <div className="divider-circle">
+                        <div className="inner-circle">
+                          <span className="number">2</span>
                         </div>
                       </div>
-                    </td>
-                  </tr>
-
-                  <tr></tr>
-                </tbody>
-              </table>
+                    </div>
+                  </div>
+                  <div className="rank-total">
+                    <span className="rank-number">Of 8</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -115,15 +115,80 @@
         position: relative;        
        display: inline-block;
       }
-      .table-end-max::after {
-        content: "";
+      .rank{
+        position: relative;
+        display: inline-block;
+        font-size: 1.246rem;
+        font-weight: bold;       
+         
+      }
+      .rank::after {
+        content: "";        
         position: absolute;
         left: 213%;
-        bottom: 0;
+        bottom: -8px;
         transform: translateX(-50%);
         width: 427%;
         height: 1px;
         background-color: #000;
+      }
+      .rank-number{
+        color: #000;
+        text-align: center;
+        font-family: Cairo;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      .outer-circle {
+        width: 100px;
+        height: 100px;       
+        background: rgba(24, 24, 34, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+         padding: 10px; 
+         position: relative;
+      }
+      .divider-circle{
+        width: 80px;
+        height: 80px;       
+        background: rgb(255, 255, 255);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px; 
+         
+      }
+  
+      .inner-circle {
+        width: 70px;
+        height: 70px;
+        background: rgba(24, 24, 34, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+       }
+  
+      .number {
+        color: #FFF;
+        text-align: center;
+        font-family: Cairo;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      .rank-total{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
       }
        
 }
