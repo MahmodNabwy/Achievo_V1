@@ -13,7 +13,9 @@ export const MainCard = (props: MainCardProps) => {
     props.expanded === true ? (
       <>
         <div
-          className={props.expanded === true ? "col-span-12" : "col-span-full"}
+          className={
+            props.expanded === true ? "col-span-12 row-span-1" : "col-span-full"
+          }
         >
           <div
             className={

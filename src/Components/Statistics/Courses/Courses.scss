@@ -1,0 +1,129 @@
+/* Maximize Card */
+.courses-section{
+    border-radius: 12.197px;
+    border: 1px solid #EAEAEB;
+    background: rgba(234, 234, 235, 0.20);
+   
+    .table-head-max{
+        position: relative;        
+       display: inline-block;
+    }
+    .table-center-max{
+      position: relative;      
+     display: inline-block;
+    } 
+    .table-head-max::after {
+        content: '';
+        position: absolute;
+        left: 95%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 190%;  
+        height: 1px;  
+        background-color: #000;  
+      }
+      .table-center-max::after {
+        content: '';
+        position: absolute;
+        left: 105%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 213%;  
+        height: 1px;  
+        background-color: #000;  
+      }
+      .status-max{
+        color: #000;
+        font-family: Cairo;
+        font-size: 1.246rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+      }
+      .percentage-max{
+        color: #000;
+        text-align: right;
+        font-family: Cairo;
+        font-size: 1.246rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      .name-max{
+        color: #000;
+        font-family: Cairo;
+        font-size: 1.246rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+      }
+      .name-data {
+        color: #000;
+        font-family: Cairo;
+        font-size: 1.246rem;
+        font-style: normal;
+        font-weight: bold;
+        line-height: normal;
+      }
+      .table-title-mx{
+        color: #000;
+        font-family: Cairo;
+        font-size: 1.246rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+     
+      .checkbox-green:checked{
+        --d-o: 0.3s;
+        --d-t: 0.6s;
+        --d-t-e: cubic-bezier(0.2,0.85,0.32,1.2);
+        --o: 1;
+        --r: 43deg;
+        background-color: #60B527;
+        border-color: #60B527;
+      }
+      .checkbox-yellow:checked{
+        --d-o: 0.3s;
+        --d-t: 0.6s;
+        --d-t-e: cubic-bezier(0.2,0.85,0.32,1.2);
+        --o: 1;
+        --r: 43deg;
+        background-color: #E1CD17;
+        border-color: #E1CD17;
+      }
+      .checkbox-xs{
+        height: 0.90rem;
+        width: 0.85rem;
+        margin-right: 10px;
+      }
+      .checkbox.checkbox-xs:after{
+        height: 11px;
+        left: 3.5px;
+        top: -0.5px;
+        width: 4px;
+      }
+      .td-content-title{
+        color: #000;
+        font-family: Cairo;
+        font-size: 1.246rem;
+        font-style: normal;
+        font-weight: normal;
+        line-height: normal;
+      }
+      .table-end-max{
+        position: relative;        
+       display: inline-block;
+      }
+      .table-end-max::after {
+        content: "";
+        position: absolute;
+        left: 213%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 427%;
+        height: 1px;
+        background-color: #000;
+      }
+       
+}

@@ -1132,7 +1132,18 @@ right: -12px;
 bottom: 0;
 border-bottom: 1px solid #b0b0b0;
 }
-/* Expanded Cards End*/
+.percentage-max{
+  position: relative;
+}
+.resume-course-max{
+  text-decoration: underline;
+  color: #3186EA;
+  font-family: Cairo;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
 
 
 
