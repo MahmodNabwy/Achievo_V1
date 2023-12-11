@@ -9,6 +9,16 @@ type InnovationContentProps = {
   reviewing: string[];
   isMinmized?: boolean;
 };
+const fillData = {
+  firstColumnData: {
+    title: "Reviewing innovation management",
+    data: ["Awareness Campaigns"],
+  },
+  secondColumnData: {
+    title: "Approved innovation management",
+    data: ["Challenging games", "Motivation", "Rewards for collaboration"],
+  },
+};
 const InnovationContent = (props: InnovationContentProps) => {
   return props.isMinmized === true ? (
     <>
@@ -19,7 +29,10 @@ const InnovationContent = (props: InnovationContentProps) => {
           cardId={3}
           expanded={false}
         />
-        <MinTwoColumns />
+        <MinTwoColumns
+          firstColumn={fillData.firstColumnData}
+          secondColumn={fillData.secondColumnData}
+        />
       </div>
     </>
   ) : (
@@ -33,10 +46,8 @@ const InnovationContent = (props: InnovationContentProps) => {
             expanded={true}
           />
           <MaxTwoColumns
-            firstColumnTitle="Reviewing innovation management"
-            secondColumnTitle="Approved innovation management"
-            firstColData={[""]}
-            secondColData={[""]}
+            firstColumn={fillData.firstColumnData}
+            secondColumn={fillData.secondColumnData}
           />
         </div>
       </div>

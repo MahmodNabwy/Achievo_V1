@@ -9,6 +9,16 @@ type AssessmentsContentProps = {
   unCompleted: string[];
   isMinmized?: boolean;
 };
+const fillData = {
+  firstColumnData: {
+    title: "Completed assessments",
+    data: ["Security Awareness Test", "Malicious emails", "Spam"],
+  },
+  secondColumnData: {
+    title: "Uncompleted assessments",
+    data: ["Working from Home", "Personality Test"],
+  },
+};
 const AssessmentsContent = (props: AssessmentsContentProps) => {
   return props.isMinmized === true ? (
     <>
@@ -19,7 +29,10 @@ const AssessmentsContent = (props: AssessmentsContentProps) => {
           cardId={3}
           expanded={false}
         />
-        <MinTwoColumns />
+        <MinTwoColumns
+          firstColumn={fillData.firstColumnData}
+          secondColumn={fillData.secondColumnData}
+        />
       </div>
     </>
   ) : (

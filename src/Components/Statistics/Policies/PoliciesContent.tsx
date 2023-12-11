@@ -8,6 +8,21 @@ type PoliciesContentProps = {
   unread: string[];
   isMinmized?: boolean;
 };
+const fillData = {
+  firstColumnData: {
+    title: "Policies & Procedures Acknowledged",
+    data: ["Company policy v1.0"],
+  },
+  secondColumnData: {
+    title: "Unread policies & procedures ",
+    data: [
+      "Sanctions list v1.0",
+      "Company policy v1.1",
+      "Attendance policy v1.2",
+      "Zenhr Guide",
+    ],
+  },
+};
 const PoliciesContent = (props: PoliciesContentProps) => {
   return props.isMinmized === true ? (
     <>
@@ -18,7 +33,10 @@ const PoliciesContent = (props: PoliciesContentProps) => {
           cardId={3}
           expanded={false}
         />
-        <MinTwoColumns />
+        <MinTwoColumns
+          firstColumn={fillData.firstColumnData}
+          secondColumn={fillData.secondColumnData}
+        />
       </div>
     </>
   ) : (

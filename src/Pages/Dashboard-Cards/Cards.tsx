@@ -4,29 +4,8 @@ import PoliciesContent from "../../Components/Statistics/Policies/PoliciesConten
 import InnovationContent from "../../Components/Statistics/Innovation/InnovationContent";
 import CourseProgress from "../../Components/Statistics/Courses/CourseProgress";
 import { CardContent } from "../../Components/CardContent/CardContent";
-import policiesIcon from "./Icons/Policies.svg";
-import { ThreeColumns } from "../../Components/ThreeColumnsContent/ThreeColumns";
 
 export const Cards = () => {
-  const AssessmentsFirstSection = {
-    title: "Completed assessments",
-    data: [
-      "Security Awareness Test",
-      "Malicious emails",
-      "Spam",
-      "test",
-      "Test",
-      "Test",
-    ],
-  };
-  const AssessmentsMiddleSection = {
-    title: "Uncompleted assessments",
-    data: ["Personality Test", "Working From Home"],
-  };
-  const AssessmentsLastSection = {
-    title: "Deadline",
-    data: ["30/07/2023", "No Deadline"],
-  };
   return (
     <div className="my-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-4">
       <div>
@@ -46,17 +25,23 @@ export const Cards = () => {
           />
         </div>
         <div className="col-span-1 mt-16" style={{ height: "142px" }}>
-          <InnovationContent
-            approved={[""]}
-            reviewing={[""]}
+          <PoliciesContent
+            acknowledged={[""]}
+            unread={[""]}
             isMinmized={true}
           />
         </div>
       </div>
       <div className="col-span-1 sm:col-span-1 lg:col-span-3 flex-1">
         <InnovationContent
-          approved={[""]}
-          reviewing={[""]}
+          approved={[
+            "Challenging games",
+            "Motivation",
+            "Rewards for collaboration",
+            "Rewards for collaboration",
+            "Rewards for collaboration",
+          ]}
+          reviewing={["Awareness Campaigns"]}
           isMinmized={false}
         />
       </div>

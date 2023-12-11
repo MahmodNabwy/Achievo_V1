@@ -1,5 +1,14 @@
 import "./MinTwoColumns.scss";
-type MinTwoColumnsProps = {};
+type MinTwoColumnsProps = {
+  firstColumn: {
+    title: string;
+    data: string[];
+  };
+  secondColumn: {
+    title: string;
+    data: string[];
+  };
+};
 export const MinTwoColumns = (props: MinTwoColumnsProps) => {
   return (
     <div className="MinTwoColumns">
@@ -9,37 +18,37 @@ export const MinTwoColumns = (props: MinTwoColumnsProps) => {
         <table className="table-auto">
           <thead className="table-head-acknowledge">
             <tr>
-              <th className="title">Policies & Procedures Acknowledged</th>
+              <th className="title">{props.firstColumn.title}</th>
             </tr>
           </thead>
           <tbody>
-            <tr className="tr-content">
-              <td className="td-content">
-                <input
-                  type="checkbox"
-                  className="checkbox-success checkbox checkbox-xs completed-box-xs f-checkBox"
-                  checked
-                />
+            {props.firstColumn.data.slice(0, 4).map((item) => {
+              return (
+                <tr className="tr-content">
+                  <td className="td-content">
+                    <input
+                      type="checkbox"
+                      className="checkbox-success checkbox checkbox-xs completed-box-xs f-checkBox"
+                      checked
+                    />
 
-                <span className="td-content-title">
-                  Security Awareness Test
-                </span>
-              </td>
-            </tr>
+                    <span className="td-content-title">{item}</span>
+                  </td>
+                </tr>
+              );
+            })}
 
-            <tr className="tr-content">
-              <td className="td-content">
-                <input
-                  type="checkbox"
-                  className="checkbox-success checkbox checkbox-xs completed-box-xs f-checkBox"
-                  checked
-                />
-
-                <span className="td-content-title">
-                  Security Awareness Test
-                </span>
-              </td>
-            </tr>
+            {props.firstColumn.data.length > 4 ? (
+              <>
+                <tr className="tr-content">
+                  <td className="td-content">
+                    <a href="#" className="td-content-title">
+                      Read More.
+                    </a>
+                  </td>
+                </tr>
+              </>
+            ) : null}
           </tbody>
         </table>
       </div>
@@ -50,47 +59,42 @@ export const MinTwoColumns = (props: MinTwoColumnsProps) => {
           <thead className="table-head-second">
             <tr>
               <th style={{ display: "flex", fontSize: "6.532px" }}>
-                Policies & Procedures Acknowledged
+                {props.secondColumn.title}
               </th>
             </tr>
           </thead>
           <tbody>
-            <tr style={{ display: "flex" }}>
-              <td style={{ display: "flex", marginTop: "5px" }}>
-                <input
-                  type="checkbox"
-                  className="checkbox-warning checkbox checkbox-xs completed-box-xs"
-                  checked
-                  style={{ marginRight: "10px" }}
-                />
+            {props.secondColumn.data.slice(0, 4).map((item) => {
+              return (
+                <tr style={{ display: "flex" }}>
+                  <td style={{ display: "flex", marginTop: "5px" }}>
+                    <input
+                      type="checkbox"
+                      className="checkbox-warning checkbox checkbox-xs completed-box-xs"
+                      checked
+                      style={{ marginRight: "10px" }}
+                    />
 
-                <span style={{ fontSize: "6.986px" }}>
-                  Security Awareness Test
-                </span>
-              </td>
-            </tr>
-            <tr style={{ display: "flex" }}>
-              <td style={{ display: "flex", marginTop: "5px" }}>
-                <input
-                  type="checkbox"
-                  className="checkbox-warning checkbox checkbox-xs completed-box-xs"
-                  checked
-                  style={{ marginRight: "10px" }}
-                />
-                <span style={{ fontSize: "6.986px" }}> Malicious emails</span>
-              </td>
-            </tr>
-            <tr style={{ display: "flex" }}>
-              <td style={{ display: "flex", marginTop: "5px" }}>
-                <input
-                  type="checkbox"
-                  className="checkbox-warning checkbox checkbox-xs completed-box-xs"
-                  checked
-                  style={{ marginRight: "10px" }}
-                />
-                <span style={{ fontSize: "6.986px" }}>Spam</span>
-              </td>
-            </tr>
+                    <span style={{ fontSize: "6.986px" }}>{item}</span>
+                  </td>
+                </tr>
+              );
+            })}
+            {props.secondColumn.data.length >= 4 ? (
+              <>
+                <tr style={{ display: "flex" }}>
+                  <td style={{ display: "flex", marginTop: "5px" }}>
+                    <a
+                      href="#"
+                      className="readMore"
+                      style={{ fontSize: "6.986px" }}
+                    >
+                      Read More.
+                    </a>
+                  </td>
+                </tr>
+              </>
+            ) : null}
           </tbody>
         </table>
       </div>
