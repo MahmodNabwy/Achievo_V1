@@ -130,10 +130,11 @@ const CourseProgress = (props: CourseProgressProps) => {
             <div className="col-span-1">
               <table className="table-auto">
                 <thead className="table-head-max">
-                  <tr>
+                  <tr style={{ display: "flow" }}>
                     <th className="table-title-mx">
                       {props.firstColumn?.title}
                     </th>
+                    <div className="title-border"></div>
                   </tr>
                 </thead>
                 <tbody>
@@ -170,10 +171,11 @@ const CourseProgress = (props: CourseProgressProps) => {
             <div className="col-span-1">
               <table className="table-auto w-full">
                 <thead className="table-center-max">
-                  <tr>
+                  <tr style={{ display: "flow" }}>
                     <th className="table-title-mx">
                       {props.secondColumn?.title}
                     </th>
+                    <div className="title-border"></div>
                   </tr>
                 </thead>
                 <tbody>
@@ -221,7 +223,8 @@ const CourseProgress = (props: CourseProgressProps) => {
             {/* Third Table */}
             <div className="col-span-1">
               <div className="row-span-1">
-                <h3 className="rank">{props.thirdColumn?.title}</h3>
+                <h3 className="rank pb-2">{props.thirdColumn?.title}</h3>
+                <div className="title-border"></div>
               </div>
               <div
                 className="row-span-1 mt-10 flex justify-center"
