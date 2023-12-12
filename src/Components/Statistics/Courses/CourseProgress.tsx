@@ -259,7 +259,7 @@ const CourseProgress = (props: CourseProgressProps) => {
     <>
       <div
         className="grid grid-cols-1 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-1 courses-section"
-        style={{ gridTemplateRows: "auto auto auto auto", height: "263px" }}
+        style={{ gridTemplateRows: "auto auto auto auto", height: "315px" }}
       >
         <div className="col-span-12 row-span-1">
           <MainCard

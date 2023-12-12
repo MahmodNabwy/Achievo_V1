@@ -223,32 +223,7 @@ transition-timing-function: cubic-bezier(.4,0,.2,1);
 -moz-user-select: none;
 user-select: none;
 will-change: transform;
-}
-.assess-btn-section{
- justify-content: flex-end;
- padding-right: 10px;
-}
- 
-.assessments-element{
-color: #000;
-font-family: Cairo;
-font-size: 1rem;
-font-style: normal;
-font-weight: 300;
-text-align: center;
- text-wrap: nowrap; 
-}
-.continue-assesments{
-width: 100%;
-background-color: #3186EA;
-color: #FFF;
-text-align: center;
-font-family: Cairo;
-font-size: 1rem;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-}
+} 
 
 /* Policies-Start*/
 .policies-text{
@@ -609,21 +584,8 @@ text-align: center;
     will-change: transform;
   }
   /* Innovation-End */
-  .continue-assesments-xs{                   
-    background-color: #3186EA;
-    color: #FFF;
-    text-align: center;
-    font-family: Cairo;
-    font-size: 0.8rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-wrap: nowrap;
-    width:unset;
-  }
-  .assess-btn-section-xs{
-  justify-content:center;
-  }
+ 
+  
   .border-completed-xs{
     position: relative;
     border: 1px solid #000;
@@ -685,20 +647,7 @@ text-align: center;
     text-align: center;
     text-wrap: unset;
    }  
-   .continue-assesments-xs{                   
-    margin-top: 10px;
-    margin-left: 20px;
-    background-color: #3186EA;
-    color: #FFF;
-    text-align: center;
-    font-family: Cairo;
-    font-size: 0.8rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-wrap: nowrap;
-    width: unset;
-   }
+ 
    .assess-btn-section-xs{
      justify-content:unset;
    }
@@ -1018,9 +967,7 @@ text-align: center;
       text-wrap: nowrap;
       width: unset;
     }
-    .assessment-text {
-      text-wrap: balance;
-    }
+    
      /* Assessments-End */
 }
 

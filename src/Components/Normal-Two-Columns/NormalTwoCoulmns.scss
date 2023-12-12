@@ -1,0 +1,84 @@
+.normal-two-container{
+    .assessment-normal-text{
+        color: #000;
+        font-family: Cairo;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal; 
+    }
+    .table-normal-completed{
+        position: relative;        
+        display: inline-block;
+        width: 100%;
+    }
+    .table-normal-title{
+        color: #000;
+        font-family: Cairo;
+        font-size: 0.946rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .title-normal-border{
+        border-top: 1px solid;
+        width: 100%;
+        position: relative;
+    }
+    .td-content-title{
+        color: #000;
+        font-family: Cairo;
+        font-size: 1.1rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+    .checkbox-green:checked{
+        --d-o: 0.3s;
+        --d-t: 0.6s;
+        --d-t-e: cubic-bezier(0.2,0.85,0.32,1.2);
+        --o: 1;
+        --r: 43deg;
+        background-color: #60B527;
+        border-color: #60B527;
+    }
+      .checkbox-yellow:checked{
+        --d-o: 0.3s;
+        --d-t: 0.6s;
+        --d-t-e: cubic-bezier(0.2,0.85,0.32,1.2);
+        --o: 1;
+        --r: 43deg;
+        background-color: #E1CD17;
+        border-color: #E1CD17;
+    }
+      .checkbox-xs{
+        height: 0.90rem;
+        width: 0.85rem;
+        margin-right: 10px;
+    }
+      .checkbox.checkbox-xs:after{
+        height: 11px;
+        left: 3.7px;
+        top: -0.5px;
+        width: 4px;
+    }
+      .table-normal-completed{
+        position: relative;        
+        display: inline-block;
+        width: 100%;
+    }    
+      .table-normal-uncompleted{
+        position: relative;      
+        display: inline-block;
+        width: 100%;
+    }
+      .read-more{
+        color: #3186EA;
+        font-family: Cairo;
+        font-size: 14.1px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-decoration-line: underline;
+    }
+}
