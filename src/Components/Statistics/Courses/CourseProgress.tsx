@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import coursesIcon from "../../../Components/MainCard/Assets/Icons/Coruses-icon.svg";
 import ProgressLine from "./ProgressLine";
 import { MainCard } from "../../MainCard/MainCard";
-// import "../../MainCard/MainCard.css";
 import "./Courses.scss";
 
 type CourseProgressProps = {
@@ -15,18 +14,30 @@ type CourseProgressProps = {
     data: { title: string; percentage: number }[];
   };
   thirdColumn?: { title: string; score: number; total: number };
+  isExpanded?: (value: boolean) => void;
 };
 
 const CourseProgress = (props: CourseProgressProps) => {
   const [parentData, setParentData] = useState<number>(0);
   const [progress, setProgress] = useState(13);
+  const [expandStatus, setExpandStatus] = useState<boolean | null>(null);
 
+  const handleCardClick = (value: boolean) => {
+    setExpandStatus(value);
+    sendPropsToContainerCard(value);
+  };
+  const sendPropsToContainerCard = (value: boolean) => {
+    if (props.isExpanded) {
+      props.isExpanded(value);
+    }
+  };
   useEffect(() => {
     const timer = setTimeout(() => setProgress(66), 500);
     return () => clearTimeout(timer);
   }, []);
 
-  return props.isMinmized === true ? (
+  return expandStatus === false ? (
+    /* Minimize Figure */
     <>
       <div className="grid grid-cols-1 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-1 h-full courses-section">
         <MainCard
@@ -72,7 +83,7 @@ const CourseProgress = (props: CourseProgressProps) => {
         </div>
       </div>
     </>
-  ) : props.isMinmized === false ? (
+  ) : expandStatus === true ? (
     //Maximize Figure
     <>
       <div
@@ -267,6 +278,7 @@ const CourseProgress = (props: CourseProgressProps) => {
             title="Courses"
             cardId={1}
             expanded={true}
+            onCourseClick={handleCardClick}
           />
         </div>
         <div className="col-span-12 row-span-2">

@@ -6,31 +6,31 @@ type MainCardProps = {
   icon: string;
   cardId: number;
   expanded: boolean;
+  onCourseClick?: (value: boolean) => void; // Optional and nullable callback function
 };
 export const MainCard = (props: MainCardProps) => {
+  const handleExpandBtn = (cardId: Number) => {
+    switch (cardId) {
+      case 1:
+        sendPropsToCardCourses();
+        break;
+
+      default:
+        break;
+    }
+  };
+  const sendPropsToCardCourses = () => {
+    if (props.onCourseClick) {
+      props.onCourseClick(true);
+    }
+  };
   return (
-    //Full Width
+    //Full Width For Normal Figures and Maximize Figures
     props.expanded === true ? (
       <>
-        <div
-          className={
-            props.expanded === true ? "col-span-12 row-span-1" : "col-span-full"
-          }
-        >
-          <div
-            className={
-              props.expanded === true
-                ? "grid grid-cols-2 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-4 gap-4"
-                : "grid grid-cols-2 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 p-4"
-            }
-          >
-            <div
-              className={
-                props.expanded === true
-                  ? "col-start-1 col-end-3 sm:col-start-1"
-                  : "col-start-1 col-end-1 sm:col-start-1"
-              }
-            >
+        <div className="col-span-12 row-span-1">
+          <div className="grid grid-cols-2 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-4 gap-4">
+            <div className="col-start-1 col-end-3 sm:col-start-1">
               <div className="flex">
                 <img src={props.icon} className="card-icon" alt="card-icon" />
                 <span className="card-title card-title-xs sm:col-start-1">
@@ -38,21 +38,21 @@ export const MainCard = (props: MainCardProps) => {
                 </span>
               </div>
             </div>
-            <div
-              className={
-                props.expanded === true
-                  ? "col-start-3 flex justify-end"
-                  : "col-start-2 flex justify-end"
-              }
-            >
+            <div className="col-start-3 flex justify-end">
               <span>
-                <img className="expand-icon" src={expandIcon} alt="expand" />
+                <img
+                  className="expand-icon"
+                  src={expandIcon}
+                  alt="expand"
+                  onClick={() => handleExpandBtn(props.cardId)}
+                />
               </span>
             </div>
           </div>
         </div>
       </>
     ) : (
+      //Only For Minmized Figures
       //Minimzed Width
       <div
         className="col-span-2"
