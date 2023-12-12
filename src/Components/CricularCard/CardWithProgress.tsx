@@ -13,41 +13,78 @@ const CardWithProgress = (props: CardWithProgressProps) => {
   const idCSS = "hello";
 
   return (
-    <div
-      className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2  md:grid-cols-1 lg:grid-cols-2 p-4 cricular-card"
-      style={{ display: "flex" }}
-    >
-      <div className="col-start-1">
-        <div style={{ width: "77px", height: "50px" }}>
-          <Gradient />
-          <CircularProgressbar
-            strokeWidth={8}
-            value={props.progress}
-            text={`${props.progress}%`}
-            minValue={10}
-            styles={{
-              path: { stroke: `url(#${idCSS})`, height: "100%" },
-              trail: {
-                stroke: "#EAEAEB",
-              },
-              text: {
-                // Text color
-                fill: "#000",
-                // Text size
-                fontSize: "1.5rem",
-                fontWeight: "700",
-                fontStyle: "normal",
-                lineHeight: "normal",
-              },
-            }}
-          />
+    // <div
+    //   className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2  md:grid-cols-1 lg:grid-cols-2 p-4 cricular-card"
+    //   style={{ display: "flex" }}
+    // >
+    //   <div className="col-start-1">
+    //     <div style={{ width: "77px", height: "50px" }}>
+    //       <Gradient />
+    //       <CircularProgressbar
+    //         strokeWidth={8}
+    //         value={props.progress}
+    //         text={`${props.progress}%`}
+    //         minValue={10}
+    //         styles={{
+    //           path: { stroke: `url(#${idCSS})`, height: "100%" },
+    //           trail: {
+    //             stroke: "#EAEAEB",
+    //           },
+    //           text: {
+    //             // Text color
+    //             fill: "#000",
+    //             // Text size
+    //             fontSize: "1.5rem",
+    //             fontWeight: "700",
+    //             fontStyle: "normal",
+    //             lineHeight: "normal",
+    //           },
+    //         }}
+    //       />
+    //     </div>
+    //   </div>
+    //   <div
+    //     className="col-start-2"
+    //     style={{ marginLeft: "15px", textAlign: "justify" }}
+    //   >
+    //     <div>
+    //       <span className="score">
+    //         <strong>{props.score}</strong>
+    //       </span>
+    //       <p className="content-txt">{props.TextOne}</p>
+    //       <p className="content-txt">{props.TextTwo}</p>
+    //     </div>
+    //   </div>
+    // </div>
+    <div className="cricular-card p-4 flex" style={{ alignItems: "center" }}>
+      <div className="flex">
+        <div style={{ textAlign: "center" }}>
+          <div style={{ width: "80px", height: "75px" }}>
+            <Gradient />
+            <CircularProgressbar
+              strokeWidth={8}
+              value={props.progress}
+              text={`${props.progress}%`}
+              minValue={10}
+              styles={{
+                path: { stroke: `url(#${idCSS})`, height: "100%" },
+                trail: {
+                  stroke: "#EAEAEB",
+                },
+                text: {
+                  // Text color
+                  fill: "#000",
+                  // Text size
+                  fontSize: "1.5rem",
+                  fontWeight: "700",
+                  fontStyle: "normal",
+                  lineHeight: "normal",
+                },
+              }}
+            />
+          </div>
         </div>
-      </div>
-      <div
-        className="col-start-2"
-        style={{ marginLeft: "15px", textAlign: "justify" }}
-      >
-        <div>
+        <div style={{ marginLeft: "15px", textAlign: "justify" }}>
           <span className="score">
             <strong>{props.score}</strong>
           </span>
