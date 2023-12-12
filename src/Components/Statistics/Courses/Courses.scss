@@ -3,7 +3,47 @@
     border-radius: 12.197px;
     border: 1px solid #EAEAEB;
     background: rgba(234, 234, 235, 0.20);
-   
+    
+    .course-status-min{
+      text-wrap: nowrap;
+      color: #000;
+      font-family: Cairo;
+      font-size: 6.5px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      }
+      .percentege-min{
+        text-wrap: nowrap;
+        color: #000;
+        text-align: right;
+        font-family: Cairo;
+        font-size: 5.5px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: normal;
+        }
+        .course-name-min{
+          color: #000;
+          font-family: Cairo;
+          font-size: 6.5px;
+          font-style: normal;
+          font-weight: bold;
+          line-height: normal;
+          text-wrap: nowrap;
+          }
+          .resuming-min{
+            color: #3186EA;
+            text-align: right;
+            font-family: Cairo;
+            font-size: 5.657px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-decoration-line: underline;
+            text-decoration-line: underline;
+            text-wrap: nowrap;
+            }
     .table-head-max{
         position: relative;        
        display: inline-block;
