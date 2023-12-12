@@ -65,7 +65,6 @@
         left: 95%;
         bottom: 0;
         transform: translateX(-50%);
-        //width: 190%;  
         height: 1px;  
         background-color: #000;  
       }
@@ -87,6 +86,23 @@
         font-weight: 700;
         line-height: normal;
       }
+      .percentage-normal{
+        color: #000;
+        text-align: right;
+        font-family: Cairo;
+        font-size: 1.1rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal; 
+      }
+      .status-normal{
+        color: #000;
+        font-family: Cairo;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 100;
+        line-height: normal;
+      }
       .name-max{
         color: #000;
         font-family: Cairo;
@@ -95,6 +111,15 @@
         font-weight: 300;
         line-height: normal;
       }
+      .name-normal{
+        color: #000;
+        font-family: Cairo;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+      }
+
       .name-data {
         color: #000;
         font-family: Cairo;
@@ -103,6 +128,34 @@
         font-weight: bold;
         line-height: normal;
       }
+      .name-data-normal{
+        color: #000;
+        font-family: Cairo;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+      .resume-course-max{
+        text-decoration: underline;
+        color: #3186EA;
+        font-family: Cairo;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+      .resume-course-normal{
+        color: #3186EA;
+        text-align: right;
+        font-family: Cairo;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-decoration-line: underline;
+      }
+            
       .table-title-mx{
         color: #000;
         font-family: Cairo;
