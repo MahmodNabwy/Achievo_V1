@@ -28,7 +28,10 @@ export const NormalTwoCoulmns = (props: NormalTwoColumnsProps) => {
               <tr>
                 {props.firstColumn.data.slice(0, 4).map((item) => {
                   return (
-                    <td className="flex" style={{ alignItems: "baseline" }}>
+                    <td
+                      className="flex td-sm"
+                      style={{ alignItems: "baseline" }}
+                    >
                       <input
                         type="checkbox"
                         className="checkbox-success checkbox checkbox-xs checkbox-green"
@@ -65,7 +68,10 @@ export const NormalTwoCoulmns = (props: NormalTwoColumnsProps) => {
               <tr className="tr-content">
                 {props.secondColumn.data.slice(0, 4).map((item) => {
                   return (
-                    <td className="flex" style={{ alignItems: "baseline" }}>
+                    <td
+                      className="flex td-sm"
+                      style={{ alignItems: "baseline" }}
+                    >
                       <input
                         type="checkbox"
                         className="checkbox-success checkbox checkbox-xs  checkbox-yellow "

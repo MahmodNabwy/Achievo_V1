@@ -1,6 +1,5 @@
 import * as React from "react";
 import "./Assessments.scss";
-import expandIcon from "../../../Components/MainCard/Assets/Icons/Bookmark.svg";
 import assesmentIcon from "../../MainCard/Assets/Icons/Assessments-icon.svg";
 import { MainCard } from "../../MainCard/MainCard";
 import { MinTwoColumns } from "../../Min-Two-Columns/MinTwoColumns";

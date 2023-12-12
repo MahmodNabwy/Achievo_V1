@@ -81,4 +81,10 @@
         line-height: normal;
         text-decoration-line: underline;
     }
+    @media (max-width: 500px) {
+      .td-sm{
+        align-items: baseline;
+        text-align: left;
+      }
+    }
 }
