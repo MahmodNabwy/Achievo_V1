@@ -22,6 +22,7 @@ const fillData = {
 };
 const InnovationContent = (props: InnovationContentProps) => {
   return props.isMinmized === true ? (
+    /* Minimize Figure */
     <>
       <div className="grid grid-cols-1 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 h-full innovation-content">
         <MainCard
@@ -37,6 +38,7 @@ const InnovationContent = (props: InnovationContentProps) => {
       </div>
     </>
   ) : props.isMinmized === false ? (
+    /* Maximize Figure */
     <>
       <div className="col-span-12 h-full">
         <div className="grid grid-cols-1 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 pb-4 h-full card-section">
