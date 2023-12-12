@@ -5,13 +5,6 @@ type ProgressLineProps = {
   value: number;
 };
 const ProgressLine = (props: ProgressLineProps) => {
-  const [progress, setProgress] = React.useState(props.value);
-
-  React.useEffect(() => {
-    const timer = setTimeout(() => setProgress(66), 500);
-    return () => clearTimeout(timer);
-  }, []);
-
-  return <Progress value={progress} />;
+  return <Progress value={props.value} />;
 };
 export default ProgressLine;

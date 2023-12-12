@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import coursesIcon from "../../../Components/MainCard/Assets/Icons/Coruses-icon.svg";
+import upArroIcon from "../../../Components/MainCard/Assets/Icons/up-arrow.svg";
 import ProgressLine from "./ProgressLine";
 import { MainCard } from "../../MainCard/MainCard";
 import "./Courses.scss";
@@ -14,7 +15,7 @@ type CourseProgressProps = {
     data: { title: string; percentage: number }[];
   };
   thirdColumn?: { title: string; score: number; total: number };
-  isExpanded?: (value: boolean) => void;
+  isExpanded?: (value: boolean | null) => void;
 };
 
 const CourseProgress = (props: CourseProgressProps) => {
@@ -22,11 +23,11 @@ const CourseProgress = (props: CourseProgressProps) => {
   const [progress, setProgress] = useState(13);
   const [expandStatus, setExpandStatus] = useState<boolean | null>(null);
 
-  const handleCardClick = (value: boolean) => {
+  const handleCardClick = (value: boolean | null) => {
     setExpandStatus(value);
     sendPropsToContainerCard(value);
   };
-  const sendPropsToContainerCard = (value: boolean) => {
+  const sendPropsToContainerCard = (value: boolean | null) => {
     if (props.isExpanded) {
       props.isExpanded(value);
     }
@@ -95,7 +96,8 @@ const CourseProgress = (props: CourseProgressProps) => {
             icon={coursesIcon}
             title="Courses"
             cardId={1}
-            expanded={true}
+            upIcon={upArroIcon}
+            expanded={null}
           />
         </div>
 

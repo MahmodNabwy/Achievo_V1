@@ -4,9 +4,10 @@ import "../MainCard/MainCard.css";
 type MainCardProps = {
   title: string;
   icon: string;
+  upIcon?: string;
   cardId: number;
-  expanded: boolean;
-  onCourseClick?: (value: boolean) => void; // Optional and nullable callback function
+  expanded: boolean | null;
+  onCourseClick?: (value: boolean | null) => void; // Optional and nullable callback function
 };
 export const MainCard = (props: MainCardProps) => {
   const handleExpandBtn = (cardId: Number) => {
@@ -21,7 +22,7 @@ export const MainCard = (props: MainCardProps) => {
   };
   const sendPropsToCardCourses = () => {
     if (props.onCourseClick) {
-      props.onCourseClick(true);
+      props.onCourseClick(props.expanded);
     }
   };
   return (
@@ -42,7 +43,7 @@ export const MainCard = (props: MainCardProps) => {
               <span>
                 <img
                   className="expand-icon"
-                  src={expandIcon}
+                  src={props.upIcon != null ? props.upIcon : expandIcon}
                   alt="expand"
                   onClick={() => handleExpandBtn(props.cardId)}
                 />

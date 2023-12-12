@@ -47,9 +47,11 @@ export const Cards = () => {
       total: 15,
     },
   };
-  const [courseExpand, setCourseExpand] = useState(false);
+
+  const [courseExpand, setCourseExpand] = useState<boolean | null>(null);
+
   const [displayVal, setDisplayVal] = useState("unset");
-  const handleExpandedCards = (value: boolean) => {
+  const handleExpandedCards = (value: boolean | null) => {
     setCourseExpand(value);
   };
   return courseExpand === true ? (
@@ -107,7 +109,7 @@ export const Cards = () => {
           <CourseProgress
             courseName="Password Cracking"
             isExpanded={handleExpandedCards}
-            lineValue={12}
+            lineValue={1}
           />
         </div>
         <div className="col-span-1">
