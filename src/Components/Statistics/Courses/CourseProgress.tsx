@@ -72,7 +72,7 @@ const CourseProgress = (props: CourseProgressProps) => {
         </div>
       </div>
     </>
-  ) : (
+  ) : props.isMinmized === false ? (
     //Maximize Figure
     <>
       <div
@@ -251,6 +251,40 @@ const CourseProgress = (props: CourseProgressProps) => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </>
+  ) : (
+    //Normal Figure
+    <>
+      <div
+        className="grid grid-cols-1 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2  card-section"
+        style={{ height: "263px" }}
+      >
+        <MainCard
+          cardId={1}
+          expanded={true}
+          icon={coursesIcon}
+          title="Courses"
+        />
+        <div className="col-start-1 col-end-1 xs:col-start-1 sm:col-start-1 pr-4 pl-4">
+          <div className="flex course-status">Latest Course</div>
+        </div>
+        <div className="col-start-1  xs:col-start-1 sm:col-start-1  md:col-start-1 lg:flex lg:col-start-2  pr-4 pl-4  justify-end ">
+          <div className="flex percentege">{props.lineValue} % Compeleted</div>
+        </div>
+        <div className="col-span-full pr-4 pl-4">
+          <ProgressLine value={props.lineValue} />
+        </div>
+        <div className="col-start-1 col-end-1 sm:col-start-1 pr-4 pl-4">
+          <span>
+            Course Name: <span className="course-name">{props.courseName}</span>
+          </span>
+        </div>
+        <div className="col-start-1 xs:col-start-1 sm:col-start-1 lg:col-start-2 flex lg:justify-end  pr-4 pl-4">
+          <a href="#" className="resuming">
+            Resume Course
+          </a>
         </div>
       </div>
     </>
