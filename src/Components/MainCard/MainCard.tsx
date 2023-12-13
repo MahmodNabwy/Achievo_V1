@@ -54,7 +54,6 @@ export const MainCard = (props: MainCardProps) => {
       </>
     ) : (
       //Only For Minmized Figures
-      //Minimzed Width
       <div
         className="col-span-2"
         style={{

@@ -97,7 +97,8 @@ const CourseProgress = (props: CourseProgressProps) => {
             title="Courses"
             cardId={1}
             upIcon={upArroIcon}
-            expanded={null}
+            expanded={expandStatus}
+            onCourseClick={handleCardClick}
           />
         </div>
 
