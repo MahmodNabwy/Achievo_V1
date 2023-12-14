@@ -4,6 +4,7 @@ import PoliciesContent from "../../Components/Statistics/Policies/PoliciesConten
 import InnovationContent from "../../Components/Statistics/Innovation/InnovationContent";
 import CourseProgress from "../../Components/Statistics/Courses/CourseProgress";
 import "./Cards.scss";
+import { useSelector } from "react-redux";
 export const Cards = () => {
   const CoursesMaximizeData = {
     firstColumn: {
@@ -49,12 +50,12 @@ export const Cards = () => {
   };
 
   const [courseExpand, setCourseExpand] = useState<boolean | null>(null);
+  const stateFromRedux = useSelector((state: any) => state.card);
 
-  const [displayVal, setDisplayVal] = useState("unset");
   const handleExpandedCards = (value: boolean | null) => {
     setCourseExpand(value);
   };
-  return courseExpand === true ? (
+  return stateFromRedux.cardId === 1 && stateFromRedux.type === 2 ? ( //Maximize Course Figure
     <>
       <div className="my-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-4">
         <div className="col-span-1 animate__animated animate__fadeIn sm:col-span-1 lg:col-span-3 flex-1">
@@ -105,20 +106,20 @@ export const Cards = () => {
   ) : (
     <>
       <div className="my-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4">
-        <div className="col-span-1" style={{ display: displayVal }}>
+        <div className="col-span-1 animate__animated animate__fadeIn">
           <CourseProgress
             courseName="Password Cracking"
             isExpanded={handleExpandedCards}
             lineValue={1}
           />
         </div>
-        <div className="col-span-1">
+        <div className="col-span-1 animate__animated animate__fadeIn">
           <AssessmentsContent
             completed={["Security Awareness Test", "Malicious emails", "Spam"]}
             unCompleted={["Personality Test", "Working From Home"]}
           />
         </div>
-        <div className="col-span-1">
+        <div className="col-span-1 animate__animated animate__fadeIn">
           <PoliciesContent
             acknowledged={["Company policy v1.0"]}
             unread={[
@@ -129,7 +130,7 @@ export const Cards = () => {
             ]}
           />
         </div>
-        <div className="col-span-1">
+        <div className="col-span-1 animate__animated animate__fadeIn">
           <InnovationContent
             approved={[
               "Challenging games",

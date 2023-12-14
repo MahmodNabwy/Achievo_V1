@@ -4,7 +4,9 @@ import upArroIcon from "../../../Components/MainCard/Assets/Icons/up-arrow.svg";
 import ProgressLine from "./ProgressLine";
 import { MainCard } from "../../MainCard/MainCard";
 import "./Courses.scss";
-
+import { useDispatch, useSelector } from "react-redux";
+import { maximizeCourses } from "../../../redux/Slices/CardsSlice";
+import { minimizeCourses } from "../../../redux/Slices/CardsSlice";
 type CourseProgressProps = {
   courseName: string;
   lineValue: number;
@@ -19,19 +21,11 @@ type CourseProgressProps = {
 };
 
 const CourseProgress = (props: CourseProgressProps) => {
-  const [parentData, setParentData] = useState<number>(0);
   const [progress, setProgress] = useState(13);
-  const [expandStatus, setExpandStatus] = useState<boolean | null>(null);
+  const [expandStatus, setExpandStatus] = useState<boolean | null>(null); //Todo : Remove this
 
-  const handleCardClick = (value: boolean | null) => {
-    setExpandStatus(value);
-    sendPropsToContainerCard(value);
-  };
-  const sendPropsToContainerCard = (value: boolean | null) => {
-    if (props.isExpanded) {
-      props.isExpanded(value);
-    }
-  };
+  const stateFromRedux = useSelector((state: any) => state.card);
+
   useEffect(() => {
     const timer = setTimeout(() => setProgress(66), 500);
     return () => clearTimeout(timer);
@@ -84,7 +78,7 @@ const CourseProgress = (props: CourseProgressProps) => {
         </div>
       </div>
     </>
-  ) : expandStatus === true ? (
+  ) : stateFromRedux.cardId === 1 && stateFromRedux.type === 2 ? (
     //Maximize Figure
     <>
       <div
@@ -98,7 +92,6 @@ const CourseProgress = (props: CourseProgressProps) => {
             cardId={1}
             upIcon={upArroIcon}
             expanded={expandStatus}
-            onCourseClick={handleCardClick}
           />
         </div>
 
@@ -281,7 +274,6 @@ const CourseProgress = (props: CourseProgressProps) => {
             title="Courses"
             cardId={1}
             expanded={true}
-            onCourseClick={handleCardClick}
           />
         </div>
         <div className="col-span-12 row-span-2">

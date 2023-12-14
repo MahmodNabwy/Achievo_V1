@@ -5,6 +5,8 @@ const initialState = {
   name: "",
   email: "",
   //Assign Card card Status Here and Card Id
+  type: 1, //Refer to expand type (1:normal,2:maximize,3:minimize)
+  cardId: 1, //(1:courses,2:assessments,3:polices,4:innovation)
 };
 
 export const CardsSlice = createSlice({
@@ -12,36 +14,28 @@ export const CardsSlice = createSlice({
   initialState,
   reducers: {
     maximizeCourses: (state, action) => {
-      state.name = action.payload.name;
-      state.email = action.payload.email;
+      state.type = action.payload.type;
     },
     minimizeCourses: (state, action) => {
-      state.name = action.payload.name;
-      state.email = action.payload.email;
+      state.type = action.payload.type;
     },
     maximizeAssessments: (state, action) => {
-      state.name = action.payload.name;
-      state.email = action.payload.email;
+      state.type = action.payload.type;
     },
     minimizeAssessments: (state, action) => {
-      state.name = action.payload.name;
-      state.email = action.payload.email;
+      state.type = action.payload.type;
     },
     maximizePolicies: (state, action) => {
-      state.name = action.payload.name;
-      state.email = action.payload.email;
+      state.type = action.payload.type;
     },
     minimizePolicies: (state, action) => {
-      state.name = action.payload.name;
-      state.email = action.payload.email;
+      state.type = action.payload.type;
     },
     maximizeInnovation: (state, action) => {
-      state.name = action.payload.name;
-      state.email = action.payload.email;
+      state.type = action.payload.type;
     },
     minimizeInnovation: (state, action) => {
-      state.name = action.payload.name;
-      state.email = action.payload.email;
+      state.type = action.payload.type;
     },
   },
 });
