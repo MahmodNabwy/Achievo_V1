@@ -3,6 +3,7 @@ import { Circles } from "../Pages/Dashboard-Circles/Circles";
 import { Cards } from "../Pages/Dashboard-Cards/Cards";
 import { Sidebar } from "../Components/Sidebar/Sidebar";
 import WelcomeBanner from "../Components/WelcomeBanner/WelcomeBanner";
+import { LineProgress } from "../Components/LineProgress/LineProgress";
 
 export const Layout = () => {
   return (

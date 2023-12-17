@@ -1,0 +1,13 @@
+.lineProgress{
+
+    .progress{
+        --tw-bg-opacity: 1;
+        appearance: none;
+        background-color: rgb(var(--gray-5)/var(--tw-bg-opacity));
+        border-radius: 9999px;
+        height: 0.3rem;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+}
