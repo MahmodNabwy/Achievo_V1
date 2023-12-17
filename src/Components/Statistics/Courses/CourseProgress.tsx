@@ -4,25 +4,22 @@ import upArroIcon from "../../../Components/MainCard/Assets/Icons/up-arrow.svg";
 import ProgressLine from "./ProgressLine";
 import { MainCard } from "../../MainCard/MainCard";
 import "./Courses.scss";
-import { useDispatch, useSelector } from "react-redux";
-import { maximizeCourses } from "../../../redux/Slices/CardsSlice";
-import { minimizeCourses } from "../../../redux/Slices/CardsSlice";
+import { useSelector } from "react-redux";
+
 type CourseProgressProps = {
   courseName: string;
   lineValue: number;
-  isMinmized?: boolean;
+
   firstColumn?: { title: string; data: string[] };
   secondColumn?: {
     title: string;
     data: { title: string; percentage: number }[];
   };
   thirdColumn?: { title: string; score: number; total: number };
-  isExpanded?: (value: boolean | null) => void;
 };
 
 const CourseProgress = (props: CourseProgressProps) => {
   const [progress, setProgress] = useState(13);
-  const [expandStatus, setExpandStatus] = useState<boolean | null>(null); //Todo : Remove this
 
   const stateFromRedux = useSelector((state: any) => state.card);
 
@@ -31,7 +28,7 @@ const CourseProgress = (props: CourseProgressProps) => {
     return () => clearTimeout(timer);
   }, []);
 
-  return expandStatus === false ? (
+  return stateFromRedux.minimizeCourse === true ? (
     /* Minimize Figure */
     <>
       <div className="grid grid-cols-1 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-1 h-full courses-section">
@@ -78,7 +75,7 @@ const CourseProgress = (props: CourseProgressProps) => {
         </div>
       </div>
     </>
-  ) : stateFromRedux.cardId === 1 && stateFromRedux.type === 2 ? (
+  ) : stateFromRedux.cardId === 1 && stateFromRedux.maximizeCourse === true ? (
     //Maximize Figure
     <>
       <div
@@ -91,7 +88,7 @@ const CourseProgress = (props: CourseProgressProps) => {
             title="Courses"
             cardId={1}
             upIcon={upArroIcon}
-            expanded={expandStatus}
+            expanded={true}
           />
         </div>
 

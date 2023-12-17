@@ -5,6 +5,7 @@ import { MainCard } from "../../MainCard/MainCard";
 import { MinTwoColumns } from "../../Min-Two-Columns/MinTwoColumns";
 import { MaxTwoColumns } from "../../Max-Two-Columns/MaxTwoColumns";
 import { NormalTwoCoulmns } from "../../Normal-Two-Columns/NormalTwoCoulmns";
+import { useSelector } from "react-redux";
 type InnovationContentProps = {
   approved: string[];
   reviewing: string[];
@@ -21,14 +22,16 @@ const fillData = {
   },
 };
 const InnovationContent = (props: InnovationContentProps) => {
-  return props.isMinmized === true ? (
+  const stateFromRedux = useSelector((state: any) => state.card);
+
+  return stateFromRedux.minimizeInnovation === true ? (
     /* Minimize Figure */
     <>
       <div className="grid grid-cols-1 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 h-full innovation-content">
         <MainCard
           icon={innovationIcon}
           title="Innovation Management"
-          cardId={3}
+          cardId={4}
           expanded={false}
         />
         <MinTwoColumns
@@ -37,7 +40,8 @@ const InnovationContent = (props: InnovationContentProps) => {
         />
       </div>
     </>
-  ) : props.isMinmized === false ? (
+  ) : stateFromRedux.cardId === 4 &&
+    stateFromRedux.maximizeInnovation === true ? (
     /* Maximize Figure */
     <>
       <div className="col-span-12 h-full">
@@ -60,7 +64,7 @@ const InnovationContent = (props: InnovationContentProps) => {
     <>
       <div className="grid grid-cols-1 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2  h-full  pb-4 policies-content">
         <MainCard
-          cardId={3}
+          cardId={4}
           expanded={true}
           icon={innovationIcon}
           title="Innovation Management"

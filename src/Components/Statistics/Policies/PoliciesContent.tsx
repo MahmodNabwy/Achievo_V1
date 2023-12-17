@@ -5,10 +5,10 @@ import { MainCard } from "../../MainCard/MainCard";
 import { MinTwoColumns } from "../../Min-Two-Columns/MinTwoColumns";
 import { NormalTwoCoulmns } from "../../Normal-Two-Columns/NormalTwoCoulmns";
 import { ThreeColumns } from "../../ThreeColumnsContent/ThreeColumns";
+import { useSelector } from "react-redux";
 type PoliciesContentProps = {
   acknowledged: string[];
   unread: string[];
-  isMinmized?: boolean;
 };
 const fillData = {
   firstColumnData: {
@@ -34,7 +34,9 @@ const fillData = {
   },
 };
 const PoliciesContent = (props: PoliciesContentProps) => {
-  return props.isMinmized === true ? (
+  const stateFromRedux = useSelector((state: any) => state.card);
+
+  return stateFromRedux.minimizePolicies === true ? (
     /* Minimize Figure */
     <>
       <div className="grid grid-cols-1 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 h-full policies-content">
@@ -50,7 +52,8 @@ const PoliciesContent = (props: PoliciesContentProps) => {
         />
       </div>
     </>
-  ) : props.isMinmized === false ? (
+  ) : stateFromRedux.cardId === 3 &&
+    stateFromRedux.maximizePolicies === true ? (
     /* Maximize Figure */
     <>
       <ThreeColumns

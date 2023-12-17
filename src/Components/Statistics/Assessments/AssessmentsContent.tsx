@@ -5,10 +5,10 @@ import { MainCard } from "../../MainCard/MainCard";
 import { MinTwoColumns } from "../../Min-Two-Columns/MinTwoColumns";
 import { ContinueButton } from "../../ContinueButton/ContinueButton";
 import { NormalTwoCoulmns } from "../../Normal-Two-Columns/NormalTwoCoulmns";
+import { useSelector } from "react-redux";
 type AssessmentsContentProps = {
   completed: string[];
   unCompleted: string[];
-  isMinmized?: boolean;
 };
 const fillData = {
   firstColumnData: {
@@ -21,14 +21,16 @@ const fillData = {
   },
 };
 const AssessmentsContent = (props: AssessmentsContentProps) => {
-  return props.isMinmized === true ? (
+  const stateFromRedux = useSelector((state: any) => state.card);
+
+  return stateFromRedux.minimizeAssessments === true ? (
     //Minimize Figure
     <>
       <div className="grid grid-cols-1 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 h-full card-section">
         <MainCard
           icon={assesmentIcon}
           title="Assessments"
-          cardId={3}
+          cardId={2}
           expanded={false}
         />
         <MinTwoColumns
@@ -37,7 +39,8 @@ const AssessmentsContent = (props: AssessmentsContentProps) => {
         />
       </div>
     </>
-  ) : props.isMinmized === false ? (
+  ) : stateFromRedux.cardId === 2 &&
+    stateFromRedux.maximizeAssessments === true ? (
     //Maximize Figure
     <>
       <div className="grid grid-cols-1 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 pb-4 card-section">
