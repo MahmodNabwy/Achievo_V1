@@ -1,0 +1,70 @@
+.CoursesCards{
+    height: 143px;
+    border-radius: 10px;
+    border: 3px solid #CCC;
+    background: #FFF;
+    display: flex;
+    .box {
+        height: 143px;
+        width: 22px;
+    }
+    
+    .box .rectangle {
+        background-color: #60b527;
+        height: 140px;
+        left: 0;
+        position: relative;
+        top: 0;
+        width: 22px;
+        border-top-left-radius: 7px;
+        border-bottom-left-radius: 7px;
+    }
+    .data-container{      
+        display: flow;
+        
+        padding-left: 10px;
+    }
+    .data-container h3{
+        color: #000;
+        font-family: Cairo;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        display: flex;
+        width: 537px;
+       
+        flex-direction: column;
+        
+        flex-shrink: 0;
+    }
+    .course-details{
+        display: flex;
+        justify-content: left;
+    }
+    .create-date{
+        color: rgba(0, 0, 0, 0.60);
+        font-family: Cairo;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        display: flex;
+        width: 313px;
+        height: 22px;
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+    .frame {
+        background-image: url('./Assets/images/Rectangle\ 530.png');
+         background-position: 50% 50%;
+        background-size: cover;
+        height: 62%;
+        width: 100%;
+        
+    }
+    
+    
+    
+}

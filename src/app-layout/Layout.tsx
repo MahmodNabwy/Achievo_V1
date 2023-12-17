@@ -4,6 +4,7 @@ import { Cards } from "../Pages/Dashboard-Cards/Cards";
 import { Sidebar } from "../Components/Sidebar/Sidebar";
 import WelcomeBanner from "../Components/WelcomeBanner/WelcomeBanner";
 import { LineProgress } from "../Components/LineProgress/LineProgress";
+import { CoursesCards } from "../Pages/Courses-Cards/CoursesCards";
 
 export const Layout = () => {
   return (
@@ -35,9 +36,10 @@ export const Layout = () => {
             </svg>
           </label>
         </div>
-        <WelcomeBanner userName="Mohamed Mansour" />
+        {/* <WelcomeBanner userName="Mohamed Mansour" />
         <Circles />
-        <Cards />
+        <Cards /> */}
+        <CoursesCards />
       </div>
     </div>
   );
