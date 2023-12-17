@@ -3,9 +3,9 @@ import "./CoursesCards.scss";
 type CoursesCardsProps = {};
 export const CoursesCards = (props: CoursesCardsProps) => {
   return (
-    <div className="row-span-1">
-      <div className="row-span-1">
-        <div className="CoursesCards">
+    <div className="grid grid-cols-1 gap-4">
+      <div className="row-span-1 CoursesCards">
+        <div className="row-span-1" style={{ display: "contents" }}>
           <div className="box">
             <div className="rectangle" />
           </div>
@@ -18,8 +18,10 @@ export const CoursesCards = (props: CoursesCardsProps) => {
           </div>
           <div className="frame"></div>
         </div>
-        <br />
       </div>
+      <div className="row-span-1 CoursesCards">Card Here</div>
+      <div className="row-span-1 CoursesCards">Card Here</div>
+      <div className="row-span-1 CoursesCards">Card Here</div>
     </div>
   );
 };
