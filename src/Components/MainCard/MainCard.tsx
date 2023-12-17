@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import expandIcon from "./Assets/Icons/Bookmark.svg";
 import "../MainCard/MainCard.css";
 import { useDispatch, useSelector } from "react-redux";
@@ -26,91 +26,134 @@ export const MainCard = (props: MainCardProps) => {
 
   const dispatch = useDispatch();
 
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+
+      // Define your screen size breakpoints
+      const smallScreenMaxWidth = 600;
+      const mediumScreenMaxWidth = 1024;
+
+      // Check if the screen is small
+      if (screenWidth <= smallScreenMaxWidth) {
+        setIsSmallScreen(true);
+      }
+
+      // Check if the screen is medium
+      else if (
+        screenWidth > smallScreenMaxWidth &&
+        screenWidth <= mediumScreenMaxWidth
+      ) {
+        setIsMediumScreen(true);
+      } else {
+        setIsSmallScreen(false);
+        setIsMediumScreen(false);
+      }
+    };
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Initial check on component mount
+    handleResize();
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const handleExpandBtn = (cardId: Number, type: number) => {
-    switch (cardId) {
-      case 1:
-        if (type === 2) {
-          //Check if Now Is Maximize and we return to normal figure
-          if (stateFromRedux.maximizeCourse === true) {
-            dispatch(resetCards({ type }));
-          } else {
-            //Maximize
-            setExpandType(2);
-            dispatch(maximizeCourses({ type }));
-            //Set Type = 3 for minimize another cards
-            type = 3;
-            dispatch(minimizeAssessments({ type }));
-            dispatch(minimizeInnovation({ type }));
-            dispatch(minimizePolicies({ type }));
-          }
-        } else if (type === 1) {
-          setExpandType(type);
-          dispatch(minimizeCourses({ type }));
-        }
-        break;
-      case 2:
-        if (type === 2) {
-          if (stateFromRedux.maximizeAssessments === true) {
+    //To Enable Expand Action only on large screens
+    if (isSmallScreen === false && isMediumScreen === false) {
+      switch (cardId) {
+        case 1:
+          if (type === 2) {
             //Check if Now Is Maximize and we return to normal figure
-            dispatch(resetCards({ type }));
-          } else {
-            setExpandType(2);
-            dispatch(maximizeAssessments({ type }));
-            //Set Type = 3 for minimize another cards
-            type = 3;
-            dispatch(minimizeInnovation({ type }));
-            dispatch(minimizePolicies({ type }));
+            if (stateFromRedux.maximizeCourse === true) {
+              dispatch(resetCards({ type }));
+            } else {
+              //Maximize
+              setExpandType(2);
+              dispatch(maximizeCourses({ type }));
+              //Set Type = 3 for minimize another cards
+              type = 3;
+              dispatch(minimizeAssessments({ type }));
+              dispatch(minimizeInnovation({ type }));
+              dispatch(minimizePolicies({ type }));
+            }
+          } else if (type === 1) {
+            setExpandType(type);
             dispatch(minimizeCourses({ type }));
           }
-        } else if (type === 1) {
-          setExpandType(2);
-          dispatch(minimizeAssessments({ type }));
-        }
-        break;
-
-      case 3:
-        if (type === 2) {
-          //Check if Now Is Maximize and we return to normal figure
-          if (stateFromRedux.maximizePolicies === true) {
-            dispatch(resetCards({ type }));
-          } else {
+          break;
+        case 2:
+          if (type === 2) {
+            if (stateFromRedux.maximizeAssessments === true) {
+              //Check if Now Is Maximize and we return to normal figure
+              dispatch(resetCards({ type }));
+            } else {
+              setExpandType(2);
+              dispatch(maximizeAssessments({ type }));
+              //Set Type = 3 for minimize another cards
+              type = 3;
+              dispatch(minimizeInnovation({ type }));
+              dispatch(minimizePolicies({ type }));
+              dispatch(minimizeCourses({ type }));
+            }
+          } else if (type === 1) {
             setExpandType(2);
-            dispatch(maximizePolicies({ type }));
-            //Set Type = 3 for minimize another cards
-            type = 3;
-            dispatch(minimizeInnovation({ type }));
             dispatch(minimizeAssessments({ type }));
-            dispatch(minimizeCourses({ type }));
           }
-        } else if (type === 1) {
-          setExpandType(1);
-          dispatch(minimizePolicies({ type }));
-        }
-        break;
+          break;
 
-      case 4:
-        if (type === 2) {
-          if (stateFromRedux.maximizeInnovation === true) {
-            dispatch(resetCards({ type }));
-          } else {
-            setExpandType(2);
-            dispatch(maximizeInnovation({ type }));
-            //Set Type = 3 for minimize another cards
-            type = 3;
+        case 3:
+          if (type === 2) {
+            //Check if Now Is Maximize and we return to normal figure
+            if (stateFromRedux.maximizePolicies === true) {
+              dispatch(resetCards({ type }));
+            } else {
+              setExpandType(2);
+              dispatch(maximizePolicies({ type }));
+              //Set Type = 3 for minimize another cards
+              type = 3;
+              dispatch(minimizeInnovation({ type }));
+              dispatch(minimizeAssessments({ type }));
+              dispatch(minimizeCourses({ type }));
+            }
+          } else if (type === 1) {
+            setExpandType(1);
             dispatch(minimizePolicies({ type }));
-            dispatch(minimizeAssessments({ type }));
-            dispatch(minimizeCourses({ type }));
           }
-        } else if (type === 1) {
-          setExpandType(1);
-          dispatch(minimizeInnovation({ type }));
-        }
-        break;
+          break;
 
-      default:
-        break;
+        case 4:
+          if (type === 2) {
+            if (stateFromRedux.maximizeInnovation === true) {
+              dispatch(resetCards({ type }));
+            } else {
+              setExpandType(2);
+              dispatch(maximizeInnovation({ type }));
+              //Set Type = 3 for minimize another cards
+              type = 3;
+              dispatch(minimizePolicies({ type }));
+              dispatch(minimizeAssessments({ type }));
+              dispatch(minimizeCourses({ type }));
+            }
+          } else if (type === 1) {
+            setExpandType(1);
+            dispatch(minimizeInnovation({ type }));
+          }
+          break;
+
+        default:
+          break;
+      }
     }
   };
+
+  const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
+  const [isMediumScreen, setIsMediumScreen] = useState<boolean>(false);
 
   return (
     //Full Width For Normal Figures
