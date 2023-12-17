@@ -4,7 +4,7 @@ type CoursesCardsProps = {};
 export const CoursesCards = (props: CoursesCardsProps) => {
   return (
     <div className="grid grid-cols-1 gap-4">
-      <div className="row-span-1 CoursesCards">
+      {/* <div className="row-span-1 CoursesCards">
         <div className="row-span-1" style={{ display: "contents" }}>
           <div className="box">
             <div className="rectangle" />
@@ -18,8 +18,28 @@ export const CoursesCards = (props: CoursesCardsProps) => {
           </div>
           <div className="frame"></div>
         </div>
+      </div> */}
+      <div className="CoursesCards">
+        <div>
+          <div className="box">
+            <div className="rectangle" />
+          </div>
+        </div>
+        <div style={{ width: "100%" }}>
+          <div>
+            <div className="data-container">
+              <h3>Security Awareness Training</h3>
+
+              <div className="frame"></div>
+            </div>
+          </div>
+          <div>
+            <span className="create-date">Created Date: 05-08-2023</span>
+            <StarsRating />
+          </div>
+          <div>Percentage Here</div>
+        </div>
       </div>
-      <div className="row-span-1 CoursesCards">Card Here</div>
       <div className="row-span-1 CoursesCards">Card Here</div>
       <div className="row-span-1 CoursesCards">Card Here</div>
     </div>

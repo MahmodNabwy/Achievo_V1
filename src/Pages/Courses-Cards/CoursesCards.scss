@@ -17,7 +17,7 @@
     border-bottom-left-radius: 7px;
 }
 .data-container{      
-    display: flow;
+    display: flex;
     
     padding-left: 10px;
 }
@@ -57,7 +57,7 @@
     background-image: url('./Assets/images/Rectangle\ 530.png');
      background-position: 50% 50%;
     background-size: cover;
-    height: 62%;
+    // height: 62%;
     width: 100%;
     
 }
