@@ -15,74 +15,127 @@ export const CoursesCards = (props: CoursesCardsProps) => {
   return (
     <div className="courses-container">
       <ModuleHeader navItems={header.data} icons={header.icons} />
-      {/* Rectangle Figure */}
-
-      {/* Square Figure */}
-
-      <div className="grid grid-col-3 gap-6 pb-4 courses-grid">
-        <div className="col-start-1">
-          <div className="card-square flex justify-between">
-            <div>
-              <div className="square-box">
-                <div className="square-retake" />
-              </div>
-            </div>
-            <div className="pl-4">
-              <span className="course-name">Security Awareness Training</span>
-              <div style={{ display: "flex" }}>
-                <span className="create-date">Created Date: 05-08-2023</span>
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4 courses-grid">
+        {/* Re Take Square Card */}
+        <div className="card-square">
+          <div
+            style={{
+              borderLeft: "26px solid #60B527",
+              borderRadius: "12px",
+              height: "100%",
+            }}
+          >
+            <span className="course-name">Security Awareness Training</span>
+            <div className="flex justify-between">
+              <span className="create-date">Created Date: 05-08-2023</span>
+              <div>
                 <StarsRating />
               </div>
-              <div className="w-full">
-                <img src={courseCover} alt="course-cover" />
+            </div>
+            <div>
+              <img src={courseCover} className="w-full" alt="course-cover" />
+            </div>
+            <div style={{ marginTop: "-13px" }}>
+              <LineProgress value={100} />
+            </div>
+            <div className="course-information">
+              <div className="deparment">IT</div>
+              <div className="course-status">
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    paddingRight: "10px",
+                  }}
+                >
+                  <div className="badge"></div>
+                  <span className="percentage">100%</span>
+                </div>
+                <div className="retake">Retake</div>
               </div>
             </div>
           </div>
         </div>
-        <div className="col-start-2">
-          <div className="card-square flex justify-between">
-            <div>
-              <div className="square-box">
-                <div className="square-retake" />
-              </div>
-            </div>
-            <div className="pl-4">
-              <span className="course-name">Security Awareness Training</span>
-              <div style={{ display: "flex" }}>
-                <span className="create-date">Created Date: 05-08-2023</span>
+        {/* Resume Square Card */}
+        <div className="card-square">
+          <div
+            style={{
+              borderLeft: "26px solid #E1CD17",
+              borderRadius: "12px",
+              height: "100%",
+            }}
+          >
+            <span className="course-name">Security Awareness Training</span>
+            <div className="flex justify-between">
+              <span className="create-date">Created Date: 05-08-2023</span>
+              <div>
                 <StarsRating />
               </div>
-              <div className="w-full">
-                <img src={courseCover} alt="course-cover" />
+            </div>
+            <div>
+              <img src={courseCover} className="w-full" alt="course-cover" />
+            </div>
+            <div style={{ marginTop: "-13px" }}>
+              <LineProgress value={72} />
+            </div>
+            <div className="course-information">
+              <div className="deparment">IT</div>
+              <div className="course-status">
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    paddingRight: "10px",
+                  }}
+                >
+                  <div className="badge"></div>
+                  <span className="percentage">100%</span>
+                </div>
+                <div className="resume">Resume</div>
               </div>
             </div>
           </div>
         </div>
-        <div className="col-start-3">
-          {" "}
-          <div className="card-square flex justify-between">
-            <div>
-              <div className="square-box">
-                <div className="square-retake" />
-              </div>
-            </div>
-            <div className="pl-4">
-              <span className="course-name">Security Awareness Training</span>
-              <div style={{ display: "flex" }}>
-                <span className="create-date">Created Date: 05-08-2023</span>
+        {/* Start Square Card */}
+        <div className="card-square">
+          <div
+            style={{
+              borderLeft: "26px solid #178CE1",
+              borderRadius: "12px",
+              height: "100%",
+            }}
+          >
+            <span className="course-name">Security Awareness Training</span>
+            <div className="flex justify-between">
+              <span className="create-date">Created Date: 05-08-2023</span>
+              <div>
                 <StarsRating />
               </div>
-              <div className="w-full">
-                <img src={courseCover} alt="course-cover" />
+            </div>
+            <div>
+              <img src={courseCover} className="w-full" alt="course-cover" />
+            </div>
+            <div style={{ marginTop: "-13px" }}>
+              <LineProgress value={0} />
+            </div>
+            <div className="course-information">
+              <div className="deparment">HR</div>
+              <div className="course-status">
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    paddingRight: "10px",
+                  }}
+                >
+                  <div className="badge"></div>
+                  <span className="percentage">0%</span>
+                </div>
+                <div className="Start">Start</div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div className="grid grid-col-3 gap-6">
-        <div className="col-start-1">111</div>
-        <div className="col-start-2">111</div>
-        <div className="col-start-3">111</div>
       </div>
     </div>
   );
