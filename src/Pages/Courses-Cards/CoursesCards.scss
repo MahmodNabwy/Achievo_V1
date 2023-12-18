@@ -1,3 +1,39 @@
+.courses-header{
+    border: 1px solid #EAEAEB;
+    background: #FFF;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+.icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px; /* Set the width of the icon as needed */
+    height: 20px; /* Set the height of the icon as needed */
+    background-color: #f00; /* Set the background color of the icon */
+    /* You can use an actual icon or customize the style further */
+}
+.header-item{
+    display: flex;
+    width: 122px;
+    height: 42px;
+    padding: 8px 0px 9px 0px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 55px;
+    background: #000;
+    color: #FFF;
+    text-align: center;
+    font-family: Cairo;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-right: 5px;
+}
 .CoursesCards{
     height: 143px;
     border-radius: 10px;
@@ -6,7 +42,7 @@
     display: flex;
 
 }
-.box .rectangle {
+.box .rectangle-retake {
     background-color: #60b527;
     height: 140px;
     left: 0;
@@ -16,15 +52,34 @@
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
 }
+.box .rectangle-resume{
+    background: #E1CD17;
+    height: 140px;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 22px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+.box .rectangle-start{
+    background: #178CE1;
+    height: 140px;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 22px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
 .data-container{      
-    display: flex;
-    
+    display: flex;    
     padding-left: 10px;
 }
-.data-container h3{
+.course-name{
     color: #000;
     font-family: Cairo;
-    font-size: 30px;
+    font-size: 1.878rem;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -42,7 +97,7 @@
 .create-date{
     color: rgba(0, 0, 0, 0.60);
     font-family: Cairo;
-    font-size: 11px;
+    font-size: 0.688rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -55,9 +110,89 @@
 }
 .frame {
     background-image: url('./Assets/images/Rectangle\ 530.png');
-     background-position: 50% 50%;
-    background-size: cover;
-    // height: 62%;
-    width: 100%;
-    
+    background-position: 50% 50%;
+    background-size: cover; 
+    width: 100%;    
+}
+.deparment{
+    display: flex;
+    width: 42px;
+    height: 21px;
+    padding: 6px 0px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 8.824px;
+    background: #3186EA;
+    color: #FFF;
+    text-align: center;
+    font-family: Cairo;
+    font-size: 0.809rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.course-information{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -7px;
+}
+.course-status{
+    display: flex;
+}
+.badge{
+    width: 24px;
+    height: 31px;
+    flex-shrink: 0;
+    background: url('./Assets/images/quality\ 1.png'), white 50% / cover no-repeat;    
+}
+.percentage{
+    color: #000;
+    text-align: right;
+    font-family: Cairo;
+    font-size: 1.246rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal; 
+}
+.retake{
+    width: 165px;
+    height: 45px;
+    flex-shrink: 0;
+    background: #60B527;
+    color: #FFF;
+    text-align: center;
+    font-family: Cairo;
+    font-size:  1.246rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.resume{
+    width: 165px;
+    height: 45px;
+    flex-shrink: 0;
+    background: #E1CD17;
+    color: #FFF;
+    text-align: center;
+    font-family: Cairo;
+    font-size:  1.246rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.Start{
+    width: 165px;
+    height: 45px;
+    flex-shrink: 0;
+    background: #178CE1;
+    color: #FFF;
+    text-align: center;
+    font-family: Cairo;
+    font-size:  1.246rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal; 
 }
