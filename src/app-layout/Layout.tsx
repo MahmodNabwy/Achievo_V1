@@ -5,13 +5,14 @@ import { Sidebar } from "../Components/Sidebar/Sidebar";
 import WelcomeBanner from "../Components/WelcomeBanner/WelcomeBanner";
 import { LineProgress } from "../Components/LineProgress/LineProgress";
 import { CoursesCards } from "../Pages/Courses-Cards/CoursesCards";
+import { MainHeader } from "../Components/MainHeader/MainHeader";
 
 export const Layout = () => {
   return (
     <div className="flex flex-row">
       <Sidebar />
 
-      <div className="flex w-full h-auto flex-col pr-4 pt-4">
+      <div className="flex w-full h-auto flex-col pr-4 ">
         {/* Expand Button */}
         <div
           className="w-fit"
@@ -36,7 +37,7 @@ export const Layout = () => {
             </svg>
           </label>
         </div>
-        <div>Header Here</div>
+        <MainHeader />
         {/* <WelcomeBanner userName="Mohamed Mansour" />
         <Circles />
         <Cards /> */}

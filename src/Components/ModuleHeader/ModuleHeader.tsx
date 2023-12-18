@@ -8,7 +8,7 @@ export const ModuleHeader = (props: ModuleHeaderProps) => {
     <div className="ModuleHeader">
       <div className="flex">
         {props.navItems.map((item) => {
-          return <div className="header-item">{item}</div>;
+          return <div className="header-item-active">{item}</div>;
         })}
       </div>
       <div className="flex pt-1">
