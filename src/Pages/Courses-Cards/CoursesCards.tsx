@@ -2,8 +2,8 @@ import { LineProgress } from "../../Components/LineProgress/LineProgress";
 import { StarsRating } from "../../Components/StarsRating/StarsRating";
 import "./CoursesCards.scss";
 import { ModuleHeader } from "../../Components/ModuleHeader/ModuleHeader";
-import arrowIcon from "./Assets/images/Paper.svg";
-import rectangleIcon from "./Assets/images/PaperPlus.svg";
+import rectangleIcon from "./Assets/images/Paper.svg";
+import arrowIcon from "./Assets/images/PaperPlus.svg";
 import fourCirclesIcon from "./Assets/images/four-circle.svg";
 type CoursesCardsProps = {};
 export const CoursesCards = (props: CoursesCardsProps) => {
