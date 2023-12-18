@@ -141,7 +141,7 @@
     font-weight: 700;
     line-height: normal;
     margin-left: 10px;
-    margin-top: 10px;
+    // margin-top: 10px; comment in Rectangle Figure
 }
 .course-information{
     display: flex;
@@ -218,14 +218,28 @@
     border: 3px solid #CCC;
     background: #FFF;
 }
-
-.square-box .square-retake {
-    background-color: #60b527;
-    height: 315px;
-    left: 0;
-    position: relative;
-    top: 0;
-    width: 22px;
-    border-top-left-radius: 7px;
-    border-bottom-left-radius: 7px;
+/* Rectangle Card Classes */
+.card-rectangle{     
+    height: 143px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 3px solid #CCC;
+    background: #FFF;
+} 
+.course-rectangle-cover{
+    height: 100px;
+}
+.start-rectangle{
+    width: 165px;
+    height: 92%;
+    flex-shrink: 0;
+    background: #178CE1;
+    color: #FFF;
+    text-align: center;
+    font-family: Cairo;
+    font-size: 1.246rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-bottom-right-radius: 7px;
 }
