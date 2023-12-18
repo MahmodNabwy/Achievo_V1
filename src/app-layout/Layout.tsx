@@ -8,10 +8,10 @@ import { CoursesCards } from "../Pages/Courses-Cards/CoursesCards";
 
 export const Layout = () => {
   return (
-    <div className="flex flex-row sm:gap-10">
+    <div className="flex flex-row">
       <Sidebar />
 
-      <div className="flex w-full h-full flex-col p-4">
+      <div className="flex w-full h-auto flex-col pr-4 pt-4">
         {/* Expand Button */}
         <div
           className="w-fit"
@@ -36,6 +36,7 @@ export const Layout = () => {
             </svg>
           </label>
         </div>
+        <div>Header Here</div>
         {/* <WelcomeBanner userName="Mohamed Mansour" />
         <Circles />
         <Cards /> */}
