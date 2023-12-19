@@ -108,7 +108,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     }}
                   >
                     <div
-                      className="flex justify-between pl-4"
+                      className="flex justify-between pl-4 data-container-nostarted"
                       style={{ height: "98x" }}
                     >
                       <div className="pt-4">
@@ -140,7 +140,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     <LineProgress value={100} />
 
                     <div
-                      className="flex justify-between"
+                      className="flex justify-between "
                       style={{ alignItems: "center" }}
                     >
                       <div className="deparment">IT</div>
@@ -170,7 +170,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     }}
                   >
                     <div
-                      className="flex justify-between pl-4"
+                      className="flex justify-between pl-4 data-container-inprogress"
                       style={{ height: "98x" }}
                     >
                       <div className="pt-4">
@@ -233,7 +233,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                       justifyContent: "space-between",
                     }}
                   >
-                    <div className="flex justify-between pl-4">
+                    <div className="flex justify-between pl-4 data-container-completed">
                       <div className="pt-4" style={{ height: "98x" }}>
                         <span className="course-name course-name-sm course-name-lg">
                           Security Awareness Training
@@ -295,7 +295,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     }}
                   >
                     <div
-                      className="flex justify-between pl-4"
+                      className="flex justify-between pl-4 data-container-nostarted"
                       style={{ height: "98x" }}
                     >
                       <div className="pt-4">
@@ -359,7 +359,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     }}
                   >
                     <div
-                      className="flex justify-between pl-4"
+                      className="flex justify-between pl-4 data-container-inprogress"
                       style={{ height: "98x" }}
                     >
                       <div className="pt-4">
@@ -420,7 +420,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     }}
                   >
                     <div
-                      className="flex justify-between pl-4"
+                      className="flex justify-between pl-4 data-container-inprogress"
                       style={{ height: "98x" }}
                     >
                       <div className="pt-4">
@@ -481,7 +481,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     }}
                   >
                     <div
-                      className="flex justify-between pl-4"
+                      className="flex justify-between pl-4 data-container-inprogress"
                       style={{ height: "98x" }}
                     >
                       <div className="pt-4">
@@ -542,7 +542,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     }}
                   >
                     <div
-                      className="flex justify-between pl-4"
+                      className="flex justify-between pl-4 data-container-inprogress"
                       style={{ height: "98x" }}
                     >
                       <div className="pt-4">
@@ -606,7 +606,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                       justifyContent: "space-between",
                     }}
                   >
-                    <div className="flex justify-between pl-4">
+                    <div className="flex justify-between pl-4 data-container-completed">
                       <div className="pt-4" style={{ height: "98x" }}>
                         <span className="course-name course-name-sm course-name-lg">
                           Security Awareness Training
@@ -665,7 +665,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                       justifyContent: "space-between",
                     }}
                   >
-                    <div className="flex justify-between pl-4">
+                    <div className="flex justify-between pl-4 data-container-completed">
                       <div className="pt-4" style={{ height: "98x" }}>
                         <span className="course-name course-name-sm course-name-lg">
                           Security Awareness Training
@@ -724,7 +724,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                       justifyContent: "space-between",
                     }}
                   >
-                    <div className="flex justify-between pl-4">
+                    <div className="flex justify-between pl-4 data-container-completed">
                       <div className="pt-4" style={{ height: "98x" }}>
                         <span className="course-name course-name-sm course-name-lg">
                           Security Awareness Training
@@ -783,7 +783,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                       justifyContent: "space-between",
                     }}
                   >
-                    <div className="flex justify-between pl-4">
+                    <div className="flex justify-between pl-4 data-container-completed">
                       <div className="pt-4" style={{ height: "98x" }}>
                         <span className="course-name course-name-sm course-name-lg">
                           Security Awareness Training
@@ -842,7 +842,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                       justifyContent: "space-between",
                     }}
                   >
-                    <div className="flex justify-between pl-4">
+                    <div className="flex justify-between pl-4 data-container-completed">
                       <div className="pt-4" style={{ height: "98x" }}>
                         <span className="course-name course-name-sm course-name-lg">
                           Security Awareness Training
@@ -906,7 +906,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     }}
                   >
                     <div
-                      className="flex justify-between pl-4"
+                      className="flex justify-between pl-4 data-container-nostarted"
                       style={{ height: "98x" }}
                     >
                       <div className="pt-4">
@@ -938,7 +938,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     <LineProgress value={100} />
 
                     <div
-                      className="flex justify-between"
+                      className="flex justify-between "
                       style={{ alignItems: "center" }}
                     >
                       <div className="deparment">IT</div>
@@ -958,6 +958,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     </div>
                   </div>
                 </div>
+
                 <div className="card-rectangle animate__animated animate__fadeIn">
                   <div
                     style={{
@@ -968,7 +969,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     }}
                   >
                     <div
-                      className="flex justify-between pl-4"
+                      className="flex justify-between pl-4 data-container-nostarted"
                       style={{ height: "98x" }}
                     >
                       <div className="pt-4">
@@ -1000,7 +1001,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     <LineProgress value={100} />
 
                     <div
-                      className="flex justify-between"
+                      className="flex justify-between "
                       style={{ alignItems: "center" }}
                     >
                       <div className="deparment">IT</div>
@@ -1020,6 +1021,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     </div>
                   </div>
                 </div>
+
                 <div className="card-rectangle animate__animated animate__fadeIn">
                   <div
                     style={{
@@ -1030,7 +1032,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     }}
                   >
                     <div
-                      className="flex justify-between pl-4"
+                      className="flex justify-between pl-4 data-container-nostarted"
                       style={{ height: "98x" }}
                     >
                       <div className="pt-4">
@@ -1062,7 +1064,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     <LineProgress value={100} />
 
                     <div
-                      className="flex justify-between"
+                      className="flex justify-between "
                       style={{ alignItems: "center" }}
                     >
                       <div className="deparment">IT</div>
@@ -1082,6 +1084,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     </div>
                   </div>
                 </div>
+
                 <div className="card-rectangle animate__animated animate__fadeIn">
                   <div
                     style={{
@@ -1092,7 +1095,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     }}
                   >
                     <div
-                      className="flex justify-between pl-4"
+                      className="flex justify-between pl-4 data-container-nostarted"
                       style={{ height: "98x" }}
                     >
                       <div className="pt-4">
@@ -1124,69 +1127,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     <LineProgress value={100} />
 
                     <div
-                      className="flex justify-between"
-                      style={{ alignItems: "center" }}
-                    >
-                      <div className="deparment">IT</div>
-                      <div className="course-status">
-                        <div
-                          style={{
-                            display: "flex",
-                            alignItems: "center",
-                            paddingRight: "10px",
-                          }}
-                        >
-                          <div className="badge"></div>
-                          <span className="percentage">0%</span>
-                        </div>
-                        <div className="start-rectangle">Start</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="card-rectangle animate__animated animate__fadeIn">
-                  <div
-                    style={{
-                      borderLeft: "26px solid #178CE1",
-                      borderRadius: "7px",
-                      // height: "100%",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <div
-                      className="flex justify-between pl-4"
-                      style={{ height: "98x" }}
-                    >
-                      <div className="pt-4">
-                        <span className="course-name course-name-sm course-name-lg">
-                          Security Awareness Training
-                        </span>
-                        <div
-                          className="flex justify-between"
-                          style={{ alignItems: "center" }}
-                        >
-                          <span className="create-date">
-                            Created Date: 05-08-2023
-                          </span>
-                          <div>
-                            <StarsRating />
-                          </div>
-                        </div>
-                      </div>
-                      {isSmallScreen === true ||
-                      isMediumScreen === true ? null : (
-                        <img
-                          src={cover}
-                          className="course-rectangle-cover"
-                          alt="course-cover"
-                        />
-                      )}
-                    </div>
-
-                    <LineProgress value={100} />
-
-                    <div
-                      className="flex justify-between"
+                      className="flex justify-between "
                       style={{ alignItems: "center" }}
                     >
                       <div className="deparment">IT</div>
@@ -1214,150 +1155,322 @@ export const CoursesCards = (props: CoursesCardsProps) => {
         //Square Figure
         <>
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4 courses-grid animate__animated animate__fadeIn">
-            {/* Re Take Square Card */}
-            <div className="card-square animate__animated animate__fadeIn">
-              <div
-                style={{
-                  borderLeft: "26px solid #60B527",
-                  borderRadius: "12px",
-                  height: "100%",
-                }}
-              >
-                <span className="course-name pl-4">
-                  Security Awareness Training
-                </span>
-                <div className="flex justify-between pl-4">
-                  <span className="create-date">Created Date: 05-08-2023</span>
-                  <div>
-                    <StarsRating />
+            {current_Li_From_Redux === 1 ? ( //Library
+              <>
+                <div className="card-square animate__animated animate__fadeIn">
+                  <div
+                    style={{
+                      borderLeft: "26px solid #60B527",
+                      borderRadius: "12px",
+                      height: "100%",
+                    }}
+                  >
+                    <span className="course-name pl-4">
+                      Security Awareness Training
+                    </span>
+                    <div className="flex justify-between pl-4">
+                      <span className="create-date">
+                        Created Date: 05-08-2023
+                      </span>
+                      <div>
+                        <StarsRating />
+                      </div>
+                    </div>
+                    <div>
+                      {isSmallScreen === true ||
+                      isMediumScreen === true ? null : (
+                        <img
+                          src={courseCover}
+                          className="w-full"
+                          alt="course-cover"
+                        />
+                      )}
+                    </div>
+                    <div>
+                      <LineProgress value={100} />
+                    </div>
+                    <div className="course-information-square">
+                      <div className="deparment">IT</div>
+                      <div className="course-status">
+                        <div
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            paddingRight: "10px",
+                          }}
+                        >
+                          <div className="badge"></div>
+                          <span className="percentage">100%</span>
+                        </div>
+                        <div className="retake">Retake</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div>
-                  {isSmallScreen === true || isMediumScreen === true ? null : (
-                    <img
-                      src={courseCover}
-                      className="w-full"
-                      alt="course-cover"
-                    />
-                  )}
-                </div>
-                <div>
-                  <LineProgress value={100} />
-                </div>
-                <div className="course-information-square">
-                  <div className="deparment">IT</div>
-                  <div className="course-status">
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        paddingRight: "10px",
-                      }}
-                    >
-                      <div className="badge"></div>
-                      <span className="percentage">100%</span>
+
+                <div className="card-square animate__animated animate__fadeIn">
+                  <div
+                    style={{
+                      borderLeft: "26px solid #E1CD17",
+                      borderRadius: "12px",
+                      height: "100%",
+                    }}
+                  >
+                    <span className="course-name pl-4">
+                      Security Awareness Training
+                    </span>
+                    <div className="flex justify-between pl-4">
+                      <span className="create-date">
+                        Created Date: 05-08-2023
+                      </span>
+                      <div>
+                        <StarsRating />
+                      </div>
                     </div>
-                    <div className="retake">Retake</div>
+                    <div>
+                      {isSmallScreen === true ||
+                      isMediumScreen === true ? null : (
+                        <img
+                          src={courseCover}
+                          className="w-full"
+                          alt="course-cover"
+                        />
+                      )}
+                    </div>
+                    <div>
+                      <LineProgress value={72} />
+                    </div>
+                    <div className="course-information-square">
+                      <div className="deparment">IT</div>
+                      <div className="course-status">
+                        <div
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            paddingRight: "10px",
+                          }}
+                        >
+                          <div className="badge"></div>
+                          <span className="percentage">100%</span>
+                        </div>
+                        <div className="resume">Resume</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="card-square animate__animated animate__fadeIn">
+                  <div
+                    style={{
+                      borderLeft: "26px solid #178CE1",
+                      borderRadius: "12px",
+                      height: "100%",
+                    }}
+                  >
+                    <span className="course-name pl-4">
+                      Security Awareness Training
+                    </span>
+                    <div className="flex justify-between pl-4">
+                      <span className="create-date">
+                        Created Date: 05-08-2023
+                      </span>
+                      <div>
+                        <StarsRating />
+                      </div>
+                    </div>
+                    <div>
+                      {isSmallScreen === true ||
+                      isMediumScreen === true ? null : (
+                        <img
+                          src={courseCover}
+                          className="w-full"
+                          alt="course-cover"
+                        />
+                      )}
+                    </div>
+                    <div>
+                      <LineProgress value={0} />
+                    </div>
+                    <div className="course-information-square">
+                      <div className="deparment">HR</div>
+                      <div className="course-status">
+                        <div
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            paddingRight: "10px",
+                          }}
+                        >
+                          <div className="badge"></div>
+                          <span className="percentage">0%</span>
+                        </div>
+                        <div className="Start">Start</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </>
+            ) : current_Li_From_Redux === 2 ? ( // Resume Square Card
+              <div className="card-square animate__animated animate__fadeIn">
+                <div
+                  style={{
+                    borderLeft: "26px solid #E1CD17",
+                    borderRadius: "12px",
+                    height: "100%",
+                  }}
+                >
+                  <div className="data-container-inprogress">
+                    <span className="course-name pl-4">
+                      Security Awareness Training
+                    </span>
+                    <div className="flex justify-between pl-4">
+                      <span className="create-date">
+                        Created Date: 05-08-2023
+                      </span>
+                      <div>
+                        <StarsRating />
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    {isSmallScreen === true ||
+                    isMediumScreen === true ? null : (
+                      <img
+                        src={courseCover}
+                        className="w-full"
+                        alt="course-cover"
+                      />
+                    )}
+                  </div>
+                  <div>
+                    <LineProgress value={72} />
+                  </div>
+                  <div className="course-information-square">
+                    <div className="deparment">IT</div>
+                    <div className="course-status">
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          paddingRight: "10px",
+                        }}
+                      >
+                        {/* Todo If value is not equal 100 so diappear the badge */}
+                        <div className="badge"></div>
+                        <span className="percentage">72%</span>
+                      </div>
+                      <div className="resume">Resume</div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            {/* Resume Square Card */}
-            <div className="card-square animate__animated animate__fadeIn">
-              <div
-                style={{
-                  borderLeft: "26px solid #E1CD17",
-                  borderRadius: "12px",
-                  height: "100%",
-                }}
-              >
-                <span className="course-name pl-4">
-                  Security Awareness Training
-                </span>
-                <div className="flex justify-between pl-4">
-                  <span className="create-date">Created Date: 05-08-2023</span>
-                  <div>
-                    <StarsRating />
-                  </div>
-                </div>
-                <div>
-                  {isSmallScreen === true || isMediumScreen === true ? null : (
-                    <img
-                      src={courseCover}
-                      className="w-full"
-                      alt="course-cover"
-                    />
-                  )}
-                </div>
-                <div>
-                  <LineProgress value={72} />
-                </div>
-                <div className="course-information-square">
-                  <div className="deparment">IT</div>
-                  <div className="course-status">
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        paddingRight: "10px",
-                      }}
-                    >
-                      <div className="badge"></div>
-                      <span className="percentage">100%</span>
+            ) : current_Li_From_Redux === 3 ? (
+              <div className="card-square animate__animated animate__fadeIn">
+                <div
+                  style={{
+                    borderLeft: "26px solid #60B527",
+                    borderRadius: "12px",
+                    height: "100%",
+                  }}
+                >
+                  <div className="data-container-completed">
+                    <span className="course-name pl-4">
+                      Security Awareness Training
+                    </span>
+                    <div className="flex justify-between pl-4">
+                      <span className="create-date">
+                        Created Date: 05-08-2023
+                      </span>
+                      <div>
+                        <StarsRating />
+                      </div>
                     </div>
-                    <div className="resume">Resume</div>
+                  </div>
+                  <div>
+                    {isSmallScreen === true ||
+                    isMediumScreen === true ? null : (
+                      <img
+                        src={courseCover}
+                        className="w-full"
+                        alt="course-cover"
+                      />
+                    )}
+                  </div>
+                  <div>
+                    <LineProgress value={100} />
+                  </div>
+                  <div className="course-information-square">
+                    <div className="deparment">IT</div>
+                    <div className="course-status">
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          paddingRight: "10px",
+                        }}
+                      >
+                        <div className="badge"></div>
+                        <span className="percentage">100%</span>
+                      </div>
+                      <div className="retake">Retake</div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            {/* Start Square Card */}
-            <div className="card-square animate__animated animate__fadeIn">
-              <div
-                style={{
-                  borderLeft: "26px solid #178CE1",
-                  borderRadius: "12px",
-                  height: "100%",
-                }}
-              >
-                <span className="course-name pl-4">
-                  Security Awareness Training
-                </span>
-                <div className="flex justify-between pl-4">
-                  <span className="create-date">Created Date: 05-08-2023</span>
-                  <div>
-                    <StarsRating />
-                  </div>
-                </div>
-                <div>
-                  {isSmallScreen === true || isMediumScreen === true ? null : (
-                    <img
-                      src={courseCover}
-                      className="w-full"
-                      alt="course-cover"
-                    />
-                  )}
-                </div>
-                <div>
-                  <LineProgress value={0} />
-                </div>
-                <div className="course-information-square">
-                  <div className="deparment">HR</div>
-                  <div className="course-status">
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        paddingRight: "10px",
-                      }}
-                    >
-                      <div className="badge"></div>
-                      <span className="percentage">0%</span>
+            ) : (
+              <div className="card-square animate__animated animate__fadeIn">
+                <div
+                  style={{
+                    borderLeft: "26px solid #178CE1",
+                    borderRadius: "12px",
+                    height: "100%",
+                  }}
+                >
+                  <div className="data-container-nostarted">
+                    <span className="course-name pl-4">
+                      Security Awareness Training
+                    </span>
+                    <div className="flex justify-between pl-4">
+                      <span className="create-date">
+                        Created Date: 05-08-2023
+                      </span>
+                      <div>
+                        <StarsRating />
+                      </div>
                     </div>
-                    <div className="Start">Start</div>
+                  </div>
+                  <div>
+                    {isSmallScreen === true ||
+                    isMediumScreen === true ? null : (
+                      <img
+                        src={courseCover}
+                        className="w-full"
+                        alt="course-cover"
+                      />
+                    )}
+                  </div>
+                  <div>
+                    <LineProgress value={0} />
+                  </div>
+                  <div className="course-information-square">
+                    <div className="deparment">HR</div>
+                    <div className="course-status">
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          paddingRight: "10px",
+                        }}
+                      >
+                        <div className="badge"></div>
+                        <span className="percentage">0%</span>
+                      </div>
+                      <div className="Start">Start</div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            )}
           </div>
         </>
       )}
