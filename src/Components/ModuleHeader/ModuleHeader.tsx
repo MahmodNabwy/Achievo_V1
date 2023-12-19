@@ -1,4 +1,5 @@
 import "./ModuleHeader.scss";
+import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import arrowIcon from "./Assets/images/PaperPlus.svg";
 import {
@@ -18,6 +19,7 @@ type ModuleHeaderProps = {
   }[];
 };
 export const ModuleHeader = (props: ModuleHeaderProps) => {
+  const [filterPopOver, setFilterPopOver] = useState(false);
   const current_Li_From_Redux = useSelector(
     (state: any) => state.courses.activeLi
   );
@@ -36,6 +38,10 @@ export const ModuleHeader = (props: ModuleHeaderProps) => {
       let type = 2;
       dispatch(squareFigure({ type }));
     }
+  };
+
+  const showFilterPopOver = () => {
+    setFilterPopOver(!filterPopOver);
   };
 
   return (
@@ -58,7 +64,34 @@ export const ModuleHeader = (props: ModuleHeaderProps) => {
       </div>
       <div className="flex pt-1">
         <div className="mr-12">
-          <img src={arrowIcon} alt="arrow" />
+          {filterPopOver === true ? (
+            <>
+              <div className="filter-popover">
+                <div className="flex justify-end">
+                  <img
+                    src={arrowIcon}
+                    alt="arrow"
+                    onClick={() => showFilterPopOver()}
+                  />
+                </div>
+
+                <div>
+                  <ul>
+                    <li>Sort by Date</li>
+                    <li>Sort by Name</li>
+                  </ul>
+                </div>
+              </div>
+            </>
+          ) : (
+            <>
+              <img
+                src={arrowIcon}
+                alt="arrow"
+                onClick={() => showFilterPopOver()}
+              />
+            </>
+          )}
         </div>
         {props.icons.map((item) => {
           return (

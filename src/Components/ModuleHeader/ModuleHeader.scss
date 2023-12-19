@@ -60,3 +60,24 @@
         animation: fadeIn 1.5s ease-out;
       }
 }
+.filter-popover{
+  width: 145px;
+  height: 85px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  border: 1px solid #EAEAEB;
+  background: #F8FAFD;
+}
+.filter-popover li{
+display: flex;
+padding-left: 10px;
+flex-direction: column;
+justify-content: center;
+flex-shrink: 0;
+color: #000;
+font-family: Cairo;
+font-size: 15px;
+font-style: normal;
+font-weight: bold;
+line-height: 2;
+}
