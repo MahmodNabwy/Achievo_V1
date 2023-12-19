@@ -104,7 +104,7 @@
     font-weight: 700;
     line-height: normal;
     margin-left: 10px;
-      margin-top: 10px; 
+    //   margin-top: 10px; 
 }
 .course-information{
     display: flex;
@@ -174,8 +174,8 @@
    
 }
  /* Square Cards Classes */ 
-.card-square{       
-    height: 320px;
+.card-square{           
+    height: 313px;
     flex-shrink: 0;
     border-radius: 15px;
     border: 3px solid #CCC;
@@ -184,12 +184,14 @@
 .course-information-square{
     display: flex;
     justify-content: space-between;
-    margin-top: -7px;
-    height: 44px;
+    align-items: center;
+    
 }
 /* Rectangle Card Classes */
 .card-rectangle{     
-    height: 143px;
+    display: flex;
+    flex-direction: column;
+    height: 145px;
     flex-shrink: 0;
     border-radius: 10px;
     border: 3px solid #CCC;
@@ -302,5 +304,8 @@
   
 .animate__fadeIn {
   animation: fadeIn 1.5s ease-out;
+}
+.testCalc{
+    height: calc(100% - 95px);
 }
  

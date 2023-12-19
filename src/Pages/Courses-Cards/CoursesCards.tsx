@@ -97,16 +97,20 @@ export const CoursesCards = (props: CoursesCardsProps) => {
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4 courses-grid ">
             {current_Li_From_Redux === 1 ? ( //Library Type
               <>
+                {/* Not Started Rectangle Card */}
                 <div className="card-rectangle animate__animated animate__fadeIn">
                   <div
                     style={{
                       borderLeft: "26px solid #178CE1",
                       borderRadius: "7px",
-                      height: "100%",
+                      // height: "100%",
                       justifyContent: "space-between",
                     }}
                   >
-                    <div className="flex justify-between pl-4">
+                    <div
+                      className="flex justify-between pl-4"
+                      style={{ height: "98x" }}
+                    >
                       <div className="pt-4">
                         <span className="course-name course-name-sm course-name-lg">
                           Security Awareness Training
@@ -132,12 +136,12 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                         />
                       )}
                     </div>
-                    <div style={{ marginTop: "-17px" }}>
-                      <LineProgress value={100} />
-                    </div>
+
+                    <LineProgress value={100} />
+
                     <div
                       className="flex justify-between"
-                      style={{ marginTop: "-7px", alignItems: "center" }}
+                      style={{ alignItems: "center" }}
                     >
                       <div className="deparment">IT</div>
                       <div className="course-status">
@@ -162,11 +166,13 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     style={{
                       borderLeft: "26px solid #E1CD17",
                       borderRadius: "7px",
-                      height: "100%",
                       justifyContent: "space-between",
                     }}
                   >
-                    <div className="flex justify-between pl-4">
+                    <div
+                      className="flex justify-between pl-4"
+                      style={{ height: "98x" }}
+                    >
                       <div className="pt-4">
                         <span className="course-name course-name-sm course-name-lg">
                           Security Awareness Training
@@ -192,12 +198,12 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                         />
                       )}
                     </div>
-                    <div style={{ marginTop: "-17px" }}>
-                      <LineProgress value={25} />
-                    </div>
+
+                    <LineProgress value={25} />
+
                     <div
                       className="flex justify-between"
-                      style={{ marginTop: "-7px", alignItems: "center" }}
+                      style={{ alignItems: "center" }}
                     >
                       <div className="deparment">IT</div>
                       <div className="course-status">
@@ -223,12 +229,12 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     style={{
                       borderLeft: "26px solid #60B527",
                       borderRadius: "7px",
-                      height: "100%",
+
                       justifyContent: "space-between",
                     }}
                   >
                     <div className="flex justify-between pl-4">
-                      <div className="pt-4">
+                      <div className="pt-4" style={{ height: "98x" }}>
                         <span className="course-name course-name-sm course-name-lg">
                           Security Awareness Training
                         </span>
@@ -253,12 +259,12 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                         />
                       )}
                     </div>
-                    <div style={{ marginTop: "-17px" }}>
-                      <LineProgress value={100} />
-                    </div>
+
+                    <LineProgress value={100} />
+
                     <div
                       className="flex justify-between"
-                      style={{ marginTop: "-7px", alignItems: "center" }}
+                      style={{ alignItems: "center" }}
                     >
                       <div className="deparment">IT</div>
                       <div className="course-status">
@@ -278,17 +284,20 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                   </div>
                 </div>
 
-                {/* Resume Rectangle Card */}
+                {/* Not Started Rectangle Card */}
                 <div className="card-rectangle animate__animated animate__fadeIn">
                   <div
                     style={{
-                      borderLeft: "26px solid #E1CD17",
+                      borderLeft: "26px solid #178CE1",
                       borderRadius: "7px",
-                      height: "100%",
+                      // height: "100%",
                       justifyContent: "space-between",
                     }}
                   >
-                    <div className="flex justify-between pl-4">
+                    <div
+                      className="flex justify-between pl-4"
+                      style={{ height: "98x" }}
+                    >
                       <div className="pt-4">
                         <span className="course-name course-name-sm course-name-lg">
                           Security Awareness Training
@@ -314,12 +323,12 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                         />
                       )}
                     </div>
-                    <div style={{ marginTop: "-17px" }}>
-                      <LineProgress value={25} />
-                    </div>
+
+                    <LineProgress value={100} />
+
                     <div
                       className="flex justify-between"
-                      style={{ marginTop: "-7px", alignItems: "center" }}
+                      style={{ alignItems: "center" }}
                     >
                       <div className="deparment">IT</div>
                       <div className="course-status">
@@ -331,9 +340,9 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                           }}
                         >
                           <div className="badge"></div>
-                          <span className="percentage">25%</span>
+                          <span className="percentage">0%</span>
                         </div>
-                        <div className="resume-rectangle">Resume</div>
+                        <div className="start-rectangle">Start</div>
                       </div>
                     </div>
                   </div>
@@ -346,11 +355,13 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     style={{
                       borderLeft: "26px solid #E1CD17",
                       borderRadius: "7px",
-                      height: "100%",
                       justifyContent: "space-between",
                     }}
                   >
-                    <div className="flex justify-between pl-4">
+                    <div
+                      className="flex justify-between pl-4"
+                      style={{ height: "98x" }}
+                    >
                       <div className="pt-4">
                         <span className="course-name course-name-sm course-name-lg">
                           Security Awareness Training
@@ -376,12 +387,12 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                         />
                       )}
                     </div>
-                    <div style={{ marginTop: "-17px" }}>
-                      <LineProgress value={25} />
-                    </div>
+
+                    <LineProgress value={25} />
+
                     <div
                       className="flex justify-between"
-                      style={{ marginTop: "-7px", alignItems: "center" }}
+                      style={{ alignItems: "center" }}
                     >
                       <div className="deparment">IT</div>
                       <div className="course-status">
@@ -405,11 +416,13 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     style={{
                       borderLeft: "26px solid #E1CD17",
                       borderRadius: "7px",
-                      height: "100%",
                       justifyContent: "space-between",
                     }}
                   >
-                    <div className="flex justify-between pl-4">
+                    <div
+                      className="flex justify-between pl-4"
+                      style={{ height: "98x" }}
+                    >
                       <div className="pt-4">
                         <span className="course-name course-name-sm course-name-lg">
                           Security Awareness Training
@@ -435,12 +448,12 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                         />
                       )}
                     </div>
-                    <div style={{ marginTop: "-17px" }}>
-                      <LineProgress value={25} />
-                    </div>
+
+                    <LineProgress value={25} />
+
                     <div
                       className="flex justify-between"
-                      style={{ marginTop: "-7px", alignItems: "center" }}
+                      style={{ alignItems: "center" }}
                     >
                       <div className="deparment">IT</div>
                       <div className="course-status">
@@ -464,11 +477,13 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     style={{
                       borderLeft: "26px solid #E1CD17",
                       borderRadius: "7px",
-                      height: "100%",
                       justifyContent: "space-between",
                     }}
                   >
-                    <div className="flex justify-between pl-4">
+                    <div
+                      className="flex justify-between pl-4"
+                      style={{ height: "98x" }}
+                    >
                       <div className="pt-4">
                         <span className="course-name course-name-sm course-name-lg">
                           Security Awareness Training
@@ -494,12 +509,12 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                         />
                       )}
                     </div>
-                    <div style={{ marginTop: "-17px" }}>
-                      <LineProgress value={25} />
-                    </div>
+
+                    <LineProgress value={25} />
+
                     <div
                       className="flex justify-between"
-                      style={{ marginTop: "-7px", alignItems: "center" }}
+                      style={{ alignItems: "center" }}
                     >
                       <div className="deparment">IT</div>
                       <div className="course-status">
@@ -523,70 +538,13 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     style={{
                       borderLeft: "26px solid #E1CD17",
                       borderRadius: "7px",
-                      height: "100%",
                       justifyContent: "space-between",
                     }}
                   >
-                    <div className="flex justify-between pl-4">
-                      <div className="pt-4">
-                        <span className="course-name course-name-sm course-name-lg">
-                          Security Awareness Training
-                        </span>
-                        <div
-                          className="flex justify-between"
-                          style={{ alignItems: "center" }}
-                        >
-                          <span className="create-date">
-                            Created Date: 05-08-2023
-                          </span>
-                          <div>
-                            <StarsRating />
-                          </div>
-                        </div>
-                      </div>
-                      {isSmallScreen === true ||
-                      isMediumScreen === true ? null : (
-                        <img
-                          src={cover}
-                          className="course-rectangle-cover"
-                          alt="course-cover"
-                        />
-                      )}
-                    </div>
-                    <div style={{ marginTop: "-17px" }}>
-                      <LineProgress value={25} />
-                    </div>
                     <div
-                      className="flex justify-between"
-                      style={{ marginTop: "-7px", alignItems: "center" }}
+                      className="flex justify-between pl-4"
+                      style={{ height: "98x" }}
                     >
-                      <div className="deparment">IT</div>
-                      <div className="course-status">
-                        <div
-                          style={{
-                            display: "flex",
-                            alignItems: "center",
-                            paddingRight: "10px",
-                          }}
-                        >
-                          <div className="badge"></div>
-                          <span className="percentage">25%</span>
-                        </div>
-                        <div className="resume-rectangle">Resume</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="card-rectangle animate__animated animate__fadeIn">
-                  <div
-                    style={{
-                      borderLeft: "26px solid #E1CD17",
-                      borderRadius: "7px",
-                      height: "100%",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <div className="flex justify-between pl-4">
                       <div className="pt-4">
                         <span className="course-name course-name-sm course-name-lg">
                           Security Awareness Training
@@ -612,12 +570,12 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                         />
                       )}
                     </div>
-                    <div style={{ marginTop: "-17px" }}>
-                      <LineProgress value={25} />
-                    </div>
+
+                    <LineProgress value={25} />
+
                     <div
                       className="flex justify-between"
-                      style={{ marginTop: "-7px", alignItems: "center" }}
+                      style={{ alignItems: "center" }}
                     >
                       <div className="deparment">IT</div>
                       <div className="course-status">
@@ -644,12 +602,12 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     style={{
                       borderLeft: "26px solid #60B527",
                       borderRadius: "7px",
-                      height: "100%",
+
                       justifyContent: "space-between",
                     }}
                   >
                     <div className="flex justify-between pl-4">
-                      <div className="pt-4">
+                      <div className="pt-4" style={{ height: "98x" }}>
                         <span className="course-name course-name-sm course-name-lg">
                           Security Awareness Training
                         </span>
@@ -674,12 +632,12 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                         />
                       )}
                     </div>
-                    <div style={{ marginTop: "-17px" }}>
-                      <LineProgress value={100} />
-                    </div>
+
+                    <LineProgress value={100} />
+
                     <div
                       className="flex justify-between"
-                      style={{ marginTop: "-7px", alignItems: "center" }}
+                      style={{ alignItems: "center" }}
                     >
                       <div className="deparment">IT</div>
                       <div className="course-status">
@@ -703,12 +661,12 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     style={{
                       borderLeft: "26px solid #60B527",
                       borderRadius: "7px",
-                      height: "100%",
+
                       justifyContent: "space-between",
                     }}
                   >
                     <div className="flex justify-between pl-4">
-                      <div className="pt-4">
+                      <div className="pt-4" style={{ height: "98x" }}>
                         <span className="course-name course-name-sm course-name-lg">
                           Security Awareness Training
                         </span>
@@ -733,12 +691,12 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                         />
                       )}
                     </div>
-                    <div style={{ marginTop: "-17px" }}>
-                      <LineProgress value={100} />
-                    </div>
+
+                    <LineProgress value={100} />
+
                     <div
                       className="flex justify-between"
-                      style={{ marginTop: "-7px", alignItems: "center" }}
+                      style={{ alignItems: "center" }}
                     >
                       <div className="deparment">IT</div>
                       <div className="course-status">
@@ -762,12 +720,12 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     style={{
                       borderLeft: "26px solid #60B527",
                       borderRadius: "7px",
-                      height: "100%",
+
                       justifyContent: "space-between",
                     }}
                   >
                     <div className="flex justify-between pl-4">
-                      <div className="pt-4">
+                      <div className="pt-4" style={{ height: "98x" }}>
                         <span className="course-name course-name-sm course-name-lg">
                           Security Awareness Training
                         </span>
@@ -792,12 +750,12 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                         />
                       )}
                     </div>
-                    <div style={{ marginTop: "-17px" }}>
-                      <LineProgress value={100} />
-                    </div>
+
+                    <LineProgress value={100} />
+
                     <div
                       className="flex justify-between"
-                      style={{ marginTop: "-7px", alignItems: "center" }}
+                      style={{ alignItems: "center" }}
                     >
                       <div className="deparment">IT</div>
                       <div className="course-status">
@@ -821,12 +779,12 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     style={{
                       borderLeft: "26px solid #60B527",
                       borderRadius: "7px",
-                      height: "100%",
+
                       justifyContent: "space-between",
                     }}
                   >
                     <div className="flex justify-between pl-4">
-                      <div className="pt-4">
+                      <div className="pt-4" style={{ height: "98x" }}>
                         <span className="course-name course-name-sm course-name-lg">
                           Security Awareness Training
                         </span>
@@ -851,12 +809,12 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                         />
                       )}
                     </div>
-                    <div style={{ marginTop: "-17px" }}>
-                      <LineProgress value={100} />
-                    </div>
+
+                    <LineProgress value={100} />
+
                     <div
                       className="flex justify-between"
-                      style={{ marginTop: "-7px", alignItems: "center" }}
+                      style={{ alignItems: "center" }}
                     >
                       <div className="deparment">IT</div>
                       <div className="course-status">
@@ -880,12 +838,12 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     style={{
                       borderLeft: "26px solid #60B527",
                       borderRadius: "7px",
-                      height: "100%",
+
                       justifyContent: "space-between",
                     }}
                   >
                     <div className="flex justify-between pl-4">
-                      <div className="pt-4">
+                      <div className="pt-4" style={{ height: "98x" }}>
                         <span className="course-name course-name-sm course-name-lg">
                           Security Awareness Training
                         </span>
@@ -910,12 +868,12 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                         />
                       )}
                     </div>
-                    <div style={{ marginTop: "-17px" }}>
-                      <LineProgress value={100} />
-                    </div>
+
+                    <LineProgress value={100} />
+
                     <div
                       className="flex justify-between"
-                      style={{ marginTop: "-7px", alignItems: "center" }}
+                      style={{ alignItems: "center" }}
                     >
                       <div className="deparment">IT</div>
                       <div className="course-status">
@@ -943,11 +901,14 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     style={{
                       borderLeft: "26px solid #178CE1",
                       borderRadius: "7px",
-                      height: "100%",
+                      // height: "100%",
                       justifyContent: "space-between",
                     }}
                   >
-                    <div className="flex justify-between pl-4">
+                    <div
+                      className="flex justify-between pl-4"
+                      style={{ height: "98x" }}
+                    >
                       <div className="pt-4">
                         <span className="course-name course-name-sm course-name-lg">
                           Security Awareness Training
@@ -973,12 +934,12 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                         />
                       )}
                     </div>
-                    <div style={{ marginTop: "-17px" }}>
-                      <LineProgress value={100} />
-                    </div>
+
+                    <LineProgress value={100} />
+
                     <div
                       className="flex justify-between"
-                      style={{ marginTop: "-7px", alignItems: "center" }}
+                      style={{ alignItems: "center" }}
                     >
                       <div className="deparment">IT</div>
                       <div className="course-status">
@@ -1002,11 +963,14 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     style={{
                       borderLeft: "26px solid #178CE1",
                       borderRadius: "7px",
-                      height: "100%",
+                      // height: "100%",
                       justifyContent: "space-between",
                     }}
                   >
-                    <div className="flex justify-between pl-4">
+                    <div
+                      className="flex justify-between pl-4"
+                      style={{ height: "98x" }}
+                    >
                       <div className="pt-4">
                         <span className="course-name course-name-sm course-name-lg">
                           Security Awareness Training
@@ -1032,12 +996,12 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                         />
                       )}
                     </div>
-                    <div style={{ marginTop: "-17px" }}>
-                      <LineProgress value={100} />
-                    </div>
+
+                    <LineProgress value={100} />
+
                     <div
                       className="flex justify-between"
-                      style={{ marginTop: "-7px", alignItems: "center" }}
+                      style={{ alignItems: "center" }}
                     >
                       <div className="deparment">IT</div>
                       <div className="course-status">
@@ -1061,11 +1025,14 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     style={{
                       borderLeft: "26px solid #178CE1",
                       borderRadius: "7px",
-                      height: "100%",
+                      // height: "100%",
                       justifyContent: "space-between",
                     }}
                   >
-                    <div className="flex justify-between pl-4">
+                    <div
+                      className="flex justify-between pl-4"
+                      style={{ height: "98x" }}
+                    >
                       <div className="pt-4">
                         <span className="course-name course-name-sm course-name-lg">
                           Security Awareness Training
@@ -1091,12 +1058,12 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                         />
                       )}
                     </div>
-                    <div style={{ marginTop: "-17px" }}>
-                      <LineProgress value={100} />
-                    </div>
+
+                    <LineProgress value={100} />
+
                     <div
                       className="flex justify-between"
-                      style={{ marginTop: "-7px", alignItems: "center" }}
+                      style={{ alignItems: "center" }}
                     >
                       <div className="deparment">IT</div>
                       <div className="course-status">
@@ -1120,11 +1087,14 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     style={{
                       borderLeft: "26px solid #178CE1",
                       borderRadius: "7px",
-                      height: "100%",
+                      // height: "100%",
                       justifyContent: "space-between",
                     }}
                   >
-                    <div className="flex justify-between pl-4">
+                    <div
+                      className="flex justify-between pl-4"
+                      style={{ height: "98x" }}
+                    >
                       <div className="pt-4">
                         <span className="course-name course-name-sm course-name-lg">
                           Security Awareness Training
@@ -1150,12 +1120,74 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                         />
                       )}
                     </div>
-                    <div style={{ marginTop: "-17px" }}>
-                      <LineProgress value={100} />
-                    </div>
+
+                    <LineProgress value={100} />
+
                     <div
                       className="flex justify-between"
-                      style={{ marginTop: "-7px", alignItems: "center" }}
+                      style={{ alignItems: "center" }}
+                    >
+                      <div className="deparment">IT</div>
+                      <div className="course-status">
+                        <div
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            paddingRight: "10px",
+                          }}
+                        >
+                          <div className="badge"></div>
+                          <span className="percentage">0%</span>
+                        </div>
+                        <div className="start-rectangle">Start</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="card-rectangle animate__animated animate__fadeIn">
+                  <div
+                    style={{
+                      borderLeft: "26px solid #178CE1",
+                      borderRadius: "7px",
+                      // height: "100%",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <div
+                      className="flex justify-between pl-4"
+                      style={{ height: "98x" }}
+                    >
+                      <div className="pt-4">
+                        <span className="course-name course-name-sm course-name-lg">
+                          Security Awareness Training
+                        </span>
+                        <div
+                          className="flex justify-between"
+                          style={{ alignItems: "center" }}
+                        >
+                          <span className="create-date">
+                            Created Date: 05-08-2023
+                          </span>
+                          <div>
+                            <StarsRating />
+                          </div>
+                        </div>
+                      </div>
+                      {isSmallScreen === true ||
+                      isMediumScreen === true ? null : (
+                        <img
+                          src={cover}
+                          className="course-rectangle-cover"
+                          alt="course-cover"
+                        />
+                      )}
+                    </div>
+
+                    <LineProgress value={100} />
+
+                    <div
+                      className="flex justify-between"
+                      style={{ alignItems: "center" }}
                     >
                       <div className="deparment">IT</div>
                       <div className="course-status">
@@ -1209,7 +1241,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     />
                   )}
                 </div>
-                <div style={{ marginTop: "-13px" }}>
+                <div>
                   <LineProgress value={100} />
                 </div>
                 <div className="course-information-square">
@@ -1257,7 +1289,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     />
                   )}
                 </div>
-                <div style={{ marginTop: "-13px" }}>
+                <div>
                   <LineProgress value={72} />
                 </div>
                 <div className="course-information-square">
@@ -1305,7 +1337,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     />
                   )}
                 </div>
-                <div style={{ marginTop: "-13px" }}>
+                <div>
                   <LineProgress value={0} />
                 </div>
                 <div className="course-information-square">
