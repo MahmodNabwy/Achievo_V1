@@ -12,7 +12,7 @@ export const Layout = () => {
     <div className="flex flex-row">
       <Sidebar />
 
-      <div className="flex w-full h-auto flex-col pr-4 ">
+      <div className="flex w-full h-auto flex-col overflow-auto">
         {/* Expand Button */}
         <div
           className="w-fit"

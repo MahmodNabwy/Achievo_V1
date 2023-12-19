@@ -39,7 +39,7 @@ export const ModuleHeader = (props: ModuleHeaderProps) => {
   };
 
   return (
-    <div className="ModuleHeader">
+    <div className="ModuleHeader animate__animated animate__fadeIn">
       <div className="flex">
         {props.navItems.map((item) => {
           return (

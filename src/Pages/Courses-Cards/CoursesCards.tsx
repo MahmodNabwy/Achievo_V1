@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { LineProgress } from "../../Components/LineProgress/LineProgress";
 import { StarsRating } from "../../Components/StarsRating/StarsRating";
 import "./CoursesCards.scss";
@@ -11,10 +12,52 @@ import { useSelector, useDispatch } from "react-redux";
 import courseCover from "./Assets/images/Rectangle 531.png";
 type CoursesCardsProps = {};
 export const CoursesCards = (props: CoursesCardsProps) => {
+  const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
+  const [isMediumScreen, setIsMediumScreen] = useState<boolean>(false);
   const typeFromRedux = useSelector((state: any) => state.courses.type);
   const current_Li_From_Redux = useSelector(
     (state: any) => state.courses.activeLi
   );
+
+  /*
+   * In SM,MD Screens We Will Disappear the course cover
+   */
+  const handleResize = () => {
+    const screenWidth = window.innerWidth;
+
+    // Define your screen size breakpoints
+    const smallScreenMaxWidth = 600;
+    const mediumScreenMaxWidth = 1024;
+
+    // Check if the screen is small
+    if (screenWidth <= smallScreenMaxWidth) {
+      setIsSmallScreen(true);
+    }
+    // Check if the screen is medium
+    else if (
+      screenWidth > smallScreenMaxWidth &&
+      screenWidth <= mediumScreenMaxWidth
+    ) {
+      setIsMediumScreen(true);
+    } else {
+      setIsSmallScreen(false);
+      setIsMediumScreen(false);
+    }
+  };
+
+  useEffect(() => {
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Initial check on component mount
+    handleResize();
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const header = {
     data: [
       {
@@ -47,14 +90,14 @@ export const CoursesCards = (props: CoursesCardsProps) => {
   };
 
   return (
-    <div className="courses-container">
+    <div className="courses-container animate__animated animate__fadeIn">
       <ModuleHeader navItems={header.data} icons={header.icons} />
-      {typeFromRedux === 1 ? (
+      {typeFromRedux === 1 ? ( //Rectangle Figure
         <>
-          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4 courses-grid">
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4 courses-grid ">
             {current_Li_From_Redux === 1 ? ( //Library Type
               <>
-                <div className="card-rectangle">
+                <div className="card-rectangle animate__animated animate__fadeIn">
                   <div
                     style={{
                       borderLeft: "26px solid #178CE1",
@@ -80,11 +123,14 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                           </div>
                         </div>
                       </div>
-                      <img
-                        src={cover}
-                        className="course-rectangle-cover"
-                        alt="course-cover"
-                      />
+                      {isSmallScreen === true ||
+                      isMediumScreen === true ? null : (
+                        <img
+                          src={cover}
+                          className="course-rectangle-cover"
+                          alt="course-cover"
+                        />
+                      )}
                     </div>
                     <div style={{ marginTop: "-17px" }}>
                       <LineProgress value={100} />
@@ -111,7 +157,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                   </div>
                 </div>
                 {/* InProgress Rectangle Card */}
-                <div className="card-rectangle">
+                <div className="card-rectangle animate__animated animate__fadeIn">
                   <div
                     style={{
                       borderLeft: "26px solid #E1CD17",
@@ -137,11 +183,14 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                           </div>
                         </div>
                       </div>
-                      <img
-                        src={cover}
-                        className="course-rectangle-cover"
-                        alt="course-cover"
-                      />
+                      {isSmallScreen === true ||
+                      isMediumScreen === true ? null : (
+                        <img
+                          src={cover}
+                          className="course-rectangle-cover"
+                          alt="course-cover"
+                        />
+                      )}
                     </div>
                     <div style={{ marginTop: "-17px" }}>
                       <LineProgress value={25} />
@@ -169,7 +218,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                 </div>
 
                 {/* Completed Rectangle Card */}
-                <div className="card-rectangle">
+                <div className="card-rectangle animate__animated animate__fadeIn">
                   <div
                     style={{
                       borderLeft: "26px solid #60B527",
@@ -195,11 +244,14 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                           </div>
                         </div>
                       </div>
-                      <img
-                        src={cover}
-                        className="course-rectangle-cover"
-                        alt="course-cover"
-                      />
+                      {isSmallScreen === true ||
+                      isMediumScreen === true ? null : (
+                        <img
+                          src={cover}
+                          className="course-rectangle-cover"
+                          alt="course-cover"
+                        />
+                      )}
                     </div>
                     <div style={{ marginTop: "-17px" }}>
                       <LineProgress value={100} />
@@ -227,7 +279,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                 </div>
 
                 {/* Resume Rectangle Card */}
-                <div className="card-rectangle">
+                <div className="card-rectangle animate__animated animate__fadeIn">
                   <div
                     style={{
                       borderLeft: "26px solid #E1CD17",
@@ -253,11 +305,14 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                           </div>
                         </div>
                       </div>
-                      <img
-                        src={cover}
-                        className="course-rectangle-cover"
-                        alt="course-cover"
-                      />
+                      {isSmallScreen === true ||
+                      isMediumScreen === true ? null : (
+                        <img
+                          src={cover}
+                          className="course-rectangle-cover"
+                          alt="course-cover"
+                        />
+                      )}
                     </div>
                     <div style={{ marginTop: "-17px" }}>
                       <LineProgress value={25} />
@@ -286,7 +341,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
               </>
             ) : current_Li_From_Redux === 2 ? ( //In Progress Type
               <>
-                <div className="card-rectangle">
+                <div className="card-rectangle animate__animated animate__fadeIn">
                   <div
                     style={{
                       borderLeft: "26px solid #E1CD17",
@@ -312,11 +367,14 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                           </div>
                         </div>
                       </div>
-                      <img
-                        src={cover}
-                        className="course-rectangle-cover"
-                        alt="course-cover"
-                      />
+                      {isSmallScreen === true ||
+                      isMediumScreen === true ? null : (
+                        <img
+                          src={cover}
+                          className="course-rectangle-cover"
+                          alt="course-cover"
+                        />
+                      )}
                     </div>
                     <div style={{ marginTop: "-17px" }}>
                       <LineProgress value={25} />
@@ -342,7 +400,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     </div>
                   </div>
                 </div>
-                <div className="card-rectangle">
+                <div className="card-rectangle animate__animated animate__fadeIn">
                   <div
                     style={{
                       borderLeft: "26px solid #E1CD17",
@@ -368,11 +426,14 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                           </div>
                         </div>
                       </div>
-                      <img
-                        src={cover}
-                        className="course-rectangle-cover"
-                        alt="course-cover"
-                      />
+                      {isSmallScreen === true ||
+                      isMediumScreen === true ? null : (
+                        <img
+                          src={cover}
+                          className="course-rectangle-cover"
+                          alt="course-cover"
+                        />
+                      )}
                     </div>
                     <div style={{ marginTop: "-17px" }}>
                       <LineProgress value={25} />
@@ -398,7 +459,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     </div>
                   </div>
                 </div>
-                <div className="card-rectangle">
+                <div className="card-rectangle animate__animated animate__fadeIn">
                   <div
                     style={{
                       borderLeft: "26px solid #E1CD17",
@@ -424,11 +485,14 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                           </div>
                         </div>
                       </div>
-                      <img
-                        src={cover}
-                        className="course-rectangle-cover"
-                        alt="course-cover"
-                      />
+                      {isSmallScreen === true ||
+                      isMediumScreen === true ? null : (
+                        <img
+                          src={cover}
+                          className="course-rectangle-cover"
+                          alt="course-cover"
+                        />
+                      )}
                     </div>
                     <div style={{ marginTop: "-17px" }}>
                       <LineProgress value={25} />
@@ -454,7 +518,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     </div>
                   </div>
                 </div>
-                <div className="card-rectangle">
+                <div className="card-rectangle animate__animated animate__fadeIn">
                   <div
                     style={{
                       borderLeft: "26px solid #E1CD17",
@@ -480,11 +544,14 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                           </div>
                         </div>
                       </div>
-                      <img
-                        src={cover}
-                        className="course-rectangle-cover"
-                        alt="course-cover"
-                      />
+                      {isSmallScreen === true ||
+                      isMediumScreen === true ? null : (
+                        <img
+                          src={cover}
+                          className="course-rectangle-cover"
+                          alt="course-cover"
+                        />
+                      )}
                     </div>
                     <div style={{ marginTop: "-17px" }}>
                       <LineProgress value={25} />
@@ -510,7 +577,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     </div>
                   </div>
                 </div>
-                <div className="card-rectangle">
+                <div className="card-rectangle animate__animated animate__fadeIn">
                   <div
                     style={{
                       borderLeft: "26px solid #E1CD17",
@@ -536,11 +603,14 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                           </div>
                         </div>
                       </div>
-                      <img
-                        src={cover}
-                        className="course-rectangle-cover"
-                        alt="course-cover"
-                      />
+                      {isSmallScreen === true ||
+                      isMediumScreen === true ? null : (
+                        <img
+                          src={cover}
+                          className="course-rectangle-cover"
+                          alt="course-cover"
+                        />
+                      )}
                     </div>
                     <div style={{ marginTop: "-17px" }}>
                       <LineProgress value={25} />
@@ -569,7 +639,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
               </>
             ) : current_Li_From_Redux === 3 ? ( //Completed Type
               <>
-                <div className="card-rectangle">
+                <div className="card-rectangle animate__animated animate__fadeIn">
                   <div
                     style={{
                       borderLeft: "26px solid #60B527",
@@ -595,11 +665,14 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                           </div>
                         </div>
                       </div>
-                      <img
-                        src={cover}
-                        className="course-rectangle-cover"
-                        alt="course-cover"
-                      />
+                      {isSmallScreen === true ||
+                      isMediumScreen === true ? null : (
+                        <img
+                          src={cover}
+                          className="course-rectangle-cover"
+                          alt="course-cover"
+                        />
+                      )}
                     </div>
                     <div style={{ marginTop: "-17px" }}>
                       <LineProgress value={100} />
@@ -625,7 +698,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     </div>
                   </div>
                 </div>
-                <div className="card-rectangle">
+                <div className="card-rectangle animate__animated animate__fadeIn">
                   <div
                     style={{
                       borderLeft: "26px solid #60B527",
@@ -651,11 +724,14 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                           </div>
                         </div>
                       </div>
-                      <img
-                        src={cover}
-                        className="course-rectangle-cover"
-                        alt="course-cover"
-                      />
+                      {isSmallScreen === true ||
+                      isMediumScreen === true ? null : (
+                        <img
+                          src={cover}
+                          className="course-rectangle-cover"
+                          alt="course-cover"
+                        />
+                      )}
                     </div>
                     <div style={{ marginTop: "-17px" }}>
                       <LineProgress value={100} />
@@ -681,7 +757,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     </div>
                   </div>
                 </div>
-                <div className="card-rectangle">
+                <div className="card-rectangle animate__animated animate__fadeIn">
                   <div
                     style={{
                       borderLeft: "26px solid #60B527",
@@ -707,11 +783,14 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                           </div>
                         </div>
                       </div>
-                      <img
-                        src={cover}
-                        className="course-rectangle-cover"
-                        alt="course-cover"
-                      />
+                      {isSmallScreen === true ||
+                      isMediumScreen === true ? null : (
+                        <img
+                          src={cover}
+                          className="course-rectangle-cover"
+                          alt="course-cover"
+                        />
+                      )}
                     </div>
                     <div style={{ marginTop: "-17px" }}>
                       <LineProgress value={100} />
@@ -737,7 +816,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     </div>
                   </div>
                 </div>
-                <div className="card-rectangle">
+                <div className="card-rectangle animate__animated animate__fadeIn">
                   <div
                     style={{
                       borderLeft: "26px solid #60B527",
@@ -763,11 +842,14 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                           </div>
                         </div>
                       </div>
-                      <img
-                        src={cover}
-                        className="course-rectangle-cover"
-                        alt="course-cover"
-                      />
+                      {isSmallScreen === true ||
+                      isMediumScreen === true ? null : (
+                        <img
+                          src={cover}
+                          className="course-rectangle-cover"
+                          alt="course-cover"
+                        />
+                      )}
                     </div>
                     <div style={{ marginTop: "-17px" }}>
                       <LineProgress value={100} />
@@ -793,7 +875,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     </div>
                   </div>
                 </div>
-                <div className="card-rectangle">
+                <div className="card-rectangle animate__animated animate__fadeIn">
                   <div
                     style={{
                       borderLeft: "26px solid #60B527",
@@ -819,11 +901,14 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                           </div>
                         </div>
                       </div>
-                      <img
-                        src={cover}
-                        className="course-rectangle-cover"
-                        alt="course-cover"
-                      />
+                      {isSmallScreen === true ||
+                      isMediumScreen === true ? null : (
+                        <img
+                          src={cover}
+                          className="course-rectangle-cover"
+                          alt="course-cover"
+                        />
+                      )}
                     </div>
                     <div style={{ marginTop: "-17px" }}>
                       <LineProgress value={100} />
@@ -853,7 +938,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
             ) : (
               //Not Started Type
               <>
-                <div className="card-rectangle">
+                <div className="card-rectangle animate__animated animate__fadeIn">
                   <div
                     style={{
                       borderLeft: "26px solid #178CE1",
@@ -879,11 +964,14 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                           </div>
                         </div>
                       </div>
-                      <img
-                        src={cover}
-                        className="course-rectangle-cover"
-                        alt="course-cover"
-                      />
+                      {isSmallScreen === true ||
+                      isMediumScreen === true ? null : (
+                        <img
+                          src={cover}
+                          className="course-rectangle-cover"
+                          alt="course-cover"
+                        />
+                      )}
                     </div>
                     <div style={{ marginTop: "-17px" }}>
                       <LineProgress value={100} />
@@ -909,7 +997,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     </div>
                   </div>
                 </div>
-                <div className="card-rectangle">
+                <div className="card-rectangle animate__animated animate__fadeIn">
                   <div
                     style={{
                       borderLeft: "26px solid #178CE1",
@@ -935,11 +1023,14 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                           </div>
                         </div>
                       </div>
-                      <img
-                        src={cover}
-                        className="course-rectangle-cover"
-                        alt="course-cover"
-                      />
+                      {isSmallScreen === true ||
+                      isMediumScreen === true ? null : (
+                        <img
+                          src={cover}
+                          className="course-rectangle-cover"
+                          alt="course-cover"
+                        />
+                      )}
                     </div>
                     <div style={{ marginTop: "-17px" }}>
                       <LineProgress value={100} />
@@ -965,7 +1056,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     </div>
                   </div>
                 </div>
-                <div className="card-rectangle">
+                <div className="card-rectangle animate__animated animate__fadeIn">
                   <div
                     style={{
                       borderLeft: "26px solid #178CE1",
@@ -991,11 +1082,14 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                           </div>
                         </div>
                       </div>
-                      <img
-                        src={cover}
-                        className="course-rectangle-cover"
-                        alt="course-cover"
-                      />
+                      {isSmallScreen === true ||
+                      isMediumScreen === true ? null : (
+                        <img
+                          src={cover}
+                          className="course-rectangle-cover"
+                          alt="course-cover"
+                        />
+                      )}
                     </div>
                     <div style={{ marginTop: "-17px" }}>
                       <LineProgress value={100} />
@@ -1021,7 +1115,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     </div>
                   </div>
                 </div>
-                <div className="card-rectangle">
+                <div className="card-rectangle animate__animated animate__fadeIn">
                   <div
                     style={{
                       borderLeft: "26px solid #178CE1",
@@ -1047,11 +1141,14 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                           </div>
                         </div>
                       </div>
-                      <img
-                        src={cover}
-                        className="course-rectangle-cover"
-                        alt="course-cover"
-                      />
+                      {isSmallScreen === true ||
+                      isMediumScreen === true ? null : (
+                        <img
+                          src={cover}
+                          className="course-rectangle-cover"
+                          alt="course-cover"
+                        />
+                      )}
                     </div>
                     <div style={{ marginTop: "-17px" }}>
                       <LineProgress value={100} />
@@ -1082,10 +1179,11 @@ export const CoursesCards = (props: CoursesCardsProps) => {
           </div>
         </>
       ) : (
+        //Square Figure
         <>
-          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4 courses-grid">
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4 courses-grid animate__animated animate__fadeIn">
             {/* Re Take Square Card */}
-            <div className="card-square">
+            <div className="card-square animate__animated animate__fadeIn">
               <div
                 style={{
                   borderLeft: "26px solid #60B527",
@@ -1093,19 +1191,23 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                   height: "100%",
                 }}
               >
-                <span className="course-name">Security Awareness Training</span>
-                <div className="flex justify-between">
+                <span className="course-name pl-4">
+                  Security Awareness Training
+                </span>
+                <div className="flex justify-between pl-4">
                   <span className="create-date">Created Date: 05-08-2023</span>
                   <div>
                     <StarsRating />
                   </div>
                 </div>
                 <div>
-                  <img
-                    src={courseCover}
-                    className="w-full"
-                    alt="course-cover"
-                  />
+                  {isSmallScreen === true || isMediumScreen === true ? null : (
+                    <img
+                      src={courseCover}
+                      className="w-full"
+                      alt="course-cover"
+                    />
+                  )}
                 </div>
                 <div style={{ marginTop: "-13px" }}>
                   <LineProgress value={100} />
@@ -1129,7 +1231,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
               </div>
             </div>
             {/* Resume Square Card */}
-            <div className="card-square">
+            <div className="card-square animate__animated animate__fadeIn">
               <div
                 style={{
                   borderLeft: "26px solid #E1CD17",
@@ -1137,19 +1239,23 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                   height: "100%",
                 }}
               >
-                <span className="course-name">Security Awareness Training</span>
-                <div className="flex justify-between">
+                <span className="course-name pl-4">
+                  Security Awareness Training
+                </span>
+                <div className="flex justify-between pl-4">
                   <span className="create-date">Created Date: 05-08-2023</span>
                   <div>
                     <StarsRating />
                   </div>
                 </div>
                 <div>
-                  <img
-                    src={courseCover}
-                    className="w-full"
-                    alt="course-cover"
-                  />
+                  {isSmallScreen === true || isMediumScreen === true ? null : (
+                    <img
+                      src={courseCover}
+                      className="w-full"
+                      alt="course-cover"
+                    />
+                  )}
                 </div>
                 <div style={{ marginTop: "-13px" }}>
                   <LineProgress value={72} />
@@ -1173,7 +1279,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
               </div>
             </div>
             {/* Start Square Card */}
-            <div className="card-square">
+            <div className="card-square animate__animated animate__fadeIn">
               <div
                 style={{
                   borderLeft: "26px solid #178CE1",
@@ -1181,19 +1287,23 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                   height: "100%",
                 }}
               >
-                <span className="course-name">Security Awareness Training</span>
-                <div className="flex justify-between">
+                <span className="course-name pl-4">
+                  Security Awareness Training
+                </span>
+                <div className="flex justify-between pl-4">
                   <span className="create-date">Created Date: 05-08-2023</span>
                   <div>
                     <StarsRating />
                   </div>
                 </div>
                 <div>
-                  <img
-                    src={courseCover}
-                    className="w-full"
-                    alt="course-cover"
-                  />
+                  {isSmallScreen === true || isMediumScreen === true ? null : (
+                    <img
+                      src={courseCover}
+                      className="w-full"
+                      alt="course-cover"
+                    />
+                  )}
                 </div>
                 <div style={{ marginTop: "-13px" }}>
                   <LineProgress value={0} />
