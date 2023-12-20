@@ -71,7 +71,7 @@ export const ModuleHeader = (props: ModuleHeaderProps) => {
             style={{ alignItems: "center" }}
           >
             <div className="flex pt-1">
-              <div className="mr-12">
+              <div className="lg:mr-12">
                 {filterPopOver === true ? (
                   <>
                     <div className="filter-popover animate__animated animate__fadeIn">
@@ -104,7 +104,7 @@ export const ModuleHeader = (props: ModuleHeaderProps) => {
               </div>
               {props.icons.map((item) => {
                 return (
-                  <div className="mr-12">
+                  <div className="lg:mr-12">
                     <img
                       className="animate__animated animate__fadeIn"
                       src={item.src}

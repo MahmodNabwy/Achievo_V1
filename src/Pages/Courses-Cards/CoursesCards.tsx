@@ -927,7 +927,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                       <span className="course-name pl-4">
                         Security Awareness Training
                       </span>
-                      <div className="flex justify-between pl-4">
+                      <div className="course-inf-square">
                         <span className="create-date">
                           Created Date: 05-08-2023
                         </span>
@@ -980,7 +980,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                       <span className="course-name pl-4">
                         Security Awareness Training
                       </span>
-                      <div className="flex justify-between pl-4">
+                      <div className="course-inf-square">
                         <span className="create-date">
                           Created Date: 05-08-2023
                         </span>
@@ -1033,7 +1033,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                       <span className="course-name pl-4">
                         Security Awareness Training
                       </span>
-                      <div className="flex justify-between pl-4">
+                      <div className="course-inf-square">
                         <span className="create-date">
                           Created Date: 05-08-2023
                         </span>
@@ -1141,7 +1141,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     <span className="course-name pl-4">
                       Security Awareness Training
                     </span>
-                    <div className="flex justify-between pl-4">
+                    <div className="course-inf-square">
                       <span className="create-date">
                         Created Date: 05-08-2023
                       </span>
@@ -1195,7 +1195,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     <span className="course-name pl-4">
                       Security Awareness Training
                     </span>
-                    <div className="flex justify-between pl-4">
+                    <div className="course-inf-square">
                       <span className="create-date">
                         Created Date: 05-08-2023
                       </span>

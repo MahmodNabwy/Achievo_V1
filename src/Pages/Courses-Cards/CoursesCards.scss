@@ -170,6 +170,11 @@
    
 }
  /* Square Cards Classes */ 
+ .course-inf-square{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1rem;
+ }
 .course-information-square{
     display: flex;
     justify-content: space-between;
@@ -241,6 +246,7 @@
     border-bottom-right-radius: 7px;  
 }
 .course-rating{
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -322,11 +328,39 @@
         padding-top: 1rem;
     }
     .card-square-sm{           
-        height: 313px;
+        height: auto;
         flex-shrink: 0;
         border-radius: 15px;
         border: 3px solid #CCC;         
         background: #FFF;
+    }
+    .resume{
+        width: 150px;
+        height: 105%;
+        flex-shrink: 0;
+        background: #E1CD17;
+        color: #FFF;
+        text-align: center;
+        font-family: Cairo;
+        font-size: 1.246rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        border-bottom-right-radius: 13px;
+    }
+    .retake{
+        width: 150px;
+        height: 105%;
+        flex-shrink: 0;
+        background: #60B527;
+        color: #FFF;
+        text-align: center;
+        font-family: Cairo;
+        font-size: 1.246rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        border-bottom-right-radius: 13px;
     }
 }
 @media screen and (min-width: 1920px) {
@@ -576,6 +610,9 @@
 }
 /* Iphone 12 */
 @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    .course-inf-square{
+        display: unset;
+    }
     .course-rating{
         display: unset;
     }
@@ -587,6 +624,48 @@
     }
     .retake-rectangle{
         width: auto;
+    }
+    .retake{
+        width: auto;
+        height: 105%;
+        flex-shrink: 0;
+        background: #60B527;
+        color: #FFF;
+        text-align: center;
+        font-family: Cairo;
+        font-size: 1.246rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        border-bottom-right-radius: 13px;
+    }
+    .resume{
+        width: auto;
+        height: 105%;
+        flex-shrink: 0;
+        background: #E1CD17;
+        color: #FFF;
+        text-align: center;
+        font-family: Cairo;
+        font-size: 1.246rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        border-bottom-right-radius: 13px;
+    }
+    .Start{
+        width: auto;
+        height: 105%;
+        flex-shrink: 0;
+        background: #178CE1;
+        color: #FFF;
+        text-align: center;
+        font-family: Cairo;
+        font-size: 1.246rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        border-bottom-right-radius: 13px;
     }
 }
 /* IPhone 11 */

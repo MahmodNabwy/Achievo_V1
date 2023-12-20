@@ -9,7 +9,7 @@ export const MainHeader = (props: MainHeaderProps) => {
             <span className="Module-title">Courses</span>
           </div>
           <div
-            className="col-start-3 flex justify-end gap-4"
+            className="sm:col-start-1 lg:col-start-3 flex justify-end gap-4"
             style={{ alignItems: "center" }}
           >
             <div className="form-control relative w-full">
@@ -19,10 +19,7 @@ export const MainHeader = (props: MainHeaderProps) => {
                 placeholder="Search"
               />
 
-              <span
-                className="absolute  inset-y-0 left-4 inline-flex items-center"
-                // style={{ top: "0px", bottom: "30px" }}
-              >
+              <span className="absolute  inset-y-0 left-4 inline-flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="21"
