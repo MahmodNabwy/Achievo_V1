@@ -10,6 +10,7 @@ import fourCirclesIcon from "./Assets/images/four-circle.svg";
 import cover from "./Assets/images/Rectangle 530.png";
 import { useSelector, useDispatch } from "react-redux";
 import courseCover from "./Assets/images/Rectangle 531.png";
+import { GoBackHeader } from "../../Components/GoBackHeader/GoBackHeader";
 type CoursesCardsProps = {};
 export const CoursesCards = (props: CoursesCardsProps) => {
   const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
@@ -91,7 +92,8 @@ export const CoursesCards = (props: CoursesCardsProps) => {
 
   return (
     <div className="courses-container animate__animated animate__fadeIn">
-      <ModuleHeader navItems={header.data} icons={header.icons} />
+      {/* <ModuleHeader navItems={header.data} icons={header.icons} /> */}
+      <GoBackHeader />
       {typeFromRedux === 1 ? ( //Rectangle Figure
         <>
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4 courses-grid ">
