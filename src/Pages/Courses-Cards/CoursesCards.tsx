@@ -109,7 +109,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                   >
                     <div className="flex justify-between pl-4 data-container-nostarted-lg data-container-nostarted-sm">
                       <div className="course-informations-lg course-informations-sm">
-                        <span className="course-name course-name-sm course-name-lg">
+                        <span className="course-name course-name-sm name-sm course-name-lg">
                           Security Awareness Training
                         </span>
                         <div className="course-rating">
@@ -168,7 +168,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                       style={{ height: "98x" }}
                     >
                       <div className="course-informations-lg course-informations-sm">
-                        <span className="course-name course-name-sm course-name-lg">
+                        <span className="course-name course-name-sm name-sm course-name-lg">
                           Security Awareness Training
                         </span>
                         <div className="course-rating">
@@ -226,7 +226,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                   >
                     <div className="flex justify-between pl-4 data-container-completed-lg data-container-completed-sm">
                       <div className="course-informations-lg course-informations-sm">
-                        <span className="course-name course-name-sm course-name-lg">
+                        <span className="course-name course-name-sm name-sm course-name-lg">
                           Security Awareness Training
                         </span>
                         <div className="course-rating">
@@ -283,7 +283,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                   >
                     <div className="flex justify-between pl-4 data-container-nostarted-lg data-container-nostarted-sm">
                       <div className="course-informations-lg course-informations-sm">
-                        <span className="course-name course-name-sm course-name-lg">
+                        <span className="course-name course-name-sm name-sm course-name-lg">
                           Security Awareness Training
                         </span>
                         <div className="course-rating">
@@ -344,7 +344,65 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                       style={{ height: "98x" }}
                     >
                       <div className="course-informations-lg course-informations-sm">
-                        <span className="course-name course-name-sm course-name-lg">
+                        <span className="course-name course-name-sm name-sm course-name-lg">
+                          Security Awareness Training
+                        </span>
+                        <div className="course-rating">
+                          <span className="create-date">
+                            Created Date: 05-08-2023
+                          </span>
+                          <div>
+                            <StarsRating />
+                          </div>
+                        </div>
+                      </div>
+                      {isSmallScreen === true ||
+                      isMediumScreen === true ? null : (
+                        <img
+                          src={cover}
+                          className="course-rectangle-cover overflow-auto"
+                          alt="course-cover"
+                        />
+                      )}
+                    </div>
+
+                    <LineProgress value={25} />
+
+                    <div
+                      className="flex justify-between"
+                      style={{ alignItems: "center" }}
+                    >
+                      <div className="deparment">IT</div>
+                      <div className="course-status">
+                        <div
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            paddingRight: "10px",
+                          }}
+                        >
+                          <div className="badge"></div>
+                          <span className="percentage">25%</span>
+                        </div>
+                        <div className="resume-rectangle">Resume</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="card-rectangle animate__animated animate__fadeIn">
+                  <div
+                    style={{
+                      borderLeft: "26px solid #E1CD17",
+                      borderRadius: "7px",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <div
+                      className="flex justify-between pl-4 data-container-inprogress-lg data-container-inprogress-sm"
+                      style={{ height: "98x" }}
+                    >
+                      <div className="course-informations-lg course-informations-sm">
+                        <span className="course-name course-name-sm name-sm course-name-lg">
                           Security Awareness Training
                         </span>
                         <div className="course-rating">
@@ -460,65 +518,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                       style={{ height: "98x" }}
                     >
                       <div className="course-informations-lg course-informations-sm">
-                        <span className="course-name course-name-sm course-name-lg">
-                          Security Awareness Training
-                        </span>
-                        <div className="course-rating">
-                          <span className="create-date">
-                            Created Date: 05-08-2023
-                          </span>
-                          <div>
-                            <StarsRating />
-                          </div>
-                        </div>
-                      </div>
-                      {isSmallScreen === true ||
-                      isMediumScreen === true ? null : (
-                        <img
-                          src={cover}
-                          className="course-rectangle-cover overflow-auto"
-                          alt="course-cover"
-                        />
-                      )}
-                    </div>
-
-                    <LineProgress value={25} />
-
-                    <div
-                      className="flex justify-between"
-                      style={{ alignItems: "center" }}
-                    >
-                      <div className="deparment">IT</div>
-                      <div className="course-status">
-                        <div
-                          style={{
-                            display: "flex",
-                            alignItems: "center",
-                            paddingRight: "10px",
-                          }}
-                        >
-                          <div className="badge"></div>
-                          <span className="percentage">25%</span>
-                        </div>
-                        <div className="resume-rectangle">Resume</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="card-rectangle animate__animated animate__fadeIn">
-                  <div
-                    style={{
-                      borderLeft: "26px solid #E1CD17",
-                      borderRadius: "7px",
-                      justifyContent: "space-between",
-                    }}
-                  >
-                    <div
-                      className="flex justify-between pl-4 data-container-inprogress-lg data-container-inprogress-sm"
-                      style={{ height: "98x" }}
-                    >
-                      <div className="course-informations-lg course-informations-sm">
-                        <span className="course-name course-name-sm course-name-lg">
+                        <span className="course-name course-name-sm name-sm course-name-lg">
                           Security Awareness Training
                         </span>
                         <div className="course-rating">
@@ -577,7 +577,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                   >
                     <div className="flex justify-between pl-4 data-container-completed-lg data-container-completed-sm">
                       <div className="course-informations-lg course-informations-sm">
-                        <span className="course-name course-name-sm course-name-lg">
+                        <span className="course-name course-name-sm name-sm course-name-lg">
                           Security Awareness Training
                         </span>
                         <div className="course-rating">
@@ -633,7 +633,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                   >
                     <div className="flex justify-between pl-4 data-container-completed-lg data-container-completed-sm">
                       <div className="course-informations-lg course-informations-sm">
-                        <span className="course-name course-name-sm course-name-lg">
+                        <span className="course-name course-name-sm name-sm course-name-lg">
                           Security Awareness Training
                         </span>
                         <div className="course-rating">
@@ -689,7 +689,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                   >
                     <div className="flex justify-between pl-4 data-container-completed-lg data-container-completed-sm">
                       <div className="course-informations-lg course-informations-sm">
-                        <span className="course-name course-name-sm course-name-lg">
+                        <span className="course-name course-name-sm name-sm course-name-lg">
                           Security Awareness Training
                         </span>
                         <div className="course-rating">
@@ -743,13 +743,12 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     style={{
                       borderLeft: "26px solid #178CE1",
                       borderRadius: "7px",
-                      // height: "100%",
                       justifyContent: "space-between",
                     }}
                   >
                     <div className="flex justify-between pl-4 data-container-nostarted-lg data-container-nostarted-sm">
                       <div className="course-informations-lg course-informations-sm">
-                        <span className="course-name course-name-sm course-name-lg">
+                        <span className="course-name course-name-sm name-sm course-name-lg">
                           Security Awareness Training
                         </span>
                         <div className="course-rating">
@@ -805,7 +804,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                   >
                     <div className="flex justify-between pl-4 data-container-nostarted-lg data-container-nostarted-sm">
                       <div className="course-informations-lg course-informations-sm">
-                        <span className="course-name course-name-sm course-name-lg">
+                        <span className="course-name course-name-sm name-sm course-name-lg">
                           Security Awareness Training
                         </span>
                         <div className="course-rating">
@@ -855,13 +854,12 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     style={{
                       borderLeft: "26px solid #178CE1",
                       borderRadius: "7px",
-                      // height: "100%",
                       justifyContent: "space-between",
                     }}
                   >
                     <div className="flex justify-between pl-4 data-container-nostarted-lg data-container-nostarted-sm">
                       <div className="course-informations-lg course-informations-sm">
-                        <span className="course-name course-name-sm course-name-lg">
+                        <span className="course-name course-name-sm name-sm course-name-lg">
                           Security Awareness Training
                         </span>
                         <div className="course-rating">

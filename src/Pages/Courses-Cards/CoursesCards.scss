@@ -484,7 +484,7 @@
         }
 }
 
-/* For iPhone 4 Portrait or Landscape View */
+/* For   Landscape View */
 @media screen and (min-device-width: 320px) 
 	and (-webkit-min-device-pixel-ratio: 2) {
         .card-square-sm{
@@ -496,13 +496,16 @@
         .course-name{
             color: #000;
             font-family: Cairo;
-            font-size: 1.4rem;
+            font-size: 1rem;
             font-style: normal;
             font-weight: 500;
             line-height: normal;
             display: flex;
             flex-direction: column;
             flex-shrink: 0;
+        }
+        .course-rating{
+            display: unset;
         }
 }
 
@@ -568,5 +571,29 @@
         display: flex;
         flex-direction: column;
         flex-shrink: 0;
+    }
+    
+}
+/* Iphone 12 */
+@media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    .course-rating{
+        display: unset;
+    }
+    .start-rectangle{
+        width: auto;
+    }
+    .resume-rectangle{
+        width: auto;
+    }
+    .retake-rectangle{
+        width: auto;
+    }
+}
+/* IPhone 11 */
+@media only screen and (min-width: 414px)
+{ 
+   
+    .start-rectangle,.resume-rectangle,.retake-rectangle{
+        width: 100px;
     }
 }
