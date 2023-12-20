@@ -1,0 +1,82 @@
+.CoursesDetails{
+    background-color: #FCFCFC;
+    border: 1px solid #eee;
+    overflow-y: hidden;
+
+    .course-informations{
+        display: grid;
+        padding-left: 15px;        
+    }
+    .course-hours{
+        color: #000;
+        font-family: Cairo;
+        font-size: 12.941px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .course-name{
+        color: #000;
+        font-family: Cairo;
+        font-size: 47.879px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .created-date{
+        color: rgba(0, 0, 0, 0.60);
+        font-family: Cairo;
+        font-size: 19px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: normal;
+    }
+    .department{
+        display: flex;
+        width: 42px;
+        height: 21px;
+        padding: 6px 0px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        border-radius: 8.824px;
+        background: #3186EA;
+        color: #FFF;
+        text-align: center;
+        font-family: Cairo;
+        font-size: 12.941px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .course-lang{
+        color: #000;
+        font-family: Cairo;
+        font-size: 12.941px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: normal;
+    }
+    .percentage{
+        color: #000;
+        text-align: right;
+        font-family: Cairo;
+        font-size: 19.935px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .badge{
+        width: 24px;
+        height: 31px;
+        flex-shrink: 0;
+        background: url('../Courses-Cards/Assets/images/quality\ 1.png'), white 50% / cover no-repeat;    
+    }
+    .course-cover{
+         width: 94%;
+    }
+    .cover{
+        width: 100%;
+        transform: skewX(-18deg);
+    }
+}

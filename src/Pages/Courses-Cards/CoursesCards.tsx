@@ -92,8 +92,8 @@ export const CoursesCards = (props: CoursesCardsProps) => {
 
   return (
     <div className="courses-container animate__animated animate__fadeIn">
-      {/* <ModuleHeader navItems={header.data} icons={header.icons} /> */}
-      <GoBackHeader />
+      <ModuleHeader navItems={header.data} icons={header.icons} />
+
       {typeFromRedux === 1 ? ( //Rectangle Figure
         <>
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4 courses-grid ">

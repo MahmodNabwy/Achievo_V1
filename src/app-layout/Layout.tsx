@@ -6,6 +6,7 @@ import WelcomeBanner from "../Components/WelcomeBanner/WelcomeBanner";
 import { LineProgress } from "../Components/LineProgress/LineProgress";
 import { CoursesCards } from "../Pages/Courses-Cards/CoursesCards";
 import { MainHeader } from "../Components/MainHeader/MainHeader";
+import { CoursesDetails } from "../Pages/Courses-Details/CoursesDetails";
 
 export const Layout = () => {
   return (
@@ -41,7 +42,8 @@ export const Layout = () => {
         {/* <WelcomeBanner userName="Mohamed Mansour" />
         <Circles />
         <Cards /> */}
-        <CoursesCards />
+        {/* <CoursesCards /> */}
+        <CoursesDetails />
       </div>
     </div>
   );
