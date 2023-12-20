@@ -8,7 +8,7 @@ export const LineProgress = (props: LineProgressProps) => {
   return (
     <div className="lineProgress">
       <progress
-        className="progress progress-success customize"
+        className="progress progress-success"
         value={props.value}
         max="100"
       ></progress>

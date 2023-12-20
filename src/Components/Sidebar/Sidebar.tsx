@@ -50,7 +50,7 @@ export const Sidebar = (props: SidebarProps) => {
       <label htmlFor="sidebar-mobile-fixed" className="sidebar-overlay"></label>
       <aside
         className="sidebar sidebar-fixed-left sidebar-mobile h-full justify-start max-sm:fixed max-sm:-translate-x-full"
-        // style={{ maxWidth: "17rem" }}
+        style={{ backgroundColor: "#f8fafd" }}
       >
         <section className="sidebar-title items-center p-4">
           {/* Achievo Logo */}
@@ -455,7 +455,10 @@ export const Sidebar = (props: SidebarProps) => {
             </section>
           </nav>
         </section>
-        <section className="sidebar-footer justify-end bg-gray-2 pt-2">
+        <section
+          className="sidebar-footer justify-end bg-gray-2 pt-2"
+          style={{ backgroundColor: "#f8fafd" }}
+        >
           <div className="divider my-0"></div>
           <div className="dropdown z-50 flex h-fit w-full cursor-pointer hover:bg-gray-4">
             <label

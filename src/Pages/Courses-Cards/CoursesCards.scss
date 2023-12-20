@@ -48,16 +48,6 @@
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
 }
- 
-.data-container-completed:hover{      
-     background-color: #a6d985;
-}
-.data-container-inprogress:hover{
-    background-color: #f4eca2;
-}
-.data-container-nostarted:hover{
-    background-color: #acd3ef;
-}
 .course-name{
     color: #000;
     font-family: Cairo;
@@ -180,18 +170,20 @@
    
 }
  /* Square Cards Classes */ 
-.card-square{           
-    height: 313px;
-    flex-shrink: 0;
-    border-radius: 15px;
-    border: 3px solid #CCC;
-    background: #FFF;
-}
 .course-information-square{
     display: flex;
     justify-content: space-between;
     align-items: center;
     
+}
+.course-square-completed-inf:hover{     
+    background-color: #a6d985;
+}
+.course-square-inprogress-inf:hover{
+    background-color: #f4eca2;    
+}
+.course-square-resume-inf:hover{    
+    background-color: #acd3ef;   
 }
 /* Rectangle Card Classes */
 .card-rectangle{     
@@ -248,7 +240,27 @@
     line-height: normal;
     border-bottom-right-radius: 7px;  
 }
+.course-rating{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+  
+.animate__fadeIn {
+  animation: fadeIn 1.5s ease-out;
+}
+.testCalc{
+    height: calc(100% - 95px);
+}
 @media screen 
   and (min-device-width: 1200px) 
   and (max-device-width: 1600px) 
@@ -263,6 +275,7 @@
         display: flex;    
         flex-direction: column;    
         flex-shrink: 0;
+       
     }
 }
 
@@ -281,37 +294,279 @@
         line-height: normal;
         display: flex;    
         flex-direction: column;    
+        flex-shrink: 0;        
+        
+    }
+    .data-container-nostarted-sm{
+        height: 99px;
+    } 
+    .data-container-inprogress-sm{
+        height: 99px;
+    }
+    .data-container-completed-sm{
+        height: 99px;
+    }
+    .data-container-nostarted-sm{
+        height: 99px;
+    }
+    .data-container-completed-sm:hover{      
+        background-color: #a6d985;
+   }
+   .data-container-inprogress-sm:hover{
+       background-color: #f4eca2;
+   }
+   .data-container-nostarted-sm:hover{
+       background-color: #acd3ef;
+   }
+    .course-informations-sm{
+        padding-top: 1rem;
+    }
+    .card-square-sm{           
+        height: 313px;
         flex-shrink: 0;
+        border-radius: 15px;
+        border: 3px solid #CCC;         
+        background: #FFF;
     }
 }
 @media screen and (min-width: 1920px) {
-    .course-name-lg {
-        
+ .course-name-lg {
+
+    color: #000;
+    font-family: Cairo;
+    font-size: 1.878rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: flex;    
+    flex-direction: column;    
+    flex-shrink: 0;
+    
+ }
+ .data-container-nostarted-lg{
+     height: 98px;
+ }
+ .data-container-inprogress-lg{
+     height: 98px;
+ }
+ .data-container-completed-lg{
+     height: 98px;
+ }
+ .data-container-nostarted-lg{
+     height: 98px;
+ }
+ .data-container-completed-lg:hover{      
+     background-color: #a6d985;
+}
+.data-container-inprogress-lg:hover{
+    background-color: #f4eca2;
+}
+.data-container-nostarted-lg:hover{
+    background-color: #acd3ef;    
+}
+ .course-informations-lg{
+     padding-top: 0rem;
+ }
+ .card-square-lg{           
+     height: 308px;
+     flex-shrink: 0;
+     border-radius: 15px;
+     border: 3px solid #CCC;
+     background: #FFF;
+ }
+}
+/* For Desktop View */
+@media screen and (max-width: 1024px) {
+    .card-square-sm{
+        height: auto;
+        border-radius: 15px;
+        border: 3px solid #ccc;
+        background: #FFF;
+    }
+    .course-name{
+        color: #000;
+        font-family: Cairo;
+        font-size: 1.4rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+    }
+}
+
+/* For Tablet View */
+@media screen and (min-device-width: 768px) 
+	and (max-device-width: 1024px) {
+        .card-square-sm{
+            height: auto;
+            border-radius: 15px;
+            border: 3px solid #ccc;
+            background: #FFF;
+        }
+        .course-name{
             color: #000;
             font-family: Cairo;
-            font-size: 1.878rem;
+            font-size: 1.4rem;
             font-style: normal;
             font-weight: 500;
             line-height: normal;
-            display: flex;    
-            flex-direction: column;    
+            display: flex;
+            flex-direction: column;
             flex-shrink: 0;
-       
+        }
+}
+
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px) 
+	and (orientation: portrait) {
+        .card-square-sm{
+            height: auto;
+            border-radius: 15px;
+            border: 3px solid #ccc;
+            background: #FFF;
+        }
+        .course-name{
+            color: #000;
+            font-family: Cairo;
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+        }
+}
+
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 640px) 
+	and (orientation: landscape) {
+        .card-square-sm{
+            height: auto;
+            border-radius: 15px;
+            border: 3px solid #ccc;
+            background: #FFF;
+        }
+        .course-name{
+            color: #000;
+            font-family: Cairo;
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+        }
+}
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen
+	and (max-device-width: 640px) {
+        .card-square-sm{
+            height: auto;
+            border-radius: 15px;
+            border: 3px solid #ccc;
+            background: #FFF;
+        }
+        .course-name{
+            color: #000;
+            font-family: Cairo;
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+        }
+}
+
+/* For iPhone 4 Portrait or Landscape View */
+@media screen and (min-device-width: 320px) 
+	and (-webkit-min-device-pixel-ratio: 2) {
+        .card-square-sm{
+            height: auto;
+            border-radius: 15px;
+            border: 3px solid #ccc;
+            background: #FFF;
+        }
+        .course-name{
+            color: #000;
+            font-family: Cairo;
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+        }
+}
+
+/* For iPhone 5 Portrait or Landscape View */
+@media (device-height: 568px) 
+	and (device-width: 320px) 
+	and (-webkit-min-device-pixel-ratio: 2) {
+        .card-square-sm{
+            height: auto;
+            border-radius: 15px;
+            border: 3px solid #ccc;
+            background: #FFF;
+        }
+        .course-name{
+            color: #000;
+            font-family: Cairo;
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+        }
+}
+
+/* For iPhone 6 and 6 plus Portrait or Landscape View */
+@media (min-device-height: 667px) 
+	and (min-device-width: 375px) 
+	and (-webkit-min-device-pixel-ratio: 3) {
+        .card-square-sm{
+            height: auto;
+            border-radius: 15px;
+            border: 3px solid #ccc;
+            background: #FFF;
+        }
+        .course-name{
+            color: #000;
+            font-family: Cairo;
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+        }
+};
+@media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    .card-square-sm{
+        height: auto;
+        border-radius: 15px;
+        border: 3px solid #ccc;
+        background: #FFF;
+    }
+    .course-name{
+        color: #000;
+        font-family: Cairo;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
     }
 }
-@keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-}
-  
-.animate__fadeIn {
-  animation: fadeIn 1.5s ease-out;
-}
-.testCalc{
-    height: calc(100% - 95px);
-}
- 
