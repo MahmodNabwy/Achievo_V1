@@ -1,0 +1,63 @@
+.Login{     
+height: 1080px;
+flex-shrink: 0;
+background: url('./Assets/Images/Artboard\ 3\ 1.png'), lightgray 50% / cover no-repeat;
+.email-input::placeholder{
+    color: #818181;
+    font-family: Cairo;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
+}
+.email-input:focus{
+    outline: none;
+}
+ 
+.password-input:focus{
+    outline: none;
+}
+.password-input::placeholder{
+color: #818181;
+font-family: Cairo;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.frame {
+    background-color: #ff0059;
+    border-radius: 10px;
+    height: 53px;
+    overflow: hidden;
+    position: relative;
+    width: 385px;
+}
+
+.frame .text-wrapper {
+    color: #ffffff;
+    font-family: Cairo;    
+    font-size: 25px;
+    font-weight: 500;
+    height: 53px;
+    left: 106px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: -1px;
+    width: 172px;
+}
+.forget-pw{
+    display: flex;
+    justify-content: start;
+    color: #3186EA;
+    font-family: Cairo;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+
+}
