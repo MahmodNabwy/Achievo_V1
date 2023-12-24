@@ -7,6 +7,7 @@ import { LineProgress } from "../Components/LineProgress/LineProgress";
 import { CoursesCards } from "../Pages/Courses-Cards/CoursesCards";
 import { MainHeader } from "../Components/MainHeader/MainHeader";
 import { CoursesDetails } from "../Pages/Courses-Details/CoursesDetails";
+import { CorusesWatch } from "../Pages/Courses-Watch/CorusesWatch";
 
 export const Layout = () => {
   return (
@@ -43,7 +44,8 @@ export const Layout = () => {
         <Circles />
         <Cards /> */}
         {/* <CoursesCards /> */}
-        <CoursesDetails />
+        {/* <CoursesDetails /> */}
+        <CorusesWatch />
       </div>
     </div>
   );

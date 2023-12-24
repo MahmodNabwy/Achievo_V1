@@ -1,0 +1,63 @@
+.CorusesWatch{
+    background-color: #FCFCFC;
+    border: 1px solid #eee;
+    overflow-y: hidden;
+    .course-information{
+        border-left: 1px solid #EAEAEB;
+        background: #FCFCFC;
+    }
+    .accordion-title{
+        color: #000;
+        font-family: Cairo;
+        font-size: 19.935px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .accordion-group.accordion-group-bordered .accordion-title{
+        padding-left: 0px;
+        background: #EAEAEB;
+
+    }
+    .session-header{
+        background: #EAEAEB;
+        
+    }
+    .session-content{
+        color: #000;
+        text-align: justify;
+        font-family: Cairo;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .course-data{
+        height: auto;
+        width: 363px;
+    }
+    .course-name{             
+        color: #000;
+        font-family: Cairo;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .video-title{
+        color: #000;
+        font-family: Cairo;
+        font-size: 0.875;
+        font-style: normal;
+        font-weight: 600;
+        
+    }
+    .video-duration{
+        color: #999494;
+        font-family: Cairo;
+        font-size: 0.688;
+        font-style: normal;
+        font-weight: 100;
+        
+    }
+}

@@ -5,7 +5,47 @@ import ProgressLine from "../../Components/Statistics/Courses/ProgressLine";
 import videoIcon from "./Assets/Icons/video.svg";
 import "./CorusesDetails.scss";
 import { LineProgress } from "../../Components/LineProgress/LineProgress";
+import { useState, useEffect } from "react";
 export const CoursesDetails = () => {
+  const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
+  const [isMediumScreen, setIsMediumScreen] = useState<boolean>(false);
+  /*
+   * In SM,MD Screens We Will Disappear the course cover
+   */
+  const handleResize = () => {
+    const screenWidth = window.innerWidth;
+
+    // Define your screen size breakpoints
+    const smallScreenMaxWidth = 600;
+    const mediumScreenMaxWidth = 1024;
+
+    // Check if the screen is small
+    if (screenWidth <= smallScreenMaxWidth) {
+      setIsSmallScreen(true);
+    }
+    // Check if the screen is medium
+    else if (
+      screenWidth > smallScreenMaxWidth &&
+      screenWidth <= mediumScreenMaxWidth
+    ) {
+      setIsMediumScreen(true);
+    } else {
+      setIsSmallScreen(false);
+      setIsMediumScreen(false);
+    }
+  };
+  useEffect(() => {
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Initial check on component mount
+    handleResize();
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div className="CoursesDetails">
       <GoBackHeader />
@@ -92,17 +132,19 @@ export const CoursesDetails = () => {
         </div>
 
         {/* Course Cover */}
-        <div className="sm:col-start-1 lg:col-start-2 two-images">
-          <div className="two-images-outer">
-            <div className="two-images-inner"></div>
+        {isSmallScreen === true || isMediumScreen === true ? null : (
+          <div className="sm:col-start-1 lg:col-start-2 two-images">
+            <div className="two-images-outer">
+              <div className="two-images-inner"></div>
+            </div>
           </div>
-        </div>
+        )}
         {/* Line Progress */}
         <div className="col-span-full">
           <LineProgress value={100} />
         </div>
         {/* Expand All , Collapse All */}
-        <div className="col-span-full">
+        <div className="col-span-full ">
           <div className="flex pl-6 gap-8 mt-4">
             {/* Expand All */}
             <div className="flex items-center gap-4">
@@ -175,7 +217,7 @@ export const CoursesDetails = () => {
           </div>
         </div>
         {/* Course Sessions */}
-        <div className="col-start-1 pl-4">
+        <div className="col-start-1 pl-4 pr-4">
           <div className="accordion-group accordion-group-bordered mt-4">
             <div className="accordion">
               <input
@@ -383,7 +425,7 @@ export const CoursesDetails = () => {
           </div>
         </div>
         {/* About The Course */}
-        <div className="col-start-2">
+        <div className="col-start-2 pr-7">
           <div className="about-course">
             <span className="about-title">About this Course</span>
             <div className="content">
