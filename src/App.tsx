@@ -8,8 +8,8 @@ import { Login } from "./Pages/Login/Login";
 const App = () => {
   return (
     <div>
-      {/* <Layout /> */}
-      <Login />
+      <Layout />
+      {/* <Login /> */}
     </div>
   );
 };

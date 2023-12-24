@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Login.scss";
+import { Loading } from "../../Components/Loading/Loading";
 export const Login = () => {
   const [pwVisible, setPwVisible] = useState(false);
   const handleShowPw = () => {
@@ -8,6 +9,7 @@ export const Login = () => {
   return (
     <div className="Login">
       <div className="flex  flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+        {/* <Loading /> */}
         {/* Achievo Logo */}
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <svg

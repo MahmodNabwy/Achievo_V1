@@ -9,7 +9,7 @@ export const CoursesDetails = () => {
   return (
     <div className="CoursesDetails">
       <GoBackHeader />
-      <div className="grid grid-cols-2 lg:grid-cols-2 gap-9 pr-10 pl-10">
+      <div className="grid grid-cols-2 lg:grid-cols-2 pl-10">
         {/* Course-Information */}
         <div className="sm:col-start-1 lg:col-start-1">
           <div className="course-informations">
@@ -83,7 +83,7 @@ export const CoursesDetails = () => {
                 <span className="course-lang">English, Arabic</span>
               </div>
               {/* Course Badge */}
-              <div className="flex gap-4 pr-16">
+              <div className="flex gap-4 pr-20">
                 <div className="badge"></div>
                 <div className="percentage">100%</div>
               </div>
@@ -92,9 +92,9 @@ export const CoursesDetails = () => {
         </div>
 
         {/* Course Cover */}
-        <div className="sm:col-start-1 lg:col-start-2">
-          <div className="course-cover">
-            <img src={courseCover} className="cover" alt="cover" />
+        <div className="sm:col-start-1 lg:col-start-2 two-images">
+          <div className="two-images-outer">
+            <div className="two-images-inner"></div>
           </div>
         </div>
         {/* Line Progress */}
