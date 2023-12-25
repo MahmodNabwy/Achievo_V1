@@ -44,8 +44,8 @@ export const Layout = () => {
         <Circles />
         <Cards /> */}
         {/* <CoursesCards /> */}
-        {/* <CoursesDetails /> */}
-        <CorusesWatch />
+        <CoursesDetails />
+        {/* <CorusesWatch /> */}
       </div>
     </div>
   );

@@ -57,7 +57,18 @@
         font-family: Cairo;
         font-size: 0.688;
         font-style: normal;
-        font-weight: 100;
-        
+        font-weight: 100;        
+    }
+    .percentage{
+        display: flex;
+        flex-shrink: 0;
+        color: #000000;
+        text-align: right;
+        font-family: Cairo;
+        font-size: 0.888rem;
+        font-style: normal;
+        font-weight: bold;
+        line-height: normal;
+        // margin-top: -15px;
     }
 }
