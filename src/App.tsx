@@ -5,12 +5,11 @@ import { Circles } from "./Pages/Dashboard-Circles/Circles";
 import { Cards } from "./Pages/Dashboard-Cards/Cards";
 import { Layout } from "./app-layout/Layout";
 import { Login } from "./Pages/Login/Login";
+import { useSelector } from "react-redux";
 const App = () => {
+  const stateFromLoginSlice = useSelector((state: any) => state.login);
   return (
-    <div>
-      <Layout />
-      {/* <Login /> */}
-    </div>
+    <div>{stateFromLoginSlice.isLogged === false ? <Login /> : <Layout />}</div>
   );
 };
 

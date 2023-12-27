@@ -8,6 +8,7 @@ import { CoursesCards } from "../Pages/Courses-Cards/CoursesCards";
 import { MainHeader } from "../Components/MainHeader/MainHeader";
 import { CoursesDetails } from "../Pages/Courses-Details/CoursesDetails";
 import { CorusesWatch } from "../Pages/Courses-Watch/CorusesWatch";
+import { Views } from "./Assets/Views";
 
 export const Layout = () => {
   return (
@@ -40,11 +41,16 @@ export const Layout = () => {
           </label>
         </div>
         <MainHeader />
+        <Views />
+        {/* <div>
+          <Circles />
+          <Cards />
+        </div> */}
         {/* <WelcomeBanner userName="Mohamed Mansour" />
         <Circles />
         <Cards /> */}
         {/* <CoursesCards /> */}
-        <CoursesDetails />
+        {/* <CoursesDetails /> */}
         {/* <CorusesWatch /> */}
       </div>
     </div>

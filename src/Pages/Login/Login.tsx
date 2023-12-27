@@ -1,10 +1,23 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+
 import "./Login.scss";
 import { Loading } from "../../Components/Loading/Loading";
+import { setIsLogged } from "../../redux/Slices/LoginSlice";
 export const Login = () => {
   const [pwVisible, setPwVisible] = useState(false);
   const handleShowPw = () => {
     setPwVisible(!pwVisible);
+  };
+  const [user, setUser] = useState("");
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const handleLogin = () => {
+    let isLogged = true;
+    dispatch(setIsLogged({ isLogged }));
+    navigate("/Home");
   };
   return (
     <div className="Login">
@@ -76,7 +89,7 @@ export const Login = () => {
         </div>
         {/* Form */}
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form className="space-y-6" action="#" method="POST">
+          <form className="space-y-6">
             <div>
               {/* Email Input */}
               <div className="mt-2">
@@ -85,6 +98,7 @@ export const Login = () => {
                     type="email"
                     className="input input-lg max-w-full pl-12 email-input"
                     placeholder="Enter email"
+                    onChange={(e) => setUser(e.target.value)}
                   />
 
                   <span className="absolute inset-y-0 left-3 inline-flex items-center">
@@ -200,7 +214,7 @@ export const Login = () => {
 
             <div>
               <button>
-                <div className="frame">
+                <div className="frame" onClick={() => handleLogin()}>
                   <div className="text-wrapper">Login</div>
                 </div>
               </button>
