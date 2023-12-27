@@ -3,22 +3,20 @@ import { DashboardContainer } from "../../Pages/Dashboard-Container/DashboardCon
 import { Login } from "../../Pages/Login/Login";
 import { CoursesCards } from "../../Pages/Courses-Cards/CoursesCards";
 import { useSelector } from "react-redux";
+import { AuthProvider, useAuth } from "../auth";
+import { Layout } from "../Layout";
 
 export const Views = () => {
-  const stateFromLoginSlice = useSelector((state: any) => state.login);
+  // const stateFromLoginSlice = useSelector((state: any) => state.login);
+  const auth = useAuth();
 
   return (
-    <Routes>
-      {stateFromLoginSlice.isLogged === true ? (
-        <>
-          <Route path="/Home" element={<DashboardContainer />} />
-          <Route path="/Courses" element={<CoursesCards />} />
-
-          <Route path="*" element={<Login />} />
-        </>
-      ) : (
-        <Route path="/login" element={<Login />} />
-      )}
-    </Routes>
+    <AuthProvider>
+      <Routes>
+        {!auth?.user && <Route path="/login" element={<Login />} />}
+        <Route path="/Home" element={<Layout type={1} />} />
+        <Route path="*" element={<Login />} />
+      </Routes>
+    </AuthProvider>
   );
 };

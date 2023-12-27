@@ -9,8 +9,12 @@ import { MainHeader } from "../Components/MainHeader/MainHeader";
 import { CoursesDetails } from "../Pages/Courses-Details/CoursesDetails";
 import { CorusesWatch } from "../Pages/Courses-Watch/CorusesWatch";
 import { Views } from "./Assets/Views";
+import { DashboardContainer } from "../Pages/Dashboard-Container/DashboardContianer";
 
-export const Layout = () => {
+type layoutProps = {
+  type: number;
+};
+export const Layout = (props: layoutProps) => {
   return (
     <div className="flex flex-row">
       <Sidebar />
@@ -41,14 +45,17 @@ export const Layout = () => {
           </label>
         </div>
         <MainHeader />
-        <Views />
+        {props.type === 1 ? (
+          <>
+            <WelcomeBanner userName="Mohamed Mansour" />
+            <DashboardContainer />
+          </>
+        ) : null}
         {/* <div>
           <Circles />
           <Cards />
         </div> */}
-        {/* <WelcomeBanner userName="Mohamed Mansour" />
-        <Circles />
-        <Cards /> */}
+
         {/* <CoursesCards /> */}
         {/* <CoursesDetails /> */}
         {/* <CorusesWatch /> */}

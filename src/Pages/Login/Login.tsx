@@ -1,22 +1,21 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-
 import "./Login.scss";
-import { Loading } from "../../Components/Loading/Loading";
-import { setIsLogged } from "../../redux/Slices/LoginSlice";
+import { useAuth } from "../../app-layout/auth";
 export const Login = () => {
   const [pwVisible, setPwVisible] = useState(false);
   const handleShowPw = () => {
     setPwVisible(!pwVisible);
   };
   const [user, setUser] = useState("");
+  const auth = useAuth();
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const handleLogin = () => {
+    auth?.login(user);
     let isLogged = true;
-    dispatch(setIsLogged({ isLogged }));
+    // dispatch(setIsLogged({ isLogged }));
     navigate("/Home");
   };
   return (
