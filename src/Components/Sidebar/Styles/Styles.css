@@ -69,7 +69,7 @@ flex-direction: row;
 font-size: .875rem ;
 gap: .5rem ;
 line-height: 1.25rem ;
-padding: 1rem 0rem;
+padding: 1rem 0.5rem;
 transition-duration: .15s;
 transition-property: transform,opacity,visibility;
 transition-timing-function: cubic-bezier(.4,0,.2,1);

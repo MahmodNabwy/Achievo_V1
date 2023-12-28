@@ -1,12 +1,14 @@
 import "./MainHeader.scss";
-type MainHeaderProps = {};
+type MainHeaderProps = {
+  title: string;
+};
 export const MainHeader = (props: MainHeaderProps) => {
   return (
     <div className="MainHeader">
       <div className="col-span-12 row-span-1 animate__animated animate__fadeIn">
         <div className="grid grid-cols-2 xs:grid-col-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-4 gap-4">
           <div className="col-start-1 col-end-3 sm:col-start-1">
-            <span className="Module-title">Courses</span>
+            <span className="Module-title">{props.title}</span>
           </div>
           <div
             className="sm:col-start-1 lg:col-start-3 flex justify-end gap-4"

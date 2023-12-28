@@ -6,7 +6,7 @@ type WelcomeBannerProps = {
 
 const WelcomeBanner = (props: WelcomeBannerProps) => {
   return (
-    <div>
+    <div className="p-4">
       <h1 className="headTitle">
         Welcome back, {props.userName} <br />
         <span> Your current status is here</span>

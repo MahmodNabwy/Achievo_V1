@@ -3,7 +3,7 @@ import { Circles } from "../Dashboard-Circles/Circles";
 
 export const DashboardContainer = () => {
   return (
-    <div>
+    <div className="p-4">
       <Circles />
       <Cards />
     </div>
