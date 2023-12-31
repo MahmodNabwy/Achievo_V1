@@ -11,6 +11,7 @@ import { CorusesWatch } from "../Pages/Courses-Watch/CorusesWatch";
 import { Views } from "./Assets/Views";
 import { DashboardContainer } from "../Pages/Dashboard-Container/DashboardContianer";
 import { title } from "process";
+import { CoursesContainer } from "../Pages/Courses-Container/CoursesContainer";
 
 type layoutProps = {
   type: number;
@@ -45,21 +46,21 @@ export const Layout = (props: layoutProps) => {
             </svg>
           </label>
         </div>
-        <MainHeader title={props.type === 1 ? "Dashboard" : ""} />
+        <MainHeader
+          title={
+            props.type === 1 ? "Dashboard" : props.type === 2 ? "Courses" : ""
+          }
+        />
         {props.type === 1 ? (
           <>
             <WelcomeBanner userName="Mohamed Mansour" />
             <DashboardContainer />
           </>
+        ) : props.type === 2 ? (
+          <>
+            <CoursesContainer />
+          </>
         ) : null}
-        {/* <div>
-          <Circles />
-          <Cards />
-        </div> */}
-
-        {/* <CoursesCards /> */}
-        {/* <CoursesDetails /> */}
-        {/* <CorusesWatch /> */}
       </div>
     </div>
   );

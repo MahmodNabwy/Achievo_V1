@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./Styles/Styles.css";
+import { Link, NavLink } from "react-router-dom";
+
 import profilePhoto from "./Assets/Images/Diversity Avatar Girl 05@4x 2.png";
 type SidebarProps = {};
 export const Sidebar = (props: SidebarProps) => {
@@ -122,98 +124,102 @@ export const Sidebar = (props: SidebarProps) => {
             <section className="menu-section px-4">
               <ul className="menu-items">
                 {/* Dashboard */}
-                <li
-                  className={
-                    selectedElement === 0
-                      ? "dashboard-item dashboard-active"
-                      : "dashboard-item"
-                  }
-                  onClick={() => handleSelectedElement(0)}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="29"
-                    viewBox="0 0 28 29"
-                    fill="none"
+                <Link to="/Home">
+                  <li
+                    className={
+                      selectedElement === 0
+                        ? "dashboard-item dashboard-active"
+                        : "dashboard-item"
+                    }
+                    onClick={() => handleSelectedElement(0)}
                   >
-                    <path
-                      d="M10.5574 19.1548H17.3194"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M2.79077 16.3383C2.79077 9.79025 3.50476 10.2473 7.348 6.68659C9.02948 5.32954 11.6459 2.71777 13.9053 2.71777C16.1648 2.71777 18.8323 5.31675 20.5336 6.68311C24.3768 10.2473 25.0897 9.79025 25.0897 16.3348C25.085 25.9749 22.807 25.9749 13.9379 25.9749C5.0688 25.9749 2.79077 25.9749 2.79077 16.3383Z"
-                      stroke="black"
-                      stroke-width="2"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  <span className="module-name">Dashboard</span>
-                  {selectedElement === 0 ? (
-                    <div className="dashboard-item-border"></div>
-                  ) : null}
-                </li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="29"
+                      viewBox="0 0 28 29"
+                      fill="none"
+                    >
+                      <path
+                        d="M10.5574 19.1548H17.3194"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M2.79077 16.3383C2.79077 9.79025 3.50476 10.2473 7.348 6.68659C9.02948 5.32954 11.6459 2.71777 13.9053 2.71777C16.1648 2.71777 18.8323 5.31675 20.5336 6.68311C24.3768 10.2473 25.0897 9.79025 25.0897 16.3348C25.085 25.9749 22.807 25.9749 13.9379 25.9749C5.0688 25.9749 2.79077 25.9749 2.79077 16.3383Z"
+                        stroke="black"
+                        stroke-width="2"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span className="module-name">Dashboard</span>
+                    {selectedElement === 0 ? (
+                      <div className="dashboard-item-border"></div>
+                    ) : null}
+                  </li>
+                </Link>
 
                 {/* Courses */}
-                <li
-                  className={
-                    selectedElement === 1
-                      ? "dashboard-item dashboard-active"
-                      : "dashboard-item"
-                  }
-                  onClick={() => handleSelectedElement(1)}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="29"
-                    viewBox="0 0 28 29"
-                    fill="none"
+                <Link to="/Courses">
+                  <li
+                    className={
+                      selectedElement === 1
+                        ? "dashboard-item dashboard-active"
+                        : "dashboard-item"
+                    }
+                    onClick={() => handleSelectedElement(1)}
                   >
-                    <path
-                      d="M15.5347 4.57837V7.66575"
-                      stroke="black"
-                      stroke-width="1.19608"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M15.5347 20.7932V23.3747"
-                      stroke="black"
-                      stroke-width="1.19608"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M15.5347 17.3046V11.1543"
-                      stroke="black"
-                      stroke-width="1.19608"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M25.0015 16.7303C24.3821 16.7109 23.7946 16.4513 23.3633 16.0063C22.9321 15.5614 22.6909 14.9661 22.6909 14.3464C22.6909 13.7268 22.9321 13.1314 23.3633 12.6865C23.7946 12.2415 24.3821 11.9819 25.0015 11.9626C25.0015 6.43901 25.0015 4.46216 13.9543 4.46216C2.90723 4.46216 2.90723 6.43901 2.90723 11.9614C3.52657 11.9808 4.11408 12.2404 4.54534 12.6853C4.97661 13.1303 5.21777 13.7256 5.21777 14.3453C5.21777 14.9649 4.97661 15.5602 4.54534 16.0052C4.11408 16.4501 3.52657 16.7098 2.90723 16.7291C2.90723 22.2538 2.90723 24.2307 13.9543 24.2307C25.0015 24.2307 25.0015 22.2538 25.0015 16.7303Z"
-                      stroke="black"
-                      stroke-width="1.19608"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  <span className="module-name">Courses</span>
-                  {selectedElement === 1 ? (
-                    <div className="dashboard-item-border"></div>
-                  ) : null}
-                </li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="29"
+                      viewBox="0 0 28 29"
+                      fill="none"
+                    >
+                      <path
+                        d="M15.5347 4.57837V7.66575"
+                        stroke="black"
+                        stroke-width="1.19608"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M15.5347 20.7932V23.3747"
+                        stroke="black"
+                        stroke-width="1.19608"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M15.5347 17.3046V11.1543"
+                        stroke="black"
+                        stroke-width="1.19608"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M25.0015 16.7303C24.3821 16.7109 23.7946 16.4513 23.3633 16.0063C22.9321 15.5614 22.6909 14.9661 22.6909 14.3464C22.6909 13.7268 22.9321 13.1314 23.3633 12.6865C23.7946 12.2415 24.3821 11.9819 25.0015 11.9626C25.0015 6.43901 25.0015 4.46216 13.9543 4.46216C2.90723 4.46216 2.90723 6.43901 2.90723 11.9614C3.52657 11.9808 4.11408 12.2404 4.54534 12.6853C4.97661 13.1303 5.21777 13.7256 5.21777 14.3453C5.21777 14.9649 4.97661 15.5602 4.54534 16.0052C4.11408 16.4501 3.52657 16.7098 2.90723 16.7291C2.90723 22.2538 2.90723 24.2307 13.9543 24.2307C25.0015 24.2307 25.0015 22.2538 25.0015 16.7303Z"
+                        stroke="black"
+                        stroke-width="1.19608"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span className="module-name">Courses</span>
+                    {selectedElement === 1 ? (
+                      <div className="dashboard-item-border"></div>
+                    ) : null}
+                  </li>
+                </Link>
 
                 {/* Assessments */}
                 <li

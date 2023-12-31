@@ -5,6 +5,7 @@ import { CoursesCards } from "../../Pages/Courses-Cards/CoursesCards";
 import { useSelector } from "react-redux";
 import { AuthProvider, useAuth } from "../auth";
 import { Layout } from "../Layout";
+import { CoursesDetails } from "../../Pages/Courses-Details/CoursesDetails";
 
 export const Views = () => {
   // const stateFromLoginSlice = useSelector((state: any) => state.login);
@@ -15,6 +16,9 @@ export const Views = () => {
       <Routes>
         {!auth?.user && <Route path="/login" element={<Login />} />}
         <Route path="/Home" element={<Layout type={1} />} />
+        <Route path="/Courses" element={<Layout type={2} />}>
+          <Route path="/Courses/:courseId" element={<CoursesDetails />} />
+        </Route>
         <Route path="*" element={<Login />} />
       </Routes>
     </AuthProvider>

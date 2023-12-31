@@ -11,11 +11,15 @@ import cover from "./Assets/images/Rectangle 530.png";
 import { useSelector, useDispatch } from "react-redux";
 import courseCover from "./Assets/images/Rectangle 531.png";
 import { GoBackHeader } from "../../Components/GoBackHeader/GoBackHeader";
+import { useNavigate } from "react-router-dom";
+
 type CoursesCardsProps = {};
 export const CoursesCards = (props: CoursesCardsProps) => {
   const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
   const [isMediumScreen, setIsMediumScreen] = useState<boolean>(false);
   const typeFromRedux = useSelector((state: any) => state.courses.type);
+  const navigate = useNavigate();
+
   const current_Li_From_Redux = useSelector(
     (state: any) => state.courses.activeLi
   );
@@ -90,6 +94,10 @@ export const CoursesCards = (props: CoursesCardsProps) => {
     ],
   };
 
+  const routeToCourse = () => {
+    navigate("/Courses/1");
+  };
+
   return (
     <div className="courses-container animate__animated animate__fadeIn">
       <ModuleHeader navItems={header.data} icons={header.icons} />
@@ -105,7 +113,6 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     style={{
                       borderLeft: "26px solid #178CE1",
                       borderRadius: "7px",
-                      // height: "100%",
                       justifyContent: "space-between",
                     }}
                   >
@@ -151,7 +158,12 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                           <div className="badge"></div>
                           <span className="percentage">0%</span>
                         </div>
-                        <div className="start-rectangle">Start</div>
+                        <div
+                          className="start-rectangle"
+                          onClick={() => navigate("1")}
+                        >
+                          Start
+                        </div>
                       </div>
                     </div>
                   </div>
