@@ -1,0 +1,70 @@
+.SessionsAccordion{
+    .accordion-title{
+        color: #000;
+        font-family: Cairo;
+        font-size: 19.935px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .accordion-group.accordion-group-bordered .accordion-title{
+        padding-left: 0px;
+        background: #EAEAEB;
+
+    }
+    .session-header{
+        background: #EAEAEB;
+        
+    }
+    .session-content{
+        color: #000;
+        text-align: justify;
+        font-family: Cairo;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .video-title{
+        color: #000;
+        text-align: justify;
+        font-family: Cairo;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .video-duration{
+        color: #000;
+        text-align: justify;
+        font-family: Cairo;
+        font-size: 0.688rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .letsStart{
+        display: flex;
+        width: 120px;
+        height: 32px;
+        padding: 9px 15px 9px 16px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: #FF0059;
+        color: #FFF;
+        text-align: center;
+        font-family: Cairo;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        cursor: pointer;
+    }
+    .course-session-content{        
+        padding: 10px;
+        border-radius: 20px;
+        background: #dce1e8;
+    }
+}

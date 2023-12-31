@@ -58,7 +58,7 @@ export const Layout = (props: layoutProps) => {
           </>
         ) : props.type === 2 ? (
           <>
-            <CoursesContainer />
+            <CoursesDetails />
           </>
         ) : null}
       </div>
