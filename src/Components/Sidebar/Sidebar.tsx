@@ -51,7 +51,7 @@ export const Sidebar = (props: SidebarProps) => {
       />
       <label htmlFor="sidebar-mobile-fixed" className="sidebar-overlay"></label>
       <aside
-        className="sidebar sidebar-fixed-left sidebar-mobile h-full justify-start max-sm:fixed max-sm:-translate-x-full"
+        className="sidebar sidebar-left sidebar-mobile h-full justify-start max-sm:fixed max-sm:-translate-x-full"
         style={{ backgroundColor: "#f8fafd" }}
       >
         <section className="sidebar-title items-center p-4">

@@ -219,9 +219,15 @@ export const CoursesDetails = () => {
         </div>
         {/* Course Sessions */}
         <div className="col-start-1 pl-4 pr-4">
-          <SessionsAccordion sessionId={Math.random()} />
-          <SessionsAccordion sessionId={Math.random()} />
-          <SessionsAccordion sessionId={Math.random()} />
+          <SessionsAccordion
+            title="Importance of Security"
+            sessionId={Math.random()}
+          />
+          <SessionsAccordion
+            title="Data and Account Security"
+            sessionId={Math.random()}
+          />
+          <SessionsAccordion title="Passwords" sessionId={Math.random()} />
         </div>
         {/* About The Course */}
         <div className="col-start-2 pr-7">

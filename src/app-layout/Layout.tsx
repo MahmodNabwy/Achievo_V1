@@ -12,6 +12,7 @@ import { Views } from "./Assets/Views";
 import { DashboardContainer } from "../Pages/Dashboard-Container/DashboardContianer";
 import { title } from "process";
 import { CoursesContainer } from "../Pages/Courses-Container/CoursesContainer";
+import { Footer } from "../Components/Footer/Footer";
 
 type layoutProps = {
   type: number;
@@ -58,7 +59,7 @@ export const Layout = (props: layoutProps) => {
           </>
         ) : props.type === 2 ? (
           <>
-            <CoursesDetails />
+            <CorusesWatch />
           </>
         ) : null}
       </div>

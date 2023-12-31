@@ -9,10 +9,11 @@ export const CorusesWatch = () => {
   return (
     <div className="CorusesWatch">
       <GoBackHeader />
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 pl-40">
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 pl-32">
         <div className="lg:col-start-1 flex justify-center">
-          <Video />
-          {/* <Quiz /> */}
+          <Quiz />
+          {/* <Video /> */}
         </div>
         <div className="sm:col-start-1 lg:col-start-2 flex justify-end pr-5">
           <div className="grid course-information">

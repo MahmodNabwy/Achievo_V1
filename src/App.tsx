@@ -9,11 +9,17 @@ import { useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 import { DashboardContainer } from "./Pages/Dashboard-Container/DashboardContianer";
 import { Views } from "./app-layout/Assets/Views";
+import { Footer } from "./Components/Footer/Footer";
 
 const App = () => {
   // const stateFromLoginSlice = useSelector((state: any) => state.login);
 
-  return <Views />;
+  return (
+    <>
+      <Views />
+      <Footer />
+    </>
+  );
 };
 
 export default App;

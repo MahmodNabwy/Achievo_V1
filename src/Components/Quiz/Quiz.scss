@@ -1,15 +1,85 @@
 .Quiz{
-    height: 586px;
+    width: 100%;
+    height: auto;
     border-radius: 15px;
     border: 1px solid #EAEAEB;
     background: rgba(234, 234, 235, 0.20);
-    .quiz-container{
-
-    }
+     
     .quiz-title{
         color: #000;
         font-family: Cairo;
         font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        padding-left: 20px;
+    }
+    .submit{
+        display: flex;
+        width: 255px;       
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 0;
+        color: #000;
+        font-family: Cairo;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .attemps{
+        display: flex;
+        width: 255px;       
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 0;
+        color: #7A7A7A;
+        font-family: Cairo;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .grade{
+        display: flex;
+        width: 255px;         
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 0;
+        color: #000;
+        font-family: Cairo;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .pass{
+        display: flex;
+        width: 255px;            
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 0;
+        color: #7A7A7A;
+        font-family: Cairo;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .letsStart{
+        border-radius: 10px;
+        background: #3186EA;
+        display: flex;
+        width: 199px;
+        height: 53px;
+        padding: 14px 15px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        color: #FFF;
+        text-align: center;
+        font-family: Cairo;
+        font-size: 16px;
         font-style: normal;
         font-weight: 700;
         line-height: normal;

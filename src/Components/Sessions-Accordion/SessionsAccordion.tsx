@@ -2,6 +2,7 @@ import "./SessionsAccordion.scss";
 import videoIcon from "../../Pages/Courses-Details/Assets/Icons/video.svg";
 type SessionsAccordionProps = {
   sessionId: number;
+  title: string;
 };
 export const SessionsAccordion = (props: SessionsAccordionProps) => {
   return (
@@ -53,7 +54,7 @@ export const SessionsAccordion = (props: SessionsAccordionProps) => {
               htmlFor={`toggle-${props.sessionId}`}
               className="accordion-title"
             >
-              Importance of Security
+              {props.title}
             </label>
           </div>
           {/* Content */}
