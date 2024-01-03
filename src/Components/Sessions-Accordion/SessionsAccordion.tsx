@@ -1,10 +1,16 @@
 import "./SessionsAccordion.scss";
 import videoIcon from "../../Pages/Courses-Details/Assets/Icons/video.svg";
+import { useNavigate } from "react-router-dom";
+
 type SessionsAccordionProps = {
   sessionId: number;
   title: string;
 };
 export const SessionsAccordion = (props: SessionsAccordionProps) => {
+  const navigate = useNavigate();
+  const routeToCourse = () => {
+    navigate("watch");
+  };
   return (
     <div className="SessionsAccordion">
       <div className="accordion-group accordion-group-bordered mt-4">
@@ -78,7 +84,9 @@ export const SessionsAccordion = (props: SessionsAccordionProps) => {
                       <span className="video-duration">Video - 13 Min</span>
                     </div>
                   </div>
-                  <div className="letsStart">Let’s Start</div>
+                  <div className="letsStart" onClick={() => routeToCourse()}>
+                    Let’s Start
+                  </div>
                 </div>
 
                 <div className="flex justify-between mt-4">

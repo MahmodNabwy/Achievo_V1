@@ -12,6 +12,7 @@ import { useSelector, useDispatch } from "react-redux";
 import courseCover from "./Assets/images/Rectangle 531.png";
 import { GoBackHeader } from "../../Components/GoBackHeader/GoBackHeader";
 import { useNavigate } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 type CoursesCardsProps = {};
 export const CoursesCards = (props: CoursesCardsProps) => {
@@ -95,7 +96,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
   };
 
   const routeToCourse = () => {
-    navigate("/Courses/1");
+    navigate("1");
   };
 
   return (
@@ -108,7 +109,11 @@ export const CoursesCards = (props: CoursesCardsProps) => {
             {current_Li_From_Redux === 1 ? ( //Library Type
               <>
                 {/* Not Started Rectangle Card */}
-                <div className="card-rectangle animate__animated animate__fadeIn">
+
+                <div
+                  className="card-rectangle animate__animated animate__fadeIn"
+                  onClick={() => routeToCourse()}
+                >
                   <div
                     style={{
                       borderLeft: "26px solid #178CE1",
@@ -168,6 +173,7 @@ export const CoursesCards = (props: CoursesCardsProps) => {
                     </div>
                   </div>
                 </div>
+
                 {/* InProgress Rectangle Card */}
                 <div className="card-rectangle animate__animated animate__fadeIn">
                   <div

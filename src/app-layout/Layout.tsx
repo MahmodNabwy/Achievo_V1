@@ -59,8 +59,12 @@ export const Layout = (props: layoutProps) => {
           </>
         ) : props.type === 2 ? (
           <>
-            <CorusesWatch />
+            <CoursesContainer />
           </>
+        ) : props.type === 3 ? (
+          <CoursesDetails />
+        ) : props.type === 4 ? (
+          <CorusesWatch />
         ) : null}
       </div>
     </div>

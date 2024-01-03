@@ -1,8 +1,14 @@
 import "./GoBackHeader.scss";
+import { useNavigate, redirect } from "react-router-dom";
+
 export const GoBackHeader = () => {
+  const navigate = useNavigate();
+  const routeToCourses = () => {
+    navigate(-1);
+  };
   return (
     <div className="GoBackHeader">
-      <div>
+      <div onClick={() => routeToCourses()}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="10"

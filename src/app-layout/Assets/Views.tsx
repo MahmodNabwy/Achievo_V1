@@ -16,9 +16,10 @@ export const Views = () => {
       <Routes>
         {!auth?.user && <Route path="/login" element={<Login />} />}
         <Route path="/Home" element={<Layout type={1} />} />
-        <Route path="/Courses" element={<Layout type={2} />}>
-          <Route path="/Courses/:courseId" element={<CoursesDetails />} />
-        </Route>
+        <Route path="/Courses" element={<Layout type={2} />}></Route>
+        <Route path="/Courses/:courseId" element={<Layout type={3} />}></Route>
+        <Route path="/Courses/:courseId/watch" element={<Layout type={4} />} />
+
         <Route path="*" element={<Login />} />
       </Routes>
     </AuthProvider>
