@@ -222,51 +222,53 @@ export const Sidebar = (props: SidebarProps) => {
                 </Link>
 
                 {/* Assessments */}
-                <li
-                  className={
-                    selectedElement === 2
-                      ? "dashboard-item dashboard-active"
-                      : "dashboard-item"
-                  }
-                  onClick={() => handleSelectedElement(2)}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="29"
-                    viewBox="0 0 28 29"
-                    fill="none"
+                <Link to="/Assessments">
+                  <li
+                    className={
+                      selectedElement === 2
+                        ? "dashboard-item dashboard-active"
+                        : "dashboard-item"
+                    }
+                    onClick={() => handleSelectedElement(2)}
                   >
-                    <path
-                      d="M13.9542 3.74023C5.88744 3.74023 3.19775 6.42992 3.19775 14.4966C3.19775 22.5634 5.88744 25.253 13.9542 25.253C22.0209 25.253 24.7106 22.5634 24.7106 14.4966"
-                      stroke="black"
-                      stroke-width="1.19608"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M22.7081 5.5427C22.4335 5.29976 22.1136 5.11333 21.7669 4.99405C21.4201 4.87478 21.0533 4.82501 20.6873 4.84758C20.3213 4.87015 19.9634 4.96462 19.6339 5.12559C19.3044 5.28657 19.0099 5.51089 18.7672 5.78574C18.7672 5.78574 13.6867 11.5244 11.9273 13.5164C10.1679 15.5084 11.4622 18.2573 11.4622 18.2573C11.4622 18.2573 14.3693 19.1795 16.1136 17.2108L22.9581 9.48129C23.4472 8.92582 23.6956 8.19883 23.6487 7.46022C23.6018 6.72161 23.2635 6.03187 22.7081 5.5427Z"
-                      stroke="black"
-                      stroke-width="1.19608"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M17.4531 7.28809L21.6394 10.9895"
-                      stroke="black"
-                      stroke-width="1.19608"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  <span className="module-name">Assessments</span>
-                  {selectedElement === 2 ? (
-                    <div className="dashboard-item-border"></div>
-                  ) : null}
-                </li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="29"
+                      viewBox="0 0 28 29"
+                      fill="none"
+                    >
+                      <path
+                        d="M13.9542 3.74023C5.88744 3.74023 3.19775 6.42992 3.19775 14.4966C3.19775 22.5634 5.88744 25.253 13.9542 25.253C22.0209 25.253 24.7106 22.5634 24.7106 14.4966"
+                        stroke="black"
+                        stroke-width="1.19608"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M22.7081 5.5427C22.4335 5.29976 22.1136 5.11333 21.7669 4.99405C21.4201 4.87478 21.0533 4.82501 20.6873 4.84758C20.3213 4.87015 19.9634 4.96462 19.6339 5.12559C19.3044 5.28657 19.0099 5.51089 18.7672 5.78574C18.7672 5.78574 13.6867 11.5244 11.9273 13.5164C10.1679 15.5084 11.4622 18.2573 11.4622 18.2573C11.4622 18.2573 14.3693 19.1795 16.1136 17.2108L22.9581 9.48129C23.4472 8.92582 23.6956 8.19883 23.6487 7.46022C23.6018 6.72161 23.2635 6.03187 22.7081 5.5427Z"
+                        stroke="black"
+                        stroke-width="1.19608"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M17.4531 7.28809L21.6394 10.9895"
+                        stroke="black"
+                        stroke-width="1.19608"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span className="module-name">Assessments</span>
+                    {selectedElement === 2 ? (
+                      <div className="dashboard-item-border"></div>
+                    ) : null}
+                  </li>
+                </Link>
 
                 {/* Policies & Procedures */}
                 <li

@@ -13,6 +13,7 @@ import { DashboardContainer } from "../Pages/Dashboard-Container/DashboardContia
 import { title } from "process";
 import { CoursesContainer } from "../Pages/Courses-Container/CoursesContainer";
 import { Footer } from "../Components/Footer/Footer";
+import { Assessments } from "../Pages/Assessments/Assessments";
 
 type layoutProps = {
   type: number;
@@ -65,6 +66,8 @@ export const Layout = (props: layoutProps) => {
           <CoursesDetails />
         ) : props.type === 4 ? (
           <CorusesWatch />
+        ) : props.type === 5 ? (
+          <Assessments />
         ) : null}
       </div>
     </div>

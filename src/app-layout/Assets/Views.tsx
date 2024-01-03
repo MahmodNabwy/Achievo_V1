@@ -19,7 +19,7 @@ export const Views = () => {
         <Route path="/Courses" element={<Layout type={2} />}></Route>
         <Route path="/Courses/:courseId" element={<Layout type={3} />}></Route>
         <Route path="/Courses/:courseId/watch" element={<Layout type={4} />} />
-
+        <Route path="/Assessments" element={<Layout type={5} />}></Route>
         <Route path="*" element={<Login />} />
       </Routes>
     </AuthProvider>
