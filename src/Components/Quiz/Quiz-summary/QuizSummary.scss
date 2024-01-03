@@ -1,0 +1,104 @@
+.QuizSummary{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    border: 1px solid #EAEAEB;
+    background: rgba(234, 234, 235, 0.20);
+    .quiz-title{
+        color: #000;
+        font-family: Cairo;
+        font-size: 1.263rem;
+        font-style: normal;
+        font-weight: bold;
+        line-height: normal;
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 0;
+        padding-left: 20px;
+    }
+    .badge{
+        width: 151px;
+        height: 140px;
+        flex-shrink: 0; 
+    } 
+    .congrats{
+      
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 0;
+        color: #000;
+        text-align: center;
+        font-family: Cairo;
+        font-size: 2.188rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .attemps{
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 0;
+        color: #7A7A7A;
+        font-family: Cairo;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .percentage{
+        color: #000;
+        text-align: right;
+        font-family: Cairo;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .rate{
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 0;
+        color: #7A7A7A;
+        text-align: center;
+        font-family: Cairo;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .view{
+      
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 0;
+        color: #3186EA;
+        font-family: Cairo;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-decoration-line: underline;
+    }
+    .goBack{
+        height: 31px;
+
+        padding: 3px 20px 3px 21px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        border-radius: 15px;
+        background: #3186EA;
+        color: #FFF;
+        text-align: center;
+        font-family: Cairo;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+         
+    }
+    
+}

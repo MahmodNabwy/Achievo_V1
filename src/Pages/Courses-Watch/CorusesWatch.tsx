@@ -5,6 +5,7 @@ import videoIcon from "../Courses-Details/Assets/Icons/video.svg";
 import courseCover from "../Courses-Cards/Assets/images/Rectangle 531.png";
 import { LineProgress } from "../../Components/LineProgress/LineProgress";
 import { Quiz } from "../../Components/Quiz/Quiz";
+import { QuizSummary } from "../../Components/Quiz/Quiz-summary/QuizSummary";
 export const CorusesWatch = () => {
   return (
     <div className="CorusesWatch">
@@ -13,7 +14,8 @@ export const CorusesWatch = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 pl-32">
         <div className="lg:col-start-1 flex justify-center">
           {/* <Quiz /> */}
-          <Video />
+          {<QuizSummary />}
+          {/* <Video /> */}
         </div>
         <div className="sm:col-start-1 lg:col-start-2 flex justify-end pr-5">
           <div className="grid course-information">
