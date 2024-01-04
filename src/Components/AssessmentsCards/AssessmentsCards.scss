@@ -1,0 +1,33 @@
+.AssessmentsCards{
+    padding-left: 20px;
+   .card{
+    border-radius: 15px;
+    border: 3px solid #CCC;
+    background: #F8FAFD;
+    padding: 10px;
+   }
+   .courseTitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Cairo;
+    font-size: 1.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+   }
+   .date{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: rgba(0, 0, 0, 0.60);
+    font-family: Cairo;
+    font-size: 0.688rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+   }
+}

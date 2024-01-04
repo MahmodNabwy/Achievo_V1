@@ -1,5 +1,6 @@
+import { AssessmentsCards } from "../../Components/AssessmentsCards/AssessmentsCards";
 import { ModuleHeader } from "../../Components/ModuleHeader/ModuleHeader";
-
+import "./Assessments.scss";
 export const Assessments = () => {
   const header = {
     data: [
@@ -27,7 +28,13 @@ export const Assessments = () => {
     <div>
       <ModuleHeader navItems={header.data} icons={header.icons} />
 
-      <h3>Assessments</h3>
+      <div className="AssessmentsPage">
+        <div className="grid grid-cols-3">
+          <div>
+            <AssessmentsCards />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
