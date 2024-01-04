@@ -50,7 +50,13 @@ export const Layout = (props: layoutProps) => {
         </div>
         <MainHeader
           title={
-            props.type === 1 ? "Dashboard" : props.type === 2 ? "Courses" : ""
+            props.type === 1
+              ? "Dashboard"
+              : props.type === 2
+              ? "Courses"
+              : props.type === 5
+              ? "Assessments"
+              : ""
           }
         />
         {props.type === 1 ? (
