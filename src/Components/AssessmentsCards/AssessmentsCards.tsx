@@ -11,13 +11,13 @@ export const AssessmentsCards = (props: AssessmentsCardsProps) => {
       {props.type === 1 ? (
         <>
           {/* Completed Type */}
-          <div className="grid grid-cols-2 card">
+          <div className="grid sm:grid-cols-1 lg:grid-cols-2 card">
             {/* Course Title */}
-            <div className="col-span-full pl-4 pr-4">
+            <div className="col-span-full lg:pl-4 lg:pr-4">
               <h3 className="courseTitle">Security Awareness Test</h3>
             </div>
             {/* Created At */}
-            <div className="col-start-1 pl-4 pr-4">
+            <div className="sm:col-start-1 lg:col-start-1 pl-4 pr-4">
               <div className="grid gap-1">
                 <span className="date">Created Date: 05-05-2023</span>
                 <span className="date">Deadline: 15-05-2023</span>
@@ -25,7 +25,7 @@ export const AssessmentsCards = (props: AssessmentsCardsProps) => {
               </div>
             </div>
             {/* Circle Progress */}
-            <div className="col-start-2 flex justify-end pl-4 pr-4">
+            <div className="sm:col-start-1 lg:col-start-2 flex justify-end pl-4 pr-4">
               <div style={{ width: "80px", height: "75px" }}>
                 <CircularProgressbar
                   strokeWidth={14}
