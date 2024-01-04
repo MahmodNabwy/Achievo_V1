@@ -8,7 +8,7 @@ import { Login } from "./Pages/Login/Login";
 import { useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 import { DashboardContainer } from "./Pages/Dashboard-Container/DashboardContianer";
-import { Views } from "./app-layout/Assets/Views";
+import { Views } from "./app-layout/Views";
 import { Footer } from "./Components/Footer/Footer";
 
 const App = () => {

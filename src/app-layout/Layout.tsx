@@ -8,12 +8,13 @@ import { CoursesCards } from "../Pages/Courses-Cards/CoursesCards";
 import { MainHeader } from "../Components/MainHeader/MainHeader";
 import { CoursesDetails } from "../Pages/Courses-Details/CoursesDetails";
 import { CorusesWatch } from "../Pages/Courses-Watch/CorusesWatch";
-import { Views } from "./Assets/Views";
+import { Views } from "./Views";
 import { DashboardContainer } from "../Pages/Dashboard-Container/DashboardContianer";
 import { title } from "process";
 import { CoursesContainer } from "../Pages/Courses-Container/CoursesContainer";
 import { Footer } from "../Components/Footer/Footer";
 import { Assessments } from "../Pages/Assessments/Assessments";
+import { AssessmentDetails } from "../Components/Assessment-Details/AssessmentDetails";
 
 type layoutProps = {
   type: number;
@@ -74,6 +75,10 @@ export const Layout = (props: layoutProps) => {
           <CorusesWatch />
         ) : props.type === 5 ? (
           <Assessments />
+        ) : props.type === 6 ? (
+          <>
+            <AssessmentDetails />
+          </>
         ) : null}
       </div>
     </div>

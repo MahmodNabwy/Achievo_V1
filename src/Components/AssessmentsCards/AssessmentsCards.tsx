@@ -2,10 +2,12 @@ import { CircularProgressbar } from "react-circular-progressbar";
 import { DepartmentBadge } from "../DepartmentBadge/DepartmentBadge";
 import "./AssessmentsCards.scss";
 import badgeIcon from "./Assets/Icons/980659aa45c22d694c64401a140d43ad.png";
+import { useNavigate } from "react-router-dom";
 type AssessmentsCardsProps = {
   type: number;
 };
 export const AssessmentsCards = (props: AssessmentsCardsProps) => {
+  const navigate = useNavigate();
   return (
     <div className="AssessmentsCards">
       {props.type === 1 ? (
@@ -188,7 +190,9 @@ export const AssessmentsCards = (props: AssessmentsCardsProps) => {
               }}
             >
               <div className="flex justify-center">
-                <h3 className="status-txt  ">Continue</h3>
+                <h3 className="status-txt" onClick={() => navigate("1")}>
+                  Continue
+                </h3>
               </div>
             </div>
           </div>
