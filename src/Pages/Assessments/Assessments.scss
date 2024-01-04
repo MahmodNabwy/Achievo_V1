@@ -2,4 +2,10 @@
     background-color: #FCFCFC;
     border-left: 1px solid #eee;
     overflow-y: hidden;
+    .no-data{
+        
+        width: 514px;
+        height: 514px;
+        flex-shrink: 0;
+    }
 }
