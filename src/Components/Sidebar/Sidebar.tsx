@@ -271,59 +271,61 @@ export const Sidebar = (props: SidebarProps) => {
                 </Link>
 
                 {/* Policies & Procedures */}
-                <li
-                  className={
-                    selectedElement === 3
-                      ? "dashboard-item dashboard-active"
-                      : "dashboard-item"
-                  }
-                  onClick={() => handleSelectedElement(3)}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="29"
-                    viewBox="0 0 28 29"
-                    fill="none"
+                <Link to="/Policies&Procedures">
+                  <li
+                    className={
+                      selectedElement === 3
+                        ? "dashboard-item dashboard-active"
+                        : "dashboard-item"
+                    }
+                    onClick={() => handleSelectedElement(3)}
                   >
-                    <path
-                      d="M12.4249 14.0718C12.4249 14.498 12.2985 14.9145 12.0616 15.2688C11.8248 15.623 11.4881 15.8991 11.0944 16.0619C10.7006 16.2248 10.2673 16.2672 9.84942 16.1837C9.43154 16.1002 9.04781 15.8947 8.74681 15.593C8.44581 15.2913 8.24106 14.9072 8.15849 14.4891C8.07592 14.071 8.11923 13.6379 8.28295 13.2444C8.44666 12.851 8.72342 12.515 9.07819 12.2789C9.43296 12.0428 9.84979 11.9173 10.2759 11.9182C10.8464 11.9191 11.3932 12.1465 11.7961 12.5503C12.199 12.9541 12.4252 13.5014 12.4249 14.0718Z"
-                      stroke="black"
-                      stroke-width="1.19608"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M12.433 14.0718H19.7799V16.2254"
-                      stroke="black"
-                      stroke-width="1.19608"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M16.4915 16.2254V14.0718"
-                      stroke="black"
-                      stroke-width="1.19608"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M3.19775 14.0718C3.19775 6.00511 5.88744 3.31543 13.9542 3.31543C22.0209 3.31543 24.7106 6.00511 24.7106 14.0718C24.7106 22.1385 22.0209 24.8282 13.9542 24.8282C5.88744 24.8282 3.19775 22.1385 3.19775 14.0718Z"
-                      stroke="black"
-                      stroke-width="1.19608"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  <span className="module-name">Policies & Procedures</span>
-                  {selectedElement === 3 ? (
-                    <div className="dashboard-item-border"></div>
-                  ) : null}
-                </li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="29"
+                      viewBox="0 0 28 29"
+                      fill="none"
+                    >
+                      <path
+                        d="M12.4249 14.0718C12.4249 14.498 12.2985 14.9145 12.0616 15.2688C11.8248 15.623 11.4881 15.8991 11.0944 16.0619C10.7006 16.2248 10.2673 16.2672 9.84942 16.1837C9.43154 16.1002 9.04781 15.8947 8.74681 15.593C8.44581 15.2913 8.24106 14.9072 8.15849 14.4891C8.07592 14.071 8.11923 13.6379 8.28295 13.2444C8.44666 12.851 8.72342 12.515 9.07819 12.2789C9.43296 12.0428 9.84979 11.9173 10.2759 11.9182C10.8464 11.9191 11.3932 12.1465 11.7961 12.5503C12.199 12.9541 12.4252 13.5014 12.4249 14.0718Z"
+                        stroke="black"
+                        stroke-width="1.19608"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M12.433 14.0718H19.7799V16.2254"
+                        stroke="black"
+                        stroke-width="1.19608"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M16.4915 16.2254V14.0718"
+                        stroke="black"
+                        stroke-width="1.19608"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M3.19775 14.0718C3.19775 6.00511 5.88744 3.31543 13.9542 3.31543C22.0209 3.31543 24.7106 6.00511 24.7106 14.0718C24.7106 22.1385 22.0209 24.8282 13.9542 24.8282C5.88744 24.8282 3.19775 22.1385 3.19775 14.0718Z"
+                        stroke="black"
+                        stroke-width="1.19608"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span className="module-name">Policies & Procedures</span>
+                    {selectedElement === 3 ? (
+                      <div className="dashboard-item-border"></div>
+                    ) : null}
+                  </li>
+                </Link>
 
                 {/* Innovation Management */}
                 <li
