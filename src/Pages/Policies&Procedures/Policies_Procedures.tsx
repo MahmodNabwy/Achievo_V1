@@ -29,7 +29,7 @@ export const PoliciesProcedures = () => {
     <div>
       <ModuleHeader navItems={header.data} icons={header.icons} />
       <div className="Policies_Procedures">
-        <div className="grid sm:grid grid-cols-1 lg:grid-cols-4 gap-10 pb-56 pr-4 pl-4">
+        <div className="grid sm:grid grid-cols-1 lg:grid-cols-4 gap-1 pb-56 pr-4 pl-4">
           <PoliciesProceduresFrame id={1} />
           <PoliciesProceduresFrame id={2} />
           <PoliciesProceduresFrame id={3} />

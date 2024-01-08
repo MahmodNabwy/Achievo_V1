@@ -19,7 +19,7 @@ export const PoliciesProceduresFrame = (
   const dispatch = useDispatch();
 
   return (
-    <div className="PoliciesProceduresFrame pt-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-480">
+    <div className="PoliciesProceduresFrame pt-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:z-50 hover:scale-480">
       <div
         className="component"
         onMouseLeave={() => {
