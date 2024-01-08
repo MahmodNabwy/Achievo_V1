@@ -1,7 +1,12 @@
 import { CircularProgressbar } from "react-circular-progressbar";
 import { GoBackHeader } from "../GoBackHeader/GoBackHeader";
 import "./AssessmentDetails.scss";
+import { useNavigate } from "react-router-dom";
 export const AssessmentDetails = () => {
+  const navigate = useNavigate();
+  const routeToCourse = () => {
+    navigate("Continue");
+  };
   return (
     <div className="AssessmentDetails">
       <GoBackHeader />
@@ -101,7 +106,9 @@ export const AssessmentDetails = () => {
               </div>
               <div className="col-span-full">
                 <div className="flex justify-end">
-                  <div className="continue">Continue</div>
+                  <div className="continue" onClick={() => routeToCourse()}>
+                    Continue
+                  </div>
                 </div>
               </div>
             </div>

@@ -23,6 +23,10 @@ export const Views = () => {
         <Route
           path="/Assessments/:AssessmentId"
           element={<Layout type={6} />}
+        ></Route>
+        <Route
+          path="/Assessments/:AssessmentId/Continue"
+          element={<Layout type={7} />}
         />
 
         <Route path="*" element={<Login />} />

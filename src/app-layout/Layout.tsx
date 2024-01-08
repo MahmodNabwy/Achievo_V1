@@ -15,6 +15,7 @@ import { CoursesContainer } from "../Pages/Courses-Container/CoursesContainer";
 import { Footer } from "../Components/Footer/Footer";
 import { Assessments } from "../Pages/Assessments/Assessments";
 import { AssessmentDetails } from "../Components/Assessment-Details/AssessmentDetails";
+import { ContinueAssessment } from "../Components/Continue-Assessment/ContinueAssessment";
 
 type layoutProps = {
   type: number;
@@ -79,6 +80,8 @@ export const Layout = (props: layoutProps) => {
           <>
             <AssessmentDetails />
           </>
+        ) : props.type === 7 ? (
+          <ContinueAssessment />
         ) : null}
       </div>
     </div>
