@@ -23,7 +23,8 @@ export const PoliciesProceduresFrame = (
       <div
         className="component"
         onMouseLeave={() => {
-          dispatch(mouse_leave({}));
+          let currentCard = props.id;
+          dispatch(mouse_leave({ currentCard }));
         }}
         onMouseEnter={() => {
           let currentCard = props.id;
@@ -31,7 +32,7 @@ export const PoliciesProceduresFrame = (
         }}
       >
         <div
-          className={`overlap-group  ${
+          className={`overlap-group ${
             props.id === stateFromPolicesSlice.currentCard
               ? stateFromPolicesSlice.property1
               : ""
@@ -39,18 +40,6 @@ export const PoliciesProceduresFrame = (
         >
           <div className="group">
             <div className="div">
-              <div className="frame">
-                <img
-                  className={`image component-8-instance`}
-                  alt="Images"
-                  src={
-                    stateFromPolicesSlice.property1 === "variant-2" &&
-                    props.id === stateFromPolicesSlice.currentCard
-                      ? image63
-                      : image63
-                  }
-                />
-              </div>
               <div className="group-wrapper">
                 <div className="group-2">
                   <div className="div-wrapper">
@@ -72,18 +61,6 @@ export const PoliciesProceduresFrame = (
           </div>
           <div className="group-3">
             <div className="group-4">
-              <div className="image-wrapper">
-                <img
-                  className={`image component-8-instance`}
-                  alt="Images"
-                  src={
-                    stateFromPolicesSlice.property1 === "variant-2" &&
-                    props.id === stateFromPolicesSlice.currentCard
-                      ? image63
-                      : image63
-                  }
-                />
-              </div>
               <div className="frame-5">
                 <div className="group-5">
                   <div className="frame-6">
@@ -105,25 +82,13 @@ export const PoliciesProceduresFrame = (
           </div>
           <div className="group-6">
             <div className="group-7">
-              <div className="img-wrapper">
-                <img
-                  className={`image component-8-instance`}
-                  alt="Images"
-                  src={
-                    stateFromPolicesSlice.property1 === "variant-2" &&
-                    props.id === stateFromPolicesSlice.currentCard
-                      ? image63
-                      : image63
-                  }
-                />
-              </div>
               <div className="frame-10">
                 <div className="group-8">
                   <div className="frame-11">
                     <DepartmentBadge title="HR" />
                   </div>
                   <div className="frame-12">
-                    <VersionButton value={1.2} />
+                    <VersionButton value={1.1} />
                   </div>
                   <div className="text-wrapper-13">Attendance policy</div>
                   <div className="frame-13">
@@ -136,26 +101,17 @@ export const PoliciesProceduresFrame = (
               </div>
             </div>
           </div>
+          {/* Parent Section */}
           <div className="group-9">
             <div className="group-10">
-              <div className="frame-15">
-                {stateFromPolicesSlice.property1 === "default" &&
-                  props.id === stateFromPolicesSlice.currentCard && (
-                    <img className="image-3" alt="Images" src={image63} />
-                  )}
-                {stateFromPolicesSlice.property1 === "variant-2" &&
-                  props.id === stateFromPolicesSlice.currentCard && (
-                    <div className="image-4" />
-                  )}
-              </div>
+              <div className="frame-15"></div>
               <div className="frame-16">
                 <div className="group-11">
                   <div className="frame-17">
-                    {/* <div className="text-wrapper-16">HR</div> */}
                     <DepartmentBadge title="HR" />
                   </div>
                   <div className="frame-18">
-                    <VersionButton value={1.3} />
+                    <VersionButton value={1.1} />
                   </div>
                   <div className="text-wrapper-18">Attendance policy</div>
                   <div className="frame-19">

@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   property1: "",
-  currentCard: 0,
+  currentCard: 1,
 };
 
 export const PoliciesProceduresSlice = createSlice({
