@@ -215,7 +215,12 @@ export const ContinueAssessment = () => {
                     </div>
                   </div> */}
                   {/* Submit Button */}
-                  <div className="flex submit gap-4 items-center">Submit</div>
+                  <div
+                    className="flex submit gap-4 items-center"
+                    onClick={() => navigate("AssessmentFinished")}
+                  >
+                    Submit
+                  </div>
                 </div>
               </div>
             </div>

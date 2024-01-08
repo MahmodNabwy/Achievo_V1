@@ -1,0 +1,111 @@
+.AssessmentCompleted{
+    background-color: #FCFCFC;
+    border: 1px solid #eee;
+    overflow: hidden;
+    .title{
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 0;
+        color: #000;
+        font-family: Cairo;
+        font-size: 2.188rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .content{
+        width: 75%;
+        height: auto;
+        flex-shrink: 0; 
+        padding-top: 20px;
+        padding-bottom: 40px;
+        padding-left: 40px;
+        padding-right: 40px;
+        flex-shrink: 0;
+        border-radius: 15px;
+        border: 1px solid #EAEAEB;
+        background: #FFF;         
+    }
+    .thank-you{
+        color: #000;
+        text-align: center;
+        font-family: Cairo;
+        font-size: 1.563rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .completed-txt{
+        color: #000;
+        text-align: center;
+        font-family: Cairo;
+        font-size: 2.188rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .name{
+        
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 0;
+        color: #7A7A7A;
+        font-family: Cairo;
+        font-size: 0.938rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .data{ 
+        flex-shrink: 0;
+        color: #7A7A7A;
+        font-family: Cairo;
+        font-size: 0.938rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .info{
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 0;
+        color: #000;
+        font-family: Cairo;
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .description{
+        display: flex; 
+        color: #7A7A7A;
+        text-align: justify;
+        font-family: Cairo;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        
+    }
+    .backAssessments{
+        display: flex;
+        width: 199px;
+        height: 53px;
+        padding: 14px 15px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: #3186EA;
+        color: #FFF;
+        text-align: center;
+        font-family: Cairo;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        cursor: pointer;
+    }
+}
