@@ -23,8 +23,7 @@ export const PoliciesProceduresFrame = (
       <div
         className="component"
         onMouseLeave={() => {
-          let currentCard = props.id;
-          dispatch(mouse_leave({ currentCard }));
+          dispatch(mouse_leave({}));
         }}
         onMouseEnter={() => {
           let currentCard = props.id;
@@ -32,7 +31,7 @@ export const PoliciesProceduresFrame = (
         }}
       >
         <div
-          className={`overlap-group ${
+          className={`overlap-group  ${
             props.id === stateFromPolicesSlice.currentCard
               ? stateFromPolicesSlice.property1
               : ""
@@ -88,7 +87,7 @@ export const PoliciesProceduresFrame = (
                     <DepartmentBadge title="HR" />
                   </div>
                   <div className="frame-12">
-                    <VersionButton value={1.1} />
+                    <VersionButton value={1.2} />
                   </div>
                   <div className="text-wrapper-13">Attendance policy</div>
                   <div className="frame-13">
@@ -101,17 +100,22 @@ export const PoliciesProceduresFrame = (
               </div>
             </div>
           </div>
-          {/* Parent Section */}
           <div className="group-9">
             <div className="group-10">
-              <div className="frame-15"></div>
+              <div className="frame-15">
+                <img src={image63} alt="cover" className="w-full h-full" />
+                {stateFromPolicesSlice.property1 === "variant-2" && (
+                  <div className="image-4" />
+                )}
+              </div>
+
               <div className="frame-16">
                 <div className="group-11">
                   <div className="frame-17">
                     <DepartmentBadge title="HR" />
                   </div>
                   <div className="frame-18">
-                    <VersionButton value={1.1} />
+                    <VersionButton value={1.3} />
                   </div>
                   <div className="text-wrapper-18">Attendance policy</div>
                   <div className="frame-19">
