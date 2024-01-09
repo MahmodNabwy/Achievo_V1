@@ -1,0 +1,60 @@
+.InnovationManagement{
+    .cardContainer{
+        width: 460px;
+
+        height: auto;
+        padding-bottom: 20px;
+        flex-shrink: 0;
+        border-radius: 15px;
+        border: 3px solid #CCC;
+        background: #F8FAFD;
+    }
+    .title{
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 0;
+        color: #000;
+        font-family: Cairo;
+        font-size: 1.875rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .createdAt{
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 0;
+        color: rgba(0, 0, 0, 0.60);
+        font-family: Cairo;
+        font-size: 0.688rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .circle{
+        background-color: #60b527;
+    }
+    .stepTxt-Approve{
+        color: #60B527;
+        
+        font-family: Cairo;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .stepTx{
+        color: #000;
+        
+        font-family: Cairo;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+ 
+    
+    
+}

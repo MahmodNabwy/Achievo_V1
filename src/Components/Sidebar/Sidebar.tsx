@@ -328,59 +328,61 @@ export const Sidebar = (props: SidebarProps) => {
                 </Link>
 
                 {/* Innovation Management */}
-                <li
-                  className={
-                    selectedElement === 4
-                      ? "dashboard-item dashboard-active"
-                      : "dashboard-item"
-                  }
-                  onClick={() => handleSelectedElement(4)}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="29"
-                    viewBox="0 0 28 29"
-                    fill="none"
+                <Link to="/InnovationManagement">
+                  <li
+                    className={
+                      selectedElement === 4
+                        ? "dashboard-item dashboard-active"
+                        : "dashboard-item"
+                    }
+                    onClick={() => handleSelectedElement(4)}
                   >
-                    <path
-                      d="M8.70166 12.625V20.4091"
-                      stroke="black"
-                      stroke-width="1.19608"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M13.9973 8.89917V20.4114"
-                      stroke="black"
-                      stroke-width="1.19608"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M19.2045 16.738V20.4092"
-                      stroke="black"
-                      stroke-width="1.19608"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M2.67456 14.6901C2.67456 6.19898 5.50611 3.36743 13.9973 3.36743C22.4884 3.36743 25.32 6.19898 25.32 14.6901C25.32 23.1813 22.4884 26.0129 13.9973 26.0129C5.50611 26.0129 2.67456 23.1813 2.67456 14.6901Z"
-                      stroke="black"
-                      stroke-width="1.19608"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  <span className="module-name">Innovation Management</span>
-                  {selectedElement === 4 ? (
-                    <div className="dashboard-item-border"></div>
-                  ) : null}
-                </li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="29"
+                      viewBox="0 0 28 29"
+                      fill="none"
+                    >
+                      <path
+                        d="M8.70166 12.625V20.4091"
+                        stroke="black"
+                        stroke-width="1.19608"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M13.9973 8.89917V20.4114"
+                        stroke="black"
+                        stroke-width="1.19608"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M19.2045 16.738V20.4092"
+                        stroke="black"
+                        stroke-width="1.19608"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M2.67456 14.6901C2.67456 6.19898 5.50611 3.36743 13.9973 3.36743C22.4884 3.36743 25.32 6.19898 25.32 14.6901C25.32 23.1813 22.4884 26.0129 13.9973 26.0129C5.50611 26.0129 2.67456 23.1813 2.67456 14.6901Z"
+                        stroke="black"
+                        stroke-width="1.19608"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span className="module-name">Innovation Management</span>
+                    {selectedElement === 4 ? (
+                      <div className="dashboard-item-border"></div>
+                    ) : null}
+                  </li>
+                </Link>
 
                 {/* Certificates */}
                 <li

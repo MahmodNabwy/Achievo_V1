@@ -36,6 +36,10 @@ export const Views = () => {
           path="/Policies&Procedures"
           element={<Layout type={9} />}
         ></Route>
+        <Route
+          path="/InnovationManagement"
+          element={<Layout type={10} />}
+        ></Route>
 
         <Route path="*" element={<Login />} />
       </Routes>
