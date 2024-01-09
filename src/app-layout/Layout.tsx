@@ -60,6 +60,8 @@ export const Layout = (props: layoutProps) => {
               ? "Courses"
               : props.type === 5
               ? "Assessments"
+              : props.type === 9
+              ? "Policies & Procedures"
               : ""
           }
         />

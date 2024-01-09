@@ -23,7 +23,7 @@ export const AssessmentsCards = (props: AssessmentsCardsProps) => {
               <div className="grid gap-1">
                 <span className="date">Created Date: 05-05-2023</span>
                 <span className="date">Deadline: 15-05-2023</span>
-                <DepartmentBadge title="TECH" />
+                <DepartmentBadge title="Technical Team" />
               </div>
             </div>
             {/* Circle Progress */}
