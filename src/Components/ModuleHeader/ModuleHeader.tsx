@@ -49,8 +49,10 @@ export const ModuleHeader = (props: ModuleHeaderProps) => {
     <div className="ModuleHeader animate__animated animate__fadeIn">
       <div className="col-span-12 w-full row-span-1 animate__animated animate__fadeIn">
         <div className="grid grid-cols-2 xs:grid-col-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 p-4 gap-4">
-          <div className="col-start-1 col-end-3 sm:col-start-1">
-            <div className="flex gap-4">
+          <div className={`col-start-1 col-end-3 sm:col-start-1`}>
+            <div
+              className={`sm:grid grid-cols-${props.navItems.length} gap-4 lg:flex lg:gap-4`}
+            >
               {props.navItems.map((item) => {
                 return (
                   <div

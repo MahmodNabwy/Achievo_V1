@@ -5,6 +5,7 @@ import { Approved } from "../../Components/InnovationManagement/Approved/Approve
 import { Reviewing } from "../../Components/InnovationManagement/Reviewing/Reviewing";
 import { NeedAction } from "../../Components/InnovationManagement/NeedAction/NeedAction";
 import { useSelector } from "react-redux";
+import { AddInnovation } from "../../Components/InnovationManagement/Add/AddInnovation";
 
 export const InnovationManagement = () => {
   const current_Li_From_Redux = useSelector(
@@ -39,7 +40,9 @@ export const InnovationManagement = () => {
   };
   return (
     <div>
-      <ModuleHeader navItems={header.data} icons={header.icons} />
+      {current_Li_From_Redux === 5 ? null : (
+        <ModuleHeader navItems={header.data} icons={header.icons} />
+      )}
 
       <div className="InnovationManagement">
         <div className="grid sm:grid grid-cols-1 lg:grid-cols-3 gap-5 pb-56 pr-4 pl-4">
@@ -61,10 +64,12 @@ export const InnovationManagement = () => {
               <Reviewing />
               <Reviewing />
             </>
-          ) : (
+          ) : current_Li_From_Redux === 4 ? (
             <>
               <NeedAction />
             </>
+          ) : (
+            <AddInnovation />
           )}
         </div>
       </div>
