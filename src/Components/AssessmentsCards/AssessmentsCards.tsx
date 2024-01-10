@@ -13,7 +13,7 @@ export const AssessmentsCards = (props: AssessmentsCardsProps) => {
       {props.type === 1 ? (
         <>
           {/* Completed Type */}
-          <div className="grid sm:grid-cols-1 lg:grid-cols-2 card">
+          <div className="grid sm:grid-cols-1 lg:grid-cols-2 card transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
             {/* Course Title */}
             <div className="col-span-full lg:pl-4 lg:pr-4">
               <h3 className="courseTitle">Security Awareness Test</h3>

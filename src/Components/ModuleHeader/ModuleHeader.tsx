@@ -50,14 +50,14 @@ export const ModuleHeader = (props: ModuleHeaderProps) => {
       <div className="col-span-12 w-full row-span-1 animate__animated animate__fadeIn">
         <div className="grid grid-cols-2 xs:grid-col-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 p-4 gap-4">
           <div className="col-start-1 col-end-3 sm:col-start-1">
-            <div className="flex">
+            <div className="flex gap-4">
               {props.navItems.map((item) => {
                 return (
                   <div
                     className={
                       item.id === current_Li_From_Redux
-                        ? "header-item-active"
-                        : "header-item"
+                        ? "header-item-active transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
+                        : "header-item transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                     }
                     onClick={() => change_Li(item.id)}
                   >

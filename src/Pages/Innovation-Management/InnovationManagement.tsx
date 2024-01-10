@@ -42,7 +42,7 @@ export const InnovationManagement = () => {
       <ModuleHeader navItems={header.data} icons={header.icons} />
 
       <div className="InnovationManagement">
-        <div className="grid sm:grid grid-cols-1 lg:grid-cols-4 gap-5 pb-56 pr-4 pl-4">
+        <div className="grid sm:grid grid-cols-1 lg:grid-cols-3 gap-5 pb-56 pr-4 pl-4">
           {current_Li_From_Redux === 1 ? (
             <>
               <Approved />

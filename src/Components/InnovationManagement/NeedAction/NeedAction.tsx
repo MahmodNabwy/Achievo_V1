@@ -3,7 +3,7 @@ import "../InnovationManagement.scss";
 export const NeedAction = () => {
   return (
     <div className="InnovationManagement">
-      <div className="grid grid-cols-2 cardContainer">
+      <div className="grid grid-cols-2 cardContainer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
         <div className="col-span-full pl-4">
           <div>
             <h1 className="title">Challenging games</h1>
