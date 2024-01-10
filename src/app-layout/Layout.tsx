@@ -19,6 +19,7 @@ import { ContinueAssessment } from "../Components/Continue-Assessment/ContinueAs
 import { AssessmentCompleted } from "../Components/Assessment-Completed/AssessmentCompleted";
 import { PoliciesProcedures } from "../Pages/Policies&Procedures/Policies_Procedures";
 import { InnovationManagement } from "../Pages/Innovation-Management/InnovationManagement";
+import { Certificates } from "../Pages/Certificates/Certificates";
 
 type layoutProps = {
   type: number;
@@ -65,6 +66,8 @@ export const Layout = (props: layoutProps) => {
               ? "Policies & Procedures"
               : props.type === 10
               ? "Innovation Management"
+              : props.type === 11
+              ? "Certificates"
               : ""
           }
         />
@@ -95,6 +98,8 @@ export const Layout = (props: layoutProps) => {
           <PoliciesProcedures />
         ) : props.type === 10 ? (
           <InnovationManagement />
+        ) : props.type === 11 ? (
+          <Certificates />
         ) : null}
       </div>
     </div>

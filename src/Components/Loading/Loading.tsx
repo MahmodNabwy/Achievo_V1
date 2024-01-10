@@ -1,7 +1,12 @@
 import "./Loading.scss";
 export const Loading = () => {
   return (
-    <div className="Loading w-full h-full fixed top-0 left-0 bg-white opacity-75 z-50 Loading">
+    <div
+      className="Loading w-full h-full fixed top-0 left-0 opacity-75 z-50 Loading"
+      style={{
+        backgroundColor: "rgba(0, 0, 0, 0.95)",
+      }}
+    >
       <div className="flex justify-center items-center mt-[50vh]">
         <svg
           className="loader"

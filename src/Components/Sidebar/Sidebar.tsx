@@ -395,43 +395,45 @@ export const Sidebar = (props: SidebarProps) => {
                 </Link>
 
                 {/* Certificates */}
-                <li
-                  className={
-                    selectedElement === 5
-                      ? "dashboard-item dashboard-active"
-                      : "dashboard-item"
-                  }
-                  onClick={() => handleSelectedElement(5)}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="29"
-                    viewBox="0 0 28 29"
-                    fill="none"
+                <Link to="/Certificates">
+                  <li
+                    className={
+                      selectedElement === 5
+                        ? "dashboard-item dashboard-active"
+                        : "dashboard-item"
+                    }
+                    onClick={() => handleSelectedElement(5)}
                   >
-                    <path
-                      d="M9.93311 10.9873H17.9045"
-                      stroke="black"
-                      stroke-width="1.19608"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M13.9194 3.17529C6.49225 3.17529 5.23288 4.25907 5.23288 12.977C5.23288 22.7368 5.05496 25.2695 6.91087 25.2695C8.76679 25.2695 11.7949 20.9856 13.9194 20.9856C16.0439 20.9856 19.0708 25.2695 20.9314 25.2695C22.792 25.2695 22.6048 22.7368 22.6048 12.977C22.6013 4.25907 21.3465 3.17529 13.9194 3.17529Z"
-                      stroke="black"
-                      stroke-width="1.19608"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  <span className="module-name">Certificates</span>
-                  {selectedElement === 5 ? (
-                    <div className="dashboard-item-border"></div>
-                  ) : null}
-                </li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="29"
+                      viewBox="0 0 28 29"
+                      fill="none"
+                    >
+                      <path
+                        d="M9.93311 10.9873H17.9045"
+                        stroke="black"
+                        stroke-width="1.19608"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M13.9194 3.17529C6.49225 3.17529 5.23288 4.25907 5.23288 12.977C5.23288 22.7368 5.05496 25.2695 6.91087 25.2695C8.76679 25.2695 11.7949 20.9856 13.9194 20.9856C16.0439 20.9856 19.0708 25.2695 20.9314 25.2695C22.792 25.2695 22.6048 22.7368 22.6048 12.977C22.6013 4.25907 21.3465 3.17529 13.9194 3.17529Z"
+                        stroke="black"
+                        stroke-width="1.19608"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span className="module-name">Certificates</span>
+                    {selectedElement === 5 ? (
+                      <div className="dashboard-item-border"></div>
+                    ) : null}
+                  </li>
+                </Link>
 
                 {/* Announcements */}
                 <li
