@@ -4,7 +4,7 @@
         background: #FFF;   
     }
     .circle{
-        background-color: #bcbfc5;    
+        background-color: #EAEAEB;    
         justify-content: center;
         align-items: center;   
         display: flex;
@@ -61,6 +61,32 @@
         font-weight: 700;
         line-height: normal;
         cursor: pointer;
-
     }
+    .content{
+         background-color: #eaeaeb1f;
+    }
+    .search-input{
+        display: flex;        
+        padding-left: 55px;
+    }
+    .title{
+        color: rgba(0, 0, 0, 0.20);
+        font-family: Cairo;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .details-input{
+        border: 1px solid;
+        border-color: #eaeaeb;
+        border-radius: 15px;
+        height: 534px;
+        width: 100%; 
+    }
+        
+    .details-input:focus{
+        outline: none;
+    }
+     
 }
