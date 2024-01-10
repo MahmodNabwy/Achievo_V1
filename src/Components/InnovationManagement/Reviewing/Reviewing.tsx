@@ -1,5 +1,5 @@
 import "../InnovationManagement.scss";
-export const Approved = () => {
+export const Reviewing = () => {
   return (
     <div className="InnovationManagement">
       <div className="grid grid-cols-2 cardContainer">
@@ -24,10 +24,10 @@ export const Approved = () => {
             </div>
             <div className="w-full">
               <div className="flex items-center w-full">
-                <div className="w-4 h-4 shrink-0 mx-[-1px] circle p-1.5 flex items-center justify-center rounded-full">
+                <div className="w-4 h-4 shrink-0 mx-[-1px] circle-yellow p-1.5 flex items-center justify-center rounded-full">
                   <span className="text-xs text-white font-bold"></span>
                 </div>
-                <div className="w-full h-1 mx-4 rounded-lg circle" />
+                <div className="w-full h-1 mx-4 rounded-lg circle-review" />
               </div>
               <div className="mt-2 mr-4">
                 <h6 className="stepTx  w-1/2">Reviewing</h6>
@@ -35,12 +35,12 @@ export const Approved = () => {
             </div>
             <div>
               <div className="flex items-center">
-                <div className="w-4 h-4 shrink-0 mx-[-1px] circle p-1.5 flex items-center justify-center rounded-full">
+                <div className="w-4 h-4 shrink-0 mx-[-1px] circle-review p-1.5 flex items-center justify-center rounded-full">
                   <span className="text-base text-white font-bold"></span>
                 </div>
               </div>
               <div className="mt-2 mr-2">
-                <h6 className="stepTxt-Approve">Approved</h6>
+                <h6 className="stepTxt-review">Approved</h6>
               </div>
             </div>
           </div>

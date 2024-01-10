@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Styles/Styles.css";
 import { Link, NavLink } from "react-router-dom";
 
@@ -6,6 +6,8 @@ import profilePhoto from "./Assets/Images/Diversity Avatar Girl 05@4x 2.png";
 type SidebarProps = {};
 export const Sidebar = (props: SidebarProps) => {
   const [selectedElement, setSelectedElement] = useState(0);
+  // const [selectedItem, setSelectedItem] = useState(0);
+
   const handleSelectedElement = (e: number) => {
     switch (e) {
       case 0: {
@@ -41,7 +43,15 @@ export const Sidebar = (props: SidebarProps) => {
         break;
       }
     }
+    localStorage.setItem("selectedLi", e.toString());
   };
+
+  useEffect(() => {
+    // Save the selected item to localStorage when it changes
+    const selectedItem = localStorage.getItem("selectedLi");
+    setSelectedElement(Number(selectedItem));
+  }, []);
+
   return (
     <div className="sm:w-full sm:max-w-[18rem]">
       <input

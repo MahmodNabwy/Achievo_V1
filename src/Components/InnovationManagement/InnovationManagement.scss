@@ -1,7 +1,6 @@
 .InnovationManagement{
     .cardContainer{
-        width: 460px;
-
+         
         height: auto;
         padding-bottom: 20px;
         flex-shrink: 0;
@@ -36,6 +35,12 @@
     .circle{
         background-color: #60b527;
     }
+    .circle-review{
+        background-color: #bcbfc5;       
+    }
+    .circle-need{
+        background-color: #bcbfc5;       
+    }
     .stepTxt-Approve{
         color: #60B527;
         
@@ -46,8 +51,36 @@
         line-height: normal;
     }
     .stepTx{
-        color: #000;
-        
+        color: #000; 
+        font-family: Cairo;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .stepTxt-review{
+        color: #D9D9D9;
+        text-align: right;
+        font-family: Cairo;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .circle-yellow{
+        background-color: #FB0;
+    }
+    .stepTxt-need{
+        color: #D9D9D9;
+        text-align: right;
+        font-family: Cairo;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .stepTx-need{
+        color: #D9D9D9; 
         font-family: Cairo;
         font-size: 16px;
         font-style: normal;
