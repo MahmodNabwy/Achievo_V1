@@ -88,5 +88,61 @@
     .details-input:focus{
         outline: none;
     }
-     
+    .submit-title{
+        width: 199px;
+        height: 53px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: #3186EA;
+        color: #FFF;
+        text-align: center;
+        font-family: Cairo;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .circle-approved{
+        background-color: #60b527;
+    }
+    .step-no-approved{
+        color: #D9D9D9;
+        text-align: right;
+        font-family: Cairo;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .innovation-title{
+        color: #000;
+        font-family: Cairo;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .actions{
+        width: 199px;
+        height: 53px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: #3186EA;
+        align-items: center;
+        align-content: center;
+    }
+    .back{
+        color: #FFF;
+        text-align: center;
+        font-family: Cairo;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        cursor: pointer;
+
+    }
 }

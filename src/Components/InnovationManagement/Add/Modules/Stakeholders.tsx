@@ -1,18 +1,19 @@
 import { useDispatch, useSelector } from "react-redux";
 import "../AddInnovation.scss";
-import { setBusinessContent } from "../../../../redux/Slices/InnovationSlice";
-export const Business = () => {
+import { setStackHolderContent } from "../../../../redux/Slices/InnovationSlice";
+
+export const Stakeholders = () => {
   const dispatch = useDispatch();
   let currentContentSlice = useSelector(
-    (state: any) => state.innovation.businessContent
+    (state: any) => state.innovation.stackHolderContent
   );
   const handleChangeContent = (content: string) => {
-    dispatch(setBusinessContent({ content }));
+    dispatch(setStackHolderContent({ content }));
   };
   return (
     <div className="AddInnovation grid grid-cols-2 pl-10">
       <div className="col-start-1">
-        <span className="title">1. Background/Business Case</span>
+        <span className="title">2. Stakeholders</span>
       </div>
       <div className="col-span-full">
         <input
