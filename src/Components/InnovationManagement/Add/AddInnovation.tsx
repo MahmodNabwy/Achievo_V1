@@ -4,6 +4,9 @@ import { Business } from "./Modules/Business";
 import { Stakeholders } from "./Modules/Stakeholders";
 import { CurrentCondition } from "./Modules/CurrentCondition";
 import { Analysis } from "./Modules/Analysis";
+import { Countermeasures } from "./Modules/Countermeasures";
+import { ActionItem } from "./Modules/ActionItem";
+import { MetricsFollowUp } from "./Modules/Metrics_FollowUp";
 export const AddInnovation = () => {
   const [title, setTitle] = useState("");
   const [currentModule, setCurrentModule] = useState(1);
@@ -233,8 +236,14 @@ export const AddInnovation = () => {
             <Stakeholders />
           ) : currentModule === 3 ? (
             <CurrentCondition />
-          ) : (
+          ) : currentModule === 4 ? (
             <Analysis />
+          ) : currentModule === 5 ? (
+            <Countermeasures />
+          ) : currentModule === 6 ? (
+            <ActionItem />
+          ) : (
+            <MetricsFollowUp />
           )}
         </div>
       </div>

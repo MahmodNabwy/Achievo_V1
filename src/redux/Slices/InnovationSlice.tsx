@@ -5,6 +5,9 @@ const initialState = {
   stackHolderContent: "",
   currentConditionContent: "",
   AnalysisContent: "",
+  counterMeasuresContent: "",
+  actionItemContent: "",
+  metricsFollowUpContent: "",
 };
 
 export const InnovationSlice = createSlice({
@@ -23,6 +26,15 @@ export const InnovationSlice = createSlice({
     setAnalysisContent: (state, action) => {
       state.AnalysisContent = action.payload.content;
     },
+    setCounterMeasuresContent: (state, action) => {
+      state.counterMeasuresContent = action.payload.content;
+    },
+    setActionItemContent: (state, action) => {
+      state.actionItemContent = action.payload.content;
+    },
+    setMetricsFollowUpContent: (state, action) => {
+      state.metricsFollowUpContent = action.payload.content;
+    },
   },
 });
 
@@ -31,6 +43,9 @@ export const {
   setStackHolderContent,
   setCurrentConditionContent,
   setAnalysisContent,
+  setCounterMeasuresContent,
+  setActionItemContent,
+  setMetricsFollowUpContent,
 } = InnovationSlice.actions;
 
 export default InnovationSlice.reducer;

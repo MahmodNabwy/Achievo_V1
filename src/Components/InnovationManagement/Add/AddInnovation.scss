@@ -88,6 +88,18 @@
     .details-input:focus{
         outline: none;
     }
+    .analysis-input{
+        border: 1px solid;
+        border-color: #eaeaeb;
+        border-radius: 15px;
+        height: auto;
+        width: 100%; 
+        padding-bottom: 20px;
+        padding-top: 40px;
+    }
+    .analysis-input:focus{
+        outline: none;
+    }
     .submit-title{
         width: 199px;
         height: 53px;
@@ -142,6 +154,46 @@
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+        cursor: pointer;
+    }
+    .header-item-active{
+        display: flex;
+        width: 122px;
+        height: 42px;
+        padding: 8px 0px 9px 0px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        border-radius: 55px;
+        background: #000;
+        color: #FFF;
+        text-align: center;
+        font-family: Cairo;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-right: 5px;
+        cursor: pointer;
+    }
+    .header-item{
+        display: flex;
+        width: 122px;
+        height: 42px;
+        padding: 8px 0px 9px 0px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        border-radius: 55px;
+        background: #EAEAEB;
+        color: rgba(0, 0, 0, 0.20);
+        text-align: center;
+        font-family: Cairo;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-right: 5px;
         cursor: pointer;
 
     }
