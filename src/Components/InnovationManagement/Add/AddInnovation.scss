@@ -195,6 +195,31 @@
         line-height: normal;
         margin-right: 5px;
         cursor: pointer;
-
     }
+    .arrow-input{
+       background-color: #5D96EC;
+       color: #FFF;
+       font-family: Cairo;
+       font-size: 16px;
+       font-style: normal;
+       font-weight: 600;
+       line-height: normal;
+    }
+    .arrow-input::placeholder{
+        color: #FFF;
+        font-family: Cairo;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    .arrow-input:focus{
+        outline: none;
+     }
+     .arrow-input::selection{
+        color: #FFF;
+     }
+     .arrow-input::-moz-selection{
+        color: #FFF;
+     }
 }

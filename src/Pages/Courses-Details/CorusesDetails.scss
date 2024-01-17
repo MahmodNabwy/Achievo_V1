@@ -88,10 +88,10 @@
     .option{
         color: rgba(0, 0, 0, 0.60);
         font-family: Cairo;
-        font-size: 0.625rem;
+        font-size: 12px;
         font-style: normal;
-        font-weight: 500;
-        line-height: 30px; 
+        font-weight: bold;
+        line-height: 30px; /* 300% */
     }
     .accordion-title{
         color: #000;
@@ -232,6 +232,15 @@
         
         .two-images-outer:nth-of-type(2) {
           margin-top: 10px;
+        }
+        .content{
+            color: #000;
+            text-align: justify;
+            font-family: Cairo;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
         }
       }
 }

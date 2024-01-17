@@ -1,8 +1,5 @@
 import { GoBackHeader } from "../../Components/GoBackHeader/GoBackHeader";
 import { StarsRating } from "../../Components/StarsRating/StarsRating";
-import courseCover from "../Courses-Cards/Assets/images/Rectangle 531.png";
-import ProgressLine from "../../Components/Statistics/Courses/ProgressLine";
-import videoIcon from "./Assets/Icons/video.svg";
 import "./CorusesDetails.scss";
 import { LineProgress } from "../../Components/LineProgress/LineProgress";
 import { useState, useEffect } from "react";
@@ -50,7 +47,7 @@ export const CoursesDetails = () => {
   return (
     <div className="CoursesDetails">
       <GoBackHeader />
-      <div className="grid grid-cols-2 lg:grid-cols-2 pl-10">
+      <div className="grid grid-cols-2 lg:grid-cols-2 pl-10 overflow-hidden">
         {/* Course-Information */}
         <div className="sm:col-start-1 lg:col-start-1">
           <div className="course-informations">

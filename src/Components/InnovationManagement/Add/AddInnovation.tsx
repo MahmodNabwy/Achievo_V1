@@ -230,7 +230,7 @@ export const AddInnovation = () => {
 
         {/* Modules */}
         <div className="col-span-full">
-          {currentModule === 1 ? (
+          {/* {currentModule === 1 ? (
             <Business />
           ) : currentModule === 2 ? (
             <Stakeholders />
@@ -244,7 +244,8 @@ export const AddInnovation = () => {
             <ActionItem />
           ) : (
             <MetricsFollowUp />
-          )}
+          )} */}
+          <Analysis />
         </div>
       </div>
       {/* Actions */}
