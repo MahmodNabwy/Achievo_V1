@@ -196,6 +196,33 @@
         margin-right: 5px;
         cursor: pointer;
     }
+    .reason-input{
+        background-color: #FAA00F;
+        color: #FFF;
+        font-family: Cairo;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        width: 50%;
+    }  
+    .reason-input::placeholder{
+        color: #FFF;
+        font-family: Cairo;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    } 
+    .reason-input:focus{
+        outline: none;
+     }
+     .reason-input::selection{
+        color: #FFF;
+     }
+     .reason-input::-moz-selection{
+        color: #FFF;
+     }
     .arrow-input{
        background-color: #5D96EC;
        color: #FFF;
@@ -204,6 +231,7 @@
        font-style: normal;
        font-weight: 600;
        line-height: normal;
+       width: 100%;
     }
     .arrow-input::placeholder{
         color: #FFF;
@@ -212,6 +240,7 @@
         font-style: normal;
         font-weight: 600;
         line-height: normal;
+        width: 100%;
     }
     .arrow-input:focus{
         outline: none;
@@ -221,5 +250,14 @@
      }
      .arrow-input::-moz-selection{
         color: #FFF;
+     }
+     .root-title{
+        color: rgba(0, 0, 0, 0.20);
+        text-align: center;
+        font-family: Cairo;
+        font-size: 18.165px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
      }
 }
