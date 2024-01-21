@@ -20,6 +20,7 @@ import { AssessmentCompleted } from "../Components/Assessment-Completed/Assessme
 import { PoliciesProcedures } from "../Pages/Policies&Procedures/Policies_Procedures";
 import { InnovationManagement } from "../Pages/Innovation-Management/InnovationManagement";
 import { Certificates } from "../Pages/Certificates/Certificates";
+import { Announcements } from "../Pages/Announcements/Announcements";
 
 type layoutProps = {
   type: number;
@@ -68,7 +69,7 @@ export const Layout = (props: layoutProps) => {
               ? "Innovation Management"
               : props.type === 11
               ? "Certificates"
-              : ""
+              : "Announcements"
           }
         />
         {props.type === 1 ? (
@@ -100,7 +101,9 @@ export const Layout = (props: layoutProps) => {
           <InnovationManagement />
         ) : props.type === 11 ? (
           <Certificates />
-        ) : null}
+        ) : (
+          <Announcements />
+        )}
       </div>
     </div>
   );

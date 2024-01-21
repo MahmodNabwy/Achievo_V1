@@ -436,45 +436,47 @@ export const Sidebar = (props: SidebarProps) => {
                 </Link>
 
                 {/* Announcements */}
-                <li
-                  className={
-                    selectedElement === 6
-                      ? "dashboard-item dashboard-active"
-                      : "dashboard-item"
-                  }
-                  onClick={() => handleSelectedElement(6)}
-                >
-                  <span className="notification-number">2</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="29"
-                    viewBox="0 0 28 29"
-                    fill="none"
-                    className="bell-icon"
+                <Link to="/Announcements">
+                  <li
+                    className={
+                      selectedElement === 6
+                        ? "dashboard-item dashboard-active"
+                        : "dashboard-item"
+                    }
+                    onClick={() => handleSelectedElement(6)}
                   >
-                    <path
-                      d="M13.9507 3.31543C8.79347 3.31543 6.55382 7.98429 6.55382 11.0717C6.55382 13.3788 6.88872 12.6997 5.6119 15.5138C4.05252 19.5245 10.3226 21.1629 13.9507 21.1629C17.5788 21.1629 23.8478 19.5233 22.2896 15.5138C21.0104 12.6997 21.3476 13.3788 21.3476 11.0717C21.3476 7.98429 19.1057 3.31543 13.9507 3.31543Z"
-                      stroke="black"
-                      stroke-width="1.19608"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M16.6358 24.2444C16.3094 24.6409 15.8993 24.9602 15.4348 25.1795C14.9704 25.3987 14.4632 25.5124 13.9496 25.5124C13.436 25.5124 12.9288 25.3987 12.4644 25.1795C12 24.9602 11.5898 24.6409 11.2634 24.2444"
-                      stroke="black"
-                      stroke-width="1.19608"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  <span className="module-name">Announcements</span>
-                  {selectedElement === 6 ? (
-                    <div className="dashboard-item-border"></div>
-                  ) : null}
-                </li>
+                    <span className="notification-number">2</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="28"
+                      height="29"
+                      viewBox="0 0 28 29"
+                      fill="none"
+                      className="bell-icon"
+                    >
+                      <path
+                        d="M13.9507 3.31543C8.79347 3.31543 6.55382 7.98429 6.55382 11.0717C6.55382 13.3788 6.88872 12.6997 5.6119 15.5138C4.05252 19.5245 10.3226 21.1629 13.9507 21.1629C17.5788 21.1629 23.8478 19.5233 22.2896 15.5138C21.0104 12.6997 21.3476 13.3788 21.3476 11.0717C21.3476 7.98429 19.1057 3.31543 13.9507 3.31543Z"
+                        stroke="black"
+                        stroke-width="1.19608"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M16.6358 24.2444C16.3094 24.6409 15.8993 24.9602 15.4348 25.1795C14.9704 25.3987 14.4632 25.5124 13.9496 25.5124C13.436 25.5124 12.9288 25.3987 12.4644 25.1795C12 24.9602 11.5898 24.6409 11.2634 24.2444"
+                        stroke="black"
+                        stroke-width="1.19608"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span className="module-name">Announcements</span>
+                    {selectedElement === 6 ? (
+                      <div className="dashboard-item-border"></div>
+                    ) : null}
+                  </li>
+                </Link>
               </ul>
             </section>
           </nav>

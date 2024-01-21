@@ -93,8 +93,8 @@ background-color: #000;
 }
 .notification-number{
 position: absolute;
-top: 10px;
-left: 15px;
+top: 8px;
+left: 20px;
 display: flex;
 width: 18.895px;
 height: 14.935px;
