@@ -61,6 +61,8 @@ export const Layout = (props: layoutProps) => {
               ? "Dashboard"
               : props.type === 2
               ? "Courses"
+              : props.type === 3
+              ? "Courses"
               : props.type === 5
               ? "Assessments"
               : props.type === 9

@@ -70,10 +70,10 @@ export const SessionsAccordion = (props: SessionsAccordionProps) => {
               will discuss the importance of and review the components of
               security. We will conclude the module by examining hackers and
               what they target.
-              <div className="course-session-content">
-                <div className="flex justify-between">
+              <div className="course-session-content grid grid-cols-2">
+                <div className="col-span-full grid grid-cols-1 lg:grid-cols-2">
                   {/* Video */}
-                  <div className="flex gap-4">
+                  <div className="flex gap-4 sm:col-start-1 lg:col-start-1">
                     <div>
                       <img src={videoIcon} alt="video" />
                     </div>
@@ -84,14 +84,16 @@ export const SessionsAccordion = (props: SessionsAccordionProps) => {
                       <span className="video-duration">Video - 13 Min</span>
                     </div>
                   </div>
-                  <div className="letsStart" onClick={() => routeToCourse()}>
-                    Let’s Start
+                  <div className="flex justify-end pr-4 sm:col-start-1 lg:col-start-2">
+                    <div className="letsStart" onClick={() => routeToCourse()}>
+                      Let’s Start
+                    </div>
                   </div>
                 </div>
 
-                <div className="flex justify-between mt-4">
+                <div className="col-span-full grid grid-cols-1 lg:grid-cols-2 mt-4">
                   {/* Video */}
-                  <div className="flex gap-4">
+                  <div className="flex gap-4 sm:col-start-1 lg:col-start-1">
                     <div>
                       <img src={videoIcon} alt="video" />
                     </div>
@@ -102,7 +104,11 @@ export const SessionsAccordion = (props: SessionsAccordionProps) => {
                       <span className="video-duration">Video - 13 Min</span>
                     </div>
                   </div>
-                  <div className="letsStart">Let’s Start</div>
+                  <div className="flex justify-end pr-4 sm:col-start-1 lg:col-start-2">
+                    <div className="letsStart" onClick={() => routeToCourse()}>
+                      Let’s Start
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

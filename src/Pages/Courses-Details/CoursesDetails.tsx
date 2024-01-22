@@ -47,7 +47,7 @@ export const CoursesDetails = () => {
   return (
     <div className="CoursesDetails">
       <GoBackHeader />
-      <div className="grid grid-cols-2 lg:grid-cols-2 pl-10 overflow-hidden">
+      <div className="grid grid-cols-2 lg:grid-cols-2 pl-10 gap-4 overflow-hidden">
         {/* Course-Information */}
         <div className="sm:col-start-1 lg:col-start-1">
           <div className="course-informations">
@@ -215,7 +215,13 @@ export const CoursesDetails = () => {
           </div>
         </div>
         {/* Course Sessions */}
-        <div className="col-start-1 pl-4 pr-4">
+        <div
+          className={`col-start-1 ${
+            isSmallScreen === true || isMediumScreen === true
+              ? "col-span-full"
+              : ""
+          }   md:col-start-1 lg:col-start-1 pl-4 pr-4`}
+        >
           <SessionsAccordion
             title="Importance of Security"
             sessionId={Math.random()}
@@ -227,7 +233,13 @@ export const CoursesDetails = () => {
           <SessionsAccordion title="Passwords" sessionId={Math.random()} />
         </div>
         {/* About The Course */}
-        <div className="col-start-2 pr-7">
+        <div
+          className={`${
+            isSmallScreen === true || isMediumScreen === true
+              ? "col-span-full"
+              : ""
+          } md:col-start-1 lg:col-start-2 pr-7`}
+        >
           <div className="about-course">
             <span className="about-title">About this Course</span>
             <div className="content">

@@ -12,8 +12,7 @@ module.exports = {
 	],
   theme: {
     container: {
-      center: true,
-      padding: "2rem",
+      
       screens: {
         'xs': '370px',        
         'sm': '640px',          
