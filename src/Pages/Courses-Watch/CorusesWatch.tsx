@@ -1,5 +1,7 @@
 import { GoBackHeader } from "../../Components/GoBackHeader/GoBackHeader";
 import { Video } from "../../Components/Videos/Video";
+import { useState, useEffect } from "react";
+
 import "./CoursesWatch.scss";
 import videoIcon from "../Courses-Details/Assets/Icons/video.svg";
 import courseCover from "../Courses-Cards/Assets/images/Rectangle 531.png";
@@ -7,11 +9,51 @@ import { LineProgress } from "../../Components/LineProgress/LineProgress";
 import { Quiz } from "../../Components/Quiz/Quiz";
 import { QuizSummary } from "../../Components/Quiz/Quiz-summary/QuizSummary";
 export const CorusesWatch = () => {
+  const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
+  const [isMediumScreen, setIsMediumScreen] = useState<boolean>(false);
+  const handleResize = () => {
+    const screenWidth = window.innerWidth;
+
+    // Define your screen size breakpoints
+    const smallScreenMaxWidth = 600;
+    const mediumScreenMaxWidth = 1024;
+
+    // Check if the screen is small
+    if (screenWidth <= smallScreenMaxWidth) {
+      setIsSmallScreen(true);
+    }
+    // Check if the screen is medium
+    else if (
+      screenWidth > smallScreenMaxWidth &&
+      screenWidth <= mediumScreenMaxWidth
+    ) {
+      setIsMediumScreen(true);
+    } else {
+      setIsSmallScreen(false);
+      setIsMediumScreen(false);
+    }
+  };
+  useEffect(() => {
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Initial check on component mount
+    handleResize();
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div className="CorusesWatch">
       <GoBackHeader />
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 pl-32">
+      <div
+        className={`grid grid-cols-1 lg:grid-cols-2 gap-4 ${
+          isSmallScreen === true || isMediumScreen === true ? "" : "pl-32"
+        }  `}
+      >
         <div className="lg:col-start-1 flex justify-center">
           {/* <Quiz /> */}
           {<QuizSummary />}

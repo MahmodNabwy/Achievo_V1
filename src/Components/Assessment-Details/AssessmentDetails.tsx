@@ -10,12 +10,12 @@ export const AssessmentDetails = () => {
   return (
     <div className="AssessmentDetails">
       <GoBackHeader />
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 pl-16 pr-16">
+      <div className="grid grid-cols-2 lg:grid-cols-2 gap-4 pl-16 pr-16">
         <div className="col-span-full">
           <h3 className="flex justify-start title">Personality Test</h3>
         </div>
         {/* Center Div */}
-        <div className="col-span-full">
+        <div className="col-span-full ">
           <div className="flex justify-center items-center">
             <div className="grid grid-cols-2 content">
               <div className="col-start-1">
@@ -104,11 +104,9 @@ export const AssessmentDetails = () => {
                   potential areas for growth or development.
                 </span>
               </div>
-              <div className="col-span-full">
-                <div className="flex justify-end">
-                  <div className="continue" onClick={() => routeToCourse()}>
-                    Continue
-                  </div>
+              <div className="sm:col-span-full lg:col-start-2 flex justify-end">
+                <div className="continue" onClick={() => routeToCourse()}>
+                  Continue
                 </div>
               </div>
             </div>

@@ -2,8 +2,47 @@ import { useNavigate } from "react-router-dom";
 import { GoBackHeader } from "../GoBackHeader/GoBackHeader";
 import "./ContinueAssessment.scss";
 import { CircularProgressbar } from "react-circular-progressbar";
+import { useState, useEffect } from "react";
+
 export const ContinueAssessment = () => {
+  const [isSmallScreen, setIsSmallScreen] = useState<boolean>(false);
+  const [isMediumScreen, setIsMediumScreen] = useState<boolean>(false);
   const navigate = useNavigate();
+  const handleResize = () => {
+    const screenWidth = window.innerWidth;
+
+    // Define your screen size breakpoints
+    const smallScreenMaxWidth = 600;
+    const mediumScreenMaxWidth = 1024;
+
+    // Check if the screen is small
+    if (screenWidth <= smallScreenMaxWidth) {
+      setIsSmallScreen(true);
+    }
+    // Check if the screen is medium
+    else if (
+      screenWidth > smallScreenMaxWidth &&
+      screenWidth <= mediumScreenMaxWidth
+    ) {
+      setIsMediumScreen(true);
+    } else {
+      setIsSmallScreen(false);
+      setIsMediumScreen(false);
+    }
+  };
+  useEffect(() => {
+    // Add event listener for window resize
+    window.addEventListener("resize", handleResize);
+
+    // Initial check on component mount
+    handleResize();
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="ContinueAssessment">
       <GoBackHeader />
@@ -14,9 +53,9 @@ export const ContinueAssessment = () => {
         {/* Center Div */}
         <div className="col-span-full">
           <div className="flex justify-center items-center">
-            <div className="grid grid-cols-2 content">
+            <div className="grid grid-cols-3 content">
               {/* Close Icon */}
-              <div className="col-span-full">
+              <div className="col-start-3">
                 <div className="flex justify-end items-center">
                   <svg
                     onClick={() => navigate(-1)}
@@ -54,15 +93,16 @@ export const ContinueAssessment = () => {
                 </div>
               </div>
               {/* Question Title */}
-              <div className="col-span-full pl-4 pr-4 mt-4">
+              <div className="col-span-full w-full ">
                 <div className="flex">
                   <p className="question-title">
                     5. You spend a lot of your free time exploring various
                     random topics that pique your interest.
                   </p>
                 </div>
-                <div className="divider"></div>
               </div>
+              <div className="col-span-full divider"></div>
+
               {/* Question Choices */}
               <div className="col-span-full mt-6">
                 <div className="flex justify-center items-center">
@@ -72,7 +112,11 @@ export const ContinueAssessment = () => {
                     <div className="circles flex gap-4">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="253"
+                        width={`${
+                          isSmallScreen === true || isMediumScreen === true
+                            ? "100"
+                            : "253"
+                        }`}
                         height="34"
                         viewBox="0 0 253 34"
                         fill="none"
@@ -133,94 +177,72 @@ export const ContinueAssessment = () => {
                   </div>
                 </div>
               </div>
-              {/* Actions */}
-              <div className="col-span-full mt-16">
-                <div className="flex  justify-between items-center  gap-8 p-4">
-                  {/* Back Button */}
 
-                  <div className="actions flex gap-4 items-center">
-                    <div>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="40"
-                        height="40"
-                        viewBox="0 0 40 40"
-                        fill="none"
-                      >
-                        <path
-                          d="M25.834 31.6667C25.834 31.6667 14.1673 24.76 14.1673 20C14.1673 15.24 25.834 8.33337 25.834 8.33337"
-                          stroke="white"
-                          stroke-width="3"
-                          stroke-miterlimit="10"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </div>
-                    <span className="back">Back</span>
-                  </div>
-                  {/* Cricular Progress */}
+              {/* Back Button */}
+              <div className="col-start-1 mt-16">
+                <div className="actions flex gap-4 items-center">
                   <div>
-                    <div style={{ width: "80px", height: "75px" }}>
-                      <CircularProgressbar
-                        strokeWidth={14}
-                        value={50}
-                        text={`50%`}
-                        minValue={10}
-                        styles={{
-                          path: {
-                            stroke: "#2dad1d",
-
-                            height: "100%",
-                          },
-                          trail: {
-                            stroke: "#EAEAEB",
-                            fill: "red",
-                          },
-                          text: {
-                            // Text color
-                            fill: "#000",
-                            // Text size
-                            fontSize: "1.5rem",
-                            fontWeight: "700",
-                            fontStyle: "normal",
-                            lineHeight: "normal",
-                            background: "red",
-                          },
-                        }}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                    >
+                      <path
+                        d="M25.834 31.6667C25.834 31.6667 14.1673 24.76 14.1673 20C14.1673 15.24 25.834 8.33337 25.834 8.33337"
+                        stroke="white"
+                        stroke-width="3"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
                       />
-                    </div>
+                    </svg>
                   </div>
-                  {/* IF Users Answer All Question return submit button else return next button */}
-                  {/* Next Button */}
-                  {/* <div className="actions flex gap-4 justify-end items-center">
-                    <span className="back">Next</span>
-                    <div>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="40"
-                        height="40"
-                        viewBox="0 0 40 40"
-                        fill="none"
-                      >
-                        <path
-                          d="M14.166 8.33329C14.166 8.33329 25.8327 15.24 25.8327 20C25.8327 24.76 14.166 31.6666 14.166 31.6666"
-                          stroke="white"
-                          stroke-width="3"
-                          stroke-miterlimit="10"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </div>
-                  </div> */}
-                  {/* Submit Button */}
-                  <div
-                    className="flex submit gap-4 items-center"
-                    onClick={() => navigate("AssessmentFinished")}
-                  >
-                    Submit
+                  <span className="back">Back</span>
+                </div>
+              </div>
+              {/* Cricular Progress */}
+              <div className="col-start-1 md:col-start-1 lg:col-start-2 pl-10 mt-16">
+                <div>
+                  <div style={{ width: "80px", height: "75px" }}>
+                    <CircularProgressbar
+                      strokeWidth={14}
+                      value={50}
+                      text={`50%`}
+                      minValue={10}
+                      styles={{
+                        path: {
+                          stroke: "#2dad1d",
+
+                          height: "100%",
+                        },
+                        trail: {
+                          stroke: "#EAEAEB",
+                          fill: "red",
+                        },
+                        text: {
+                          // Text color
+                          fill: "#000",
+                          // Text size
+                          fontSize: "1.5rem",
+                          fontWeight: "700",
+                          fontStyle: "normal",
+                          lineHeight: "normal",
+                          background: "red",
+                        },
+                      }}
+                    />
                   </div>
+                </div>
+              </div>
+              {/* Submit Button */}
+              <div className="col-start-1 md:col-start-1 lg:col-start-3 mt-16">
+                <div
+                  className="flex submit gap-4 items-center"
+                  onClick={() => navigate("AssessmentFinished")}
+                >
+                  Submit
                 </div>
               </div>
             </div>

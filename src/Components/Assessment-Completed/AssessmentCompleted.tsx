@@ -93,10 +93,10 @@ export const AssessmentCompleted = () => {
                     </div>
                   </div>
 
-                  <div className="col-span-full mt-4">
+                  <div className="col-start-2 mt-4">
                     <div className="flex justify-end">
                       <div
-                        className="backAssessments"
+                        className="backAssessments sm:w-full md:w-full lg:w-1/2"
                         onClick={() => navigate(-3)}
                       >
                         Back To Assessments
